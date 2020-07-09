@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rrx-qr-7Qb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Call Details Page View Controller-->
+        <scene sceneID="rNr-kN-eSs">
+            <objects>
+                <viewController id="rrx-qr-7Qb" customClass="CallDetailsPageViewController" customModule="Aircall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ysI-jT-CZ9" customClass="CallDetailsPageView" customModule="Aircall" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnY-3X-Bc5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="124.5"/>
+                                <color key="backgroundColor" name="Colors/background"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ToU-s1-wOQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="124.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dys-wM-gKB">
+                                        <rect key="frame" x="8" y="9.5" width="153.5" height="90.5"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="64" scale="large"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+44 1234-5678-90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-QI-Wo2">
+                                        <rect key="frame" x="193.5" y="16" width="212.5" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="16" left="8" bottom="32" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="top" secondItem="LIQ-4H-FkI" secondAttribute="top" id="A31-80-UQa"/>
+                            <constraint firstItem="LIQ-4H-FkI" firstAttribute="trailing" secondItem="FnY-3X-Bc5" secondAttribute="trailing" id="Cb3-73-Zoh"/>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="leading" secondItem="LIQ-4H-FkI" secondAttribute="leading" id="RqQ-if-rBh"/>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="trailing" secondItem="ToU-s1-wOQ" secondAttribute="trailing" id="fEB-co-2XR"/>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="leading" secondItem="ToU-s1-wOQ" secondAttribute="leading" id="iRC-mA-ZIt"/>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="top" secondItem="ToU-s1-wOQ" secondAttribute="top" id="iZM-J6-WbE"/>
+                            <constraint firstItem="FnY-3X-Bc5" firstAttribute="bottom" secondItem="ToU-s1-wOQ" secondAttribute="bottom" id="qfq-PH-nGr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LIQ-4H-FkI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-yo-L9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="Colors/background">
+            <color red="0.054901960784313725" green="0.5607843137254902" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
