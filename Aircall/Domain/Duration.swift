@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Duration {
+enum Duration: Hashable {
     case seconds(Int)
 }
