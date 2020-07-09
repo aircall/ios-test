@@ -24,6 +24,9 @@
 		49E4DA1C24B743FC0090AFB7 /* CallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */; };
 		49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1E24B7473B0090AFB7 /* CallDataSource.swift */; };
 		49E4DA2224B74FF00090AFB7 /* ActivityFeedPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */; };
+		49E4DA2524B7568C0090AFB7 /* CallDetailsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA2424B7568C0090AFB7 /* CallDetailsPageViewController.swift */; };
+		49E4DA2724B756BE0090AFB7 /* CallDetailsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E4DA2624B756BE0090AFB7 /* CallDetailsPage.storyboard */; };
+		49E4DA2924B75F4F0090AFB7 /* CallDetailsPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA2824B75F4F0090AFB7 /* CallDetailsPageViewModel.swift */; };
 		69E2CACC6DDDEF3512003AA9 /* libPods-Aircall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D70ED4D8EEDE29C2F7ED913 /* libPods-Aircall.a */; };
 		B306449DFBDFC273D6702E11 /* libPods-AircallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EAA1895F5837C21BDAE2B5 /* libPods-AircallTests.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewCell.swift; sourceTree = "<group>"; };
 		49E4DA1E24B7473B0090AFB7 /* CallDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDataSource.swift; sourceTree = "<group>"; };
 		49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedPageViewModel.swift; sourceTree = "<group>"; };
+		49E4DA2424B7568C0090AFB7 /* CallDetailsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailsPageViewController.swift; sourceTree = "<group>"; };
+		49E4DA2624B756BE0090AFB7 /* CallDetailsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CallDetailsPage.storyboard; sourceTree = "<group>"; };
+		49E4DA2824B75F4F0090AFB7 /* CallDetailsPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailsPageViewModel.swift; sourceTree = "<group>"; };
 		6F76E2B062A688DB40DDC514 /* Pods-AircallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.debug.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E761BBFE34DA01072652D0AD /* Pods-Aircall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircall.debug.xcconfig"; path = "Target Support Files/Pods-Aircall/Pods-Aircall.debug.xcconfig"; sourceTree = "<group>"; };
 		EA37A7503738617FA2280B37 /* Pods-AircallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.release.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		49E4DA1024B733090090AFB7 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				49E4DA2324B756790090AFB7 /* CallDetails */,
 				49E4DA2024B74FDF0090AFB7 /* Activity */,
 			);
 			path = Page;
@@ -211,6 +218,16 @@
 				49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		49E4DA2324B756790090AFB7 /* CallDetails */ = {
+			isa = PBXGroup;
+			children = (
+				49E4DA2424B7568C0090AFB7 /* CallDetailsPageViewController.swift */,
+				49E4DA2624B756BE0090AFB7 /* CallDetailsPage.storyboard */,
+				49E4DA2824B75F4F0090AFB7 /* CallDetailsPageViewModel.swift */,
+			);
+			path = CallDetails;
 			sourceTree = "<group>";
 		};
 		677F23CF1FFCBBFBB5E2F8AC /* Frameworks */ = {
@@ -321,6 +338,7 @@
 				4938FF0724B720980066B4CD /* LaunchScreen.storyboard in Resources */,
 				4938FF0424B720980066B4CD /* Assets.xcassets in Resources */,
 				4938FF0224B720970066B4CD /* Main.storyboard in Resources */,
+				49E4DA2724B756BE0090AFB7 /* CallDetailsPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E4DA2524B7568C0090AFB7 /* CallDetailsPageViewController.swift in Sources */,
 				49E4DA0824B732260090AFB7 /* StoryboardScenes.generated.swift in Sources */,
 				49E4DA1424B733390090AFB7 /* Call.swift in Sources */,
 				49E4DA2224B74FF00090AFB7 /* ActivityFeedPageViewModel.swift in Sources */,
@@ -430,6 +449,7 @@
 				49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */,
 				49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */,
 				49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */,
+				49E4DA2924B75F4F0090AFB7 /* CallDetailsPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

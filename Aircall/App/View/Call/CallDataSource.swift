@@ -16,6 +16,7 @@ private enum Section {
 
 class CallDataSource: NSObject, UITableViewDelegate {
     private let dataSource: UITableViewDiffableDataSource<Section, Call>
+    private var selectAction: ((Call) -> Void)?
     
     init(tableView: UITableView) {
         dataSource = UITableViewDiffableDataSource(tableView: tableView,
@@ -27,8 +28,10 @@ class CallDataSource: NSObject, UITableViewDelegate {
         tableView.delegate = self
     }
     
-    func bind(calls: [Call]) {
+    func bind(calls: [Call], selectAction: @escaping (Call) -> Void) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Call>()
+        
+        self.selectAction = selectAction
         
         snapshot.appendSections([.main])
         snapshot.appendItems(calls, toSection: .main)
@@ -44,10 +47,10 @@ class CallDataSource: NSObject, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = dataSource.itemIdentifier(for: indexPath) else {
+        guard let call = dataSource.itemIdentifier(for: indexPath) else {
             return
         }
         
-        
+        selectAction?(call)
     }
 }
