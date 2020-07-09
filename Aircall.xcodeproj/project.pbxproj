@@ -20,6 +20,10 @@
 		49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0724B732260090AFB7 /* Register.generated.swift */; };
 		49E4DA1424B733390090AFB7 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1324B733390090AFB7 /* Call.swift */; };
 		49E4DA1724B733BC0090AFB7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1624B733BC0090AFB7 /* Duration.swift */; };
+		49E4DA1924B73D370090AFB7 /* ActivityFeedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1824B73D370090AFB7 /* ActivityFeedPageViewController.swift */; };
+		49E4DA1C24B743FC0090AFB7 /* CallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */; };
+		49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1E24B7473B0090AFB7 /* CallDataSource.swift */; };
+		49E4DA2224B74FF00090AFB7 /* ActivityFeedPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */; };
 		69E2CACC6DDDEF3512003AA9 /* libPods-Aircall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D70ED4D8EEDE29C2F7ED913 /* libPods-Aircall.a */; };
 		B306449DFBDFC273D6702E11 /* libPods-AircallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EAA1895F5837C21BDAE2B5 /* libPods-AircallTests.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,10 @@
 		49E4DA0724B732260090AFB7 /* Register.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.generated.swift; sourceTree = "<group>"; };
 		49E4DA1324B733390090AFB7 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		49E4DA1624B733BC0090AFB7 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		49E4DA1824B73D370090AFB7 /* ActivityFeedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedPageViewController.swift; sourceTree = "<group>"; };
+		49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewCell.swift; sourceTree = "<group>"; };
+		49E4DA1E24B7473B0090AFB7 /* CallDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDataSource.swift; sourceTree = "<group>"; };
+		49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedPageViewModel.swift; sourceTree = "<group>"; };
 		6F76E2B062A688DB40DDC514 /* Pods-AircallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.debug.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E761BBFE34DA01072652D0AD /* Pods-Aircall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircall.debug.xcconfig"; path = "Target Support Files/Pods-Aircall/Pods-Aircall.debug.xcconfig"; sourceTree = "<group>"; };
 		EA37A7503738617FA2280B37 /* Pods-AircallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.release.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 		49E4DA0F24B733090090AFB7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				49E4DA1A24B73DBE0090AFB7 /* View */,
 				49E4DA1024B733090090AFB7 /* Page */,
 			);
 			path = App;
@@ -158,6 +167,7 @@
 		49E4DA1024B733090090AFB7 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				49E4DA2024B74FDF0090AFB7 /* Activity */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -175,6 +185,32 @@
 				49E4DA1324B733390090AFB7 /* Call.swift */,
 			);
 			path = Call;
+			sourceTree = "<group>";
+		};
+		49E4DA1A24B73DBE0090AFB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49E4DA1D24B744000090AFB7 /* Call */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		49E4DA1D24B744000090AFB7 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */,
+				49E4DA1E24B7473B0090AFB7 /* CallDataSource.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		49E4DA2024B74FDF0090AFB7 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				49E4DA1824B73D370090AFB7 /* ActivityFeedPageViewController.swift */,
+				49E4DA2124B74FF00090AFB7 /* ActivityFeedPageViewModel.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		677F23CF1FFCBBFBB5E2F8AC /* Frameworks */ = {
@@ -383,12 +419,16 @@
 			files = (
 				49E4DA0824B732260090AFB7 /* StoryboardScenes.generated.swift in Sources */,
 				49E4DA1424B733390090AFB7 /* Call.swift in Sources */,
+				49E4DA2224B74FF00090AFB7 /* ActivityFeedPageViewModel.swift in Sources */,
 				4938FEFF24B720970066B4CD /* ViewController.swift in Sources */,
 				49E4DA0A24B732260090AFB7 /* ServiceResolver.generated.swift in Sources */,
+				49E4DA1924B73D370090AFB7 /* ActivityFeedPageViewController.swift in Sources */,
 				4938FEFB24B720970066B4CD /* AppDelegate.swift in Sources */,
 				4938FEFD24B720970066B4CD /* SceneDelegate.swift in Sources */,
+				49E4DA1C24B743FC0090AFB7 /* CallViewCell.swift in Sources */,
 				49E4DA1724B733BC0090AFB7 /* Duration.swift in Sources */,
 				49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */,
+				49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */,
 				49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

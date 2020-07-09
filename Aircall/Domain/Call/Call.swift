@@ -12,7 +12,7 @@ import Foundation
 /// (like international code) and custom format
 typealias PhoneNumber = String
 
-struct Call: Identifiable {
+struct Call: Identifiable, Hashable {
     let id: Int
     let createdAt: Date
     let direction: Direction
@@ -25,19 +25,19 @@ struct Call: Identifiable {
 }
 
 extension Call {
-    enum Direction: String {
+    enum Direction: String, Hashable {
         case inbound
         case outbound
     }
     
-    enum Status: String {
+    enum Status: String, Hashable {
         case missed
         case answered
         case voicemail
     }
 }
 
-enum Caller {
-    case phone(number: PhoneNumber)
-    case contact(name: String)
+enum Caller: Hashable {
+    case phone(PhoneNumber)
+    case contact(String)
 }
