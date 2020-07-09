@@ -1,0 +1,6 @@
+module Pods_AircallTests {
+  umbrella header "Pods-AircallTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

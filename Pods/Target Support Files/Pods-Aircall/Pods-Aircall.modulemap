@@ -1,0 +1,6 @@
+module Pods_Aircall {
+  umbrella header "Pods-Aircall-umbrella.h"
+
+  export *
+  module * { export * }
+}

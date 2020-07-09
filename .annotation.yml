@@ -1,0 +1,10 @@
+output: Aircall/Generated
+
+sources:
+  include:
+    - Aircall
+  exclude:
+    - Aircall/Generated
+
+templates:
+  - Pods/AnnotationInject/Templates

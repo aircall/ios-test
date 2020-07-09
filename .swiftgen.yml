@@ -1,0 +1,18 @@
+output_dir: Aircall/Generated
+
+xcassets:
+  -
+    inputs:
+      - Aircall/Assets.xcassets
+    outputs:
+      templateName: swift4
+      output: Assets.generated.swift
+      params:
+        allValues: true
+
+ib:
+  inputs:
+    - Aircall/App
+  outputs:
+    templateName: scenes-swift4
+    output: StoryboardScenes.generated.swift

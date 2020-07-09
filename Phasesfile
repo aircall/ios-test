@@ -1,0 +1,37 @@
+module Phase
+  def self.gen_resources
+    {
+      :name => '🛠️ Generate resources',
+      :script => Script.swiftgen,
+      :execution_position => :before_compile,
+      :input_files => ['.swiftgen.yml'],
+      :output_file_lists => ['.swiftgen.outputs.xcfilelist']
+    }
+  end
+
+  def self.gen_injections
+    {
+      :name => '🛠️ Generate injection',
+      :script => Script.annotation_inject,
+      :execution_position => :before_compile,
+      :input_files => ['.annotation.yml'],
+      :output_file_lists => ['.annotation.outputs.xcfilelist']
+    }
+  end
+end
+
+module Script
+  def self.swiftgen
+    <<~EOS
+      "${PODS_ROOT}/SwiftGen/bin/swiftgen" config run --config .swiftgen.yml
+      touch .swiftgen.yml
+    EOS
+  end
+
+  def self.annotation_inject
+    <<~EOS
+      "${PODS_ROOT}/AnnotationInject/Scripts/annotationinject" --config .annotation.yml
+      touch .annotation.yml
+    EOS
+  end
+end

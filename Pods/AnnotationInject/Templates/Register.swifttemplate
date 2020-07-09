@@ -1,0 +1,81 @@
+import Foundation
+import Swinject
+<%_
+    let imports: [String]!
+
+    if let _imports = (argument["imports"] as? [String]) {
+      imports =  _imports
+    } else if let _import = argument["imports"] as? String {
+         imports = [_import]
+    } else {
+       imports =  []
+    }
+-%>
+<%_ for `import` in imports { -%>
+import <%= `import` %>
+<%_ } -%>
+
+<%- include("AnnotationInject.swift") %>
+<%- include("Partials/Method.swift") -%>
+<%- include("Partials/String.swift") -%>
+
+<%_
+  let serviceProvider = ServiceProvider(types: types)
+  let factories = serviceProvider.findFactoryServices() + serviceProvider.findAnnotatedServices()
+
+  func factory(with service: Service) -> String {
+    let paramValues = serviceProvider.findParameterValues(for: service)
+
+    return """
+    { resolver\(prefixNonEmpty(concatParamNames(of: paramValues.runtimeParameters()), with: ", ")) in
+            \(service.registerTypeName)(\(concat(parametersWithValue(paramValues))))
+        }
+    """
+  }
+
+  func initCompleted(_ service: Service) -> String? {
+    do {
+      let variables = try serviceProvider
+          .findInjectedServiceAttributes(for: service)
+          .map { "service.\($0.variable.name) = resolver.\($0.service.functionName)()"  }
+
+      guard !variables.isEmpty else {
+        return nil
+      }
+
+      return """
+        .initCompleted { service, resolver in
+            \(variables.joined(separator: "\n       "))
+        }
+      """
+    }
+    catch {
+      return """
+        .initCompleted { _, _ in
+          #error(#"\(error)"#)
+        }
+      """
+    }
+  }
+
+  func serviceOptions(_ service: Service) -> [String?] {
+    return [
+        initCompleted(service),
+        service.scope.map { ".inObjectScope(.\($0))" }
+    ]
+  }
+-%>
+
+class AnnotationAssembly: Assembly {
+  func assemble(container: Container) {
+  <%_ for service in ServiceProvider(types: types).findAnnotatedServices() { -%>
+    container.register(<%= service.factory.returnTypeName %>.self, factory: <%= factory(with: service) -%>)
+    <%= serviceOptions(service).compactMap { $0 }.joined(separator: "\n") _%>
+  <%_ } -%>
+
+  <%_ for service in ServiceProvider(types: types).findFactoryServices() { -%>
+    <%_ let method = service.factory -%>
+    container.register(<%= method.returnTypeName %>.self, factory: <%= method.definedInTypeName?.name ?? "" %>.<%= method.selectorName %>)
+  <%_ } -%>
+  }
+}

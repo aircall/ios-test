@@ -1,0 +1,44 @@
+PODS:
+  - AnnotationInject (0.5.0):
+    - Sourcery (>= 0.16.2)
+    - Swinject
+  - Nimble (8.0.7)
+  - Quick (2.2.0)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - Sourcery (0.18.0)
+  - SwiftGen (6.1.0)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - AnnotationInject
+  - Nimble
+  - Quick
+  - Reusable
+  - SwiftGen
+
+SPEC REPOS:
+  trunk:
+    - AnnotationInject
+    - Nimble
+    - Quick
+    - Reusable
+    - Sourcery
+    - SwiftGen
+    - Swinject
+
+SPEC CHECKSUMS:
+  AnnotationInject: ff11c3f5b791ab780785a4329f8dee94c88f109b
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  Sourcery: e0e8658a1ce6d9f475156ad3ffce4c68f1261b3e
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: dd57380f719ffc1d8d378eea17602374aa73a6c8
+
+COCOAPODS: 1.9.3
