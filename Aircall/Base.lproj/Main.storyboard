@@ -64,9 +64,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="callInfoLabel" destination="DcY-K6-2dQ" id="FtJ-th-pAi"/>
+                                    <outlet property="callNumberLabel" destination="WOY-pQ-Md2" id="Cl8-j6-YoW"/>
                                     <outlet property="callTimeLabel" destination="WtH-iW-m3c" id="MxK-cT-2b2"/>
                                     <outlet property="directionIcon" destination="zhc-rh-8EQ" id="OLh-Ye-cGM"/>
-                                    <outlet property="fromLabel" destination="WOY-pQ-Md2" id="hHN-zT-btJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

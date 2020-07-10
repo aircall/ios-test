@@ -13,7 +13,15 @@ import Combine
 class ActivityFeedPageViewController: UITableViewController {
     var viewModel: ActivityFeedPageViewModel = ActivityFeedPageViewModel(
         state: .init(calls: [
-            Call(id: 1, createdAt: Date(), direction: .inbound, from: .contact("Foobar"), to: nil, via: "Office", duration: .seconds(0), isArchived: false, callType: .missed)
+            Call(id: 1,
+                 createdAt: Date(),
+                 direction: .outbound,
+                 from: .contact("Foobar"),
+                 to: .contact("Aircall"),
+                 via: "Home",
+                 duration: .seconds(245),
+                 isArchived: false,
+                 callType: .answered)
         ]))
     
     private lazy var dataSource = CallDataSource(tableView: tableView)

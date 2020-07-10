@@ -24,10 +24,32 @@ class CallDetailsPageViewController: UIViewController {
     override func viewDidLoad() {
         navigationItem.rightBarButtonItem = .archive()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        bind()
+    }
+    
+    func bind() {
+        detailsView.bind(call: viewModel.call)
+    }
 }
 
 class CallDetailsPageView: UIView {
+    @IBOutlet private var directionIcon: UIImageView!
+    @IBOutlet private var callNumberLabel: UILabel!
+    @IBOutlet private var callTimeLabel: UILabel!
+    @IBOutlet private var callInfoLabel: UILabel!
+    @IBOutlet private var durationLabel: UILabel!
     
+    func bind(call: Call) {
+        DirectionViewComponent.render(call.direction, in: directionIcon)
+        CallNumberViewComponent.render(call, in: callNumberLabel)
+        CallInfoViewComponent.render(call, detailed: true, in: callInfoLabel)
+        CallDurationViewComponent.render(call.duration, status: call.callType, in: durationLabel)
+        
+        callTimeLabel.text = DateConverter.string(call.createdAt, to: .hour)
+    }
 }
 
 extension UIBarButtonItem {
