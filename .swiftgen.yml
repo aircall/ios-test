@@ -7,8 +7,6 @@ xcassets:
     outputs:
       templateName: swift4
       output: Assets.generated.swift
-      params:
-        allValues: true
 
 ib:
   inputs:
