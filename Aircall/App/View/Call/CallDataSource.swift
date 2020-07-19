@@ -14,32 +14,33 @@ private enum Section {
     case main
 }
 
-class CallDataSource: NSObject, UITableViewDelegate {
-    private let dataSource: UITableViewDiffableDataSource<Section, Call>
+class CallDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var selectAction: ((Call) -> Void)?
+    private var calls: [Call] = []
+    weak var tableView: UITableView?
     
     init(tableView: UITableView) {
-        dataSource = UITableViewDiffableDataSource(tableView: tableView,
-                                                   cellProvider: Self.cell(for:at:call:))
-        
         super.init()
 
-        tableView.dataSource = dataSource
+        self.tableView = tableView
+        tableView.dataSource = self
         tableView.delegate = self
     }
     
     func bind(calls: [Call], selectAction: @escaping (Call) -> Void) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Call>()
-        
+        self.calls = calls
         self.selectAction = selectAction
         
-        snapshot.appendSections([.main])
-        snapshot.appendItems(calls, toSection: .main)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        tableView?.reloadData()
     }
     
-    private static func cell(for tableView: UITableView, at indexPath: IndexPath, call: Call) -> UITableViewCell? {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        calls.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CallViewCell = tableView.dequeueReusableCell(for: indexPath, cellType: CallViewCell.self)
+        let call = calls[indexPath.row]
 
         cell.bind(call: call)
         
@@ -47,9 +48,7 @@ class CallDataSource: NSObject, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let call = dataSource.itemIdentifier(for: indexPath) else {
-            return
-        }
+        let call = calls[indexPath.row]
         
         selectAction?(call)
     }
