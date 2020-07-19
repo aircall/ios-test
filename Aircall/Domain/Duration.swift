@@ -21,7 +21,13 @@ enum Duration: Codable, Hashable {
     }
     
     init(from decoder: Decoder) throws {
-        self = try .seconds(decoder.singleValueContainer().decode(TimeInterval.self))
+        let container = try decoder.singleValueContainer()
+
+        guard let value = Double(try container.decode(String.self)) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "string representation is not valid Double value")
+        }
+        
+        self = .seconds(value)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -29,7 +35,7 @@ enum Duration: Codable, Hashable {
         
         switch self {
         case .seconds(let time):
-            try container.encode(time)
+            try container.encode(String(time))
         }
     }
 }
