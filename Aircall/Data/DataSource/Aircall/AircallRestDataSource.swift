@@ -33,7 +33,7 @@ class AircallRestDataSource {
     private lazy var encoder: JSONEncoder = {
         var encoder = JSONEncoder()
         
-        encoder.dateEncodingStrategy = .iso8601
+        encoder.dateEncodingStrategy = .aircallFormat()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         
         return encoder
@@ -42,7 +42,7 @@ class AircallRestDataSource {
         var decoder = JSONDecoder()
         
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
+        decoder.dateDecodingStrategy = .aircallFormat()
         
         return decoder
     }()
@@ -101,5 +101,39 @@ extension URLSession.DataTaskPublisher {
         self
             .map { _ in () }
             .eraseToAnyPublisher()
+    }
+}
+
+extension JSONDecoder.DateDecodingStrategy {
+    fileprivate static func aircallFormat() -> Self {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+            
+        return .custom { decoder in
+            let container = try decoder.singleValueContainer()
+        
+            guard let date = try formatter.date(from: container.decode(String.self)) else {
+                throw DecodingError.dataCorrupted(
+                    DecodingError.Context(
+                        codingPath: [],
+                        debugDescription: "Date is not valid format")
+                )
+            }
+            
+            return date
+        }
+    }
+}
+
+extension JSONEncoder.DateEncodingStrategy {
+    fileprivate static func aircallFormat() -> Self {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        
+        return .custom { date, encoder in
+            var container = encoder.singleValueContainer()
+            
+            try container.encode(formatter.string(from: date))
+        }
     }
 }
