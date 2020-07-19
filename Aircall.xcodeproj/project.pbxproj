@@ -38,6 +38,7 @@
 		49FCC53F24C48A4300458DCA /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53E24C48A4300458DCA /* CallRepository.swift */; };
 		49FCC54324C48D3400458DCA /* AircallRestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC54224C48D3400458DCA /* AircallRestDataSource.swift */; };
 		49FCC54824C4B3F100458DCA /* AircallRestEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */; };
+		49FCC54D24C4B62E00458DCA /* CallRepositoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC54C24C4B62E00458DCA /* CallRepositoryAdapter.swift */; };
 		69E2CACC6DDDEF3512003AA9 /* libPods-Aircall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D70ED4D8EEDE29C2F7ED913 /* libPods-Aircall.a */; };
 		B306449DFBDFC273D6702E11 /* libPods-AircallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EAA1895F5837C21BDAE2B5 /* libPods-AircallTests.a */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		49FCC53E24C48A4300458DCA /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
 		49FCC54224C48D3400458DCA /* AircallRestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallRestDataSource.swift; sourceTree = "<group>"; };
 		49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallRestEndpointTests.swift; sourceTree = "<group>"; };
+		49FCC54C24C4B62E00458DCA /* CallRepositoryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepositoryAdapter.swift; sourceTree = "<group>"; };
 		6F76E2B062A688DB40DDC514 /* Pods-AircallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.debug.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E761BBFE34DA01072652D0AD /* Pods-Aircall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircall.debug.xcconfig"; path = "Target Support Files/Pods-Aircall/Pods-Aircall.debug.xcconfig"; sourceTree = "<group>"; };
 		EA37A7503738617FA2280B37 /* Pods-AircallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.release.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		49E4DA1124B733090090AFB7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				49FCC54B24C4B61800458DCA /* RepositoryAdapter */,
 				49FCC54024C48B1700458DCA /* DataSource */,
 			);
 			path = Data;
@@ -349,6 +352,14 @@
 				49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */,
 			);
 			path = Aircall;
+			sourceTree = "<group>";
+		};
+		49FCC54B24C4B61800458DCA /* RepositoryAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54C24C4B62E00458DCA /* CallRepositoryAdapter.swift */,
+			);
+			path = RepositoryAdapter;
 			sourceTree = "<group>";
 		};
 		677F23CF1FFCBBFBB5E2F8AC /* Frameworks */ = {
@@ -556,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FCC54D24C4B62E00458DCA /* CallRepositoryAdapter.swift in Sources */,
 				49FCC53F24C48A4300458DCA /* CallRepository.swift in Sources */,
 				49E4DA2524B7568C0090AFB7 /* CallDetailsPageViewController.swift in Sources */,
 				49E4DA3324B775E60090AFB7 /* ImageStyle.swift in Sources */,

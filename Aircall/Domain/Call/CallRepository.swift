@@ -10,6 +10,6 @@ import Foundation
 import Combine
 
 protocol CallRepository {
-    func loadAll() -> Future<[Call], Error>
-    func save(call: Call) -> Future<Call, Error>
+    func loadAll() -> AnyPublisher<[Call], Error>
+    func save(call: Call) -> AnyPublisher<Call, Error>
 }
