@@ -36,6 +36,8 @@
 		49FCC53B24C484D500458DCA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53A24C484D500458DCA /* DateConverterTests.swift */; };
 		49FCC53D24C4858800458DCA /* DurationConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53C24C4858800458DCA /* DurationConverterTests.swift */; };
 		49FCC53F24C48A4300458DCA /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53E24C48A4300458DCA /* CallRepository.swift */; };
+		49FCC54324C48D3400458DCA /* AircallRestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC54224C48D3400458DCA /* AircallRestDataSource.swift */; };
+		49FCC54824C4B3F100458DCA /* AircallRestEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */; };
 		69E2CACC6DDDEF3512003AA9 /* libPods-Aircall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D70ED4D8EEDE29C2F7ED913 /* libPods-Aircall.a */; };
 		B306449DFBDFC273D6702E11 /* libPods-AircallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EAA1895F5837C21BDAE2B5 /* libPods-AircallTests.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		49FCC53A24C484D500458DCA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53C24C4858800458DCA /* DurationConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53E24C48A4300458DCA /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
+		49FCC54224C48D3400458DCA /* AircallRestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallRestDataSource.swift; sourceTree = "<group>"; };
+		49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallRestEndpointTests.swift; sourceTree = "<group>"; };
 		6F76E2B062A688DB40DDC514 /* Pods-AircallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.debug.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E761BBFE34DA01072652D0AD /* Pods-Aircall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aircall.debug.xcconfig"; path = "Target Support Files/Pods-Aircall/Pods-Aircall.debug.xcconfig"; sourceTree = "<group>"; };
 		EA37A7503738617FA2280B37 /* Pods-AircallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AircallTests.release.xcconfig"; path = "Target Support Files/Pods-AircallTests/Pods-AircallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		4938FF1024B720980066B4CD /* AircallTests */ = {
 			isa = PBXGroup;
 			children = (
+				49FCC54424C4B3B700458DCA /* Data */,
 				49FCC53824C484C000458DCA /* App */,
 				4938FF1324B720980066B4CD /* Info.plist */,
 			);
@@ -218,6 +223,7 @@
 		49E4DA1124B733090090AFB7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				49FCC54024C48B1700458DCA /* DataSource */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -303,6 +309,46 @@
 				49FCC53C24C4858800458DCA /* DurationConverterTests.swift */,
 			);
 			path = Converter;
+			sourceTree = "<group>";
+		};
+		49FCC54024C48B1700458DCA /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54124C48B4E00458DCA /* Aircall */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		49FCC54124C48B4E00458DCA /* Aircall */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54224C48D3400458DCA /* AircallRestDataSource.swift */,
+			);
+			path = Aircall;
+			sourceTree = "<group>";
+		};
+		49FCC54424C4B3B700458DCA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54524C4B3BC00458DCA /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		49FCC54524C4B3BC00458DCA /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54624C4B3C800458DCA /* Aircall */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		49FCC54624C4B3C800458DCA /* Aircall */ = {
+			isa = PBXGroup;
+			children = (
+				49FCC54724C4B3F100458DCA /* AircallRestEndpointTests.swift */,
+			);
+			path = Aircall;
 			sourceTree = "<group>";
 		};
 		677F23CF1FFCBBFBB5E2F8AC /* Frameworks */ = {
@@ -531,6 +577,7 @@
 				49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */,
 				49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */,
 				49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */,
+				49FCC54324C48D3400458DCA /* AircallRestDataSource.swift in Sources */,
 				49E4DA2924B75F4F0090AFB7 /* CallDetailsPageViewModel.swift in Sources */,
 				49E4DA3D24B77F480090AFB7 /* DirectionViewComponent.swift in Sources */,
 			);
@@ -541,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49FCC53B24C484D500458DCA /* DateConverterTests.swift in Sources */,
+				49FCC54824C4B3F100458DCA /* AircallRestEndpointTests.swift in Sources */,
 				49FCC53D24C4858800458DCA /* DurationConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

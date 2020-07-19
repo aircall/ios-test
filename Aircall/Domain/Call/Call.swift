@@ -12,7 +12,7 @@ import Foundation
 /// (like international code) and custom format
 typealias PhoneNumber = String
 
-struct Call: Identifiable, Hashable {
+struct Call: Identifiable, Codable, Hashable {
     let id: Int
     let createdAt: Date
     let direction: Direction
@@ -25,19 +25,37 @@ struct Call: Identifiable, Hashable {
 }
 
 extension Call {
-    enum Direction: String, Hashable {
+    enum Direction: String, Codable, Hashable {
         case inbound
         case outbound
     }
     
-    enum Status: String, Hashable {
+    enum Status: String, Codable, Hashable {
         case missed
         case answered
         case voicemail
     }
 }
 
-enum Caller: Hashable {
+enum Caller: Codable, Hashable {
     case phone(PhoneNumber)
     case contact(String)
+    
+    init(from decoder: Decoder) throws {
+        let value = try decoder.singleValueContainer().decode(String.self)
+        let hasLetters = value.unicodeScalars.contains(where: CharacterSet.letters.contains)
+        
+        self = hasLetters ? .contact(value) : .phone(value)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        
+        switch self {
+        case .phone(let number):
+            try container.encode(number)
+        case .contact(let name):
+            try container.encode(name)
+        }
+    }
 }
