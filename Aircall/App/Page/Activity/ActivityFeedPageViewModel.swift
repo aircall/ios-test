@@ -19,7 +19,7 @@ class ActivityFeedPageViewModel {
     private let callRepository: CallRepository
     private var bag: Set<AnyCancellable> = []
     
-    init(state: State, callRepository: CallRepository) {
+    init(state: State, callRepository: CallRepository = CallRepositoryAdapter()) {
         self._state = Published(initialValue: state)
         self.callRepository = callRepository
     }
@@ -34,5 +34,10 @@ class ActivityFeedPageViewModel {
     
     func selectAction(call: Call?) {
         state.selectedCall = call
+    }
+    
+    func onCallArchived() {
+        state.selectedCall = nil
+        self.load()
     }
 }

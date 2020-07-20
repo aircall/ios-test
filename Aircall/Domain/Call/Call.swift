@@ -20,7 +20,7 @@ struct Call: Identifiable, Codable, Hashable {
     let to: Caller?
     let via: String
     let duration: Duration
-    let isArchived: Bool
+    var isArchived: Bool
     let callType: Status
 }
 
