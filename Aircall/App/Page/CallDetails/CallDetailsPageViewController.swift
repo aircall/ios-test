@@ -41,6 +41,11 @@ class CallDetailsPageView: UIView {
     @IBOutlet private var callTimeLabel: UILabel!
     @IBOutlet private var callInfoLabel: UILabel!
     @IBOutlet private var durationLabel: UILabel!
+    @IBOutlet private var boxContainer: UIView!
+    
+    override func awakeFromNib() {
+        boxContainer.styleBox()
+    }
     
     func bind(call: Call) {
         DirectionViewComponent.render(call.direction, in: directionIcon)

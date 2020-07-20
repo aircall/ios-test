@@ -30,6 +30,7 @@
 		49E4DA3B24B77F2D0090AFB7 /* CallerConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA3A24B77F2D0090AFB7 /* CallerConverter.swift */; };
 		49E4DA3D24B77F480090AFB7 /* DirectionViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA3C24B77F480090AFB7 /* DirectionViewComponent.swift */; };
 		49E4DA3F24B77F540090AFB7 /* CallStatusConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA3E24B77F540090AFB7 /* CallStatusConverter.swift */; };
+		49F8217D24C59B5900BAE914 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8217C24C59B5900BAE914 /* UIView+Style.swift */; };
 		49FCC53B24C484D500458DCA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53A24C484D500458DCA /* DateConverterTests.swift */; };
 		49FCC53D24C4858800458DCA /* DurationConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53C24C4858800458DCA /* DurationConverterTests.swift */; };
 		49FCC53F24C48A4300458DCA /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53E24C48A4300458DCA /* CallRepository.swift */; };
@@ -81,6 +82,7 @@
 		49E4DA3A24B77F2D0090AFB7 /* CallerConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallerConverter.swift; sourceTree = "<group>"; };
 		49E4DA3C24B77F480090AFB7 /* DirectionViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewComponent.swift; sourceTree = "<group>"; };
 		49E4DA3E24B77F540090AFB7 /* CallStatusConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatusConverter.swift; sourceTree = "<group>"; };
+		49F8217C24C59B5900BAE914 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		49FCC53A24C484D500458DCA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53C24C4858800458DCA /* DurationConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53E24C48A4300458DCA /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				49E4DA3224B775E60090AFB7 /* ImageStyle.swift */,
+				49F8217C24C59B5900BAE914 /* UIView+Style.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				49E4DA1924B73D370090AFB7 /* ActivityFeedPageViewController.swift in Sources */,
 				4938FEFB24B720970066B4CD /* AppDelegate.swift in Sources */,
 				4991974324B8A91F0007EC5B /* DurationConverter.swift in Sources */,
+				49F8217D24C59B5900BAE914 /* UIView+Style.swift in Sources */,
 				49E4DA3924B779030090AFB7 /* CallViewComponent.swift in Sources */,
 				49E4DA3B24B77F2D0090AFB7 /* CallerConverter.swift in Sources */,
 				4938FEFD24B720970066B4CD /* SceneDelegate.swift in Sources */,

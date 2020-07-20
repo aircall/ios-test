@@ -24,19 +24,20 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dys-wM-gKB">
                                                 <rect key="frame" x="20" y="9.5" width="92.5" height="90.5"/>
+                                                <color key="tintColor" name="Colors/secondaryText"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="64" scale="large"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+44 1234-5678-90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-QI-Wo2">
                                                 <rect key="frame" x="144.5" y="16" width="249.5" height="76.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Colors/secondaryText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="16" left="8" bottom="32" right="8"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="Colors/background"/>
+                                <color key="backgroundColor" name="Colors/secondaryBackground"/>
                                 <constraints>
                                     <constraint firstItem="ToU-s1-wOQ" firstAttribute="leading" secondItem="FnY-3X-Bc5" secondAttribute="leading" id="QU9-rU-GA4"/>
                                     <constraint firstAttribute="bottom" secondItem="ToU-s1-wOQ" secondAttribute="bottom" id="Tlc-pb-CZa"/>
@@ -45,33 +46,33 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfB-Fy-b2e">
-                                <rect key="frame" x="20" y="152.5" width="394" height="57"/>
+                                <rect key="frame" x="20" y="152.5" width="394" height="49.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-a7-twI">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="49.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="phone.arrow.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-iB-v80">
-                                                <rect key="frame" x="16" y="8.5" width="20.5" height="39.5"/>
+                                                <rect key="frame" x="16" y="8.5" width="20.5" height="32"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-ob-ICY">
-                                                <rect key="frame" x="68.5" y="8" width="229.5" height="41"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-ob-ICY">
+                                                <rect key="frame" x="68.5" y="8" width="229.5" height="33.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Kevin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uie-dZ-QvA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="229.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="229.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="via office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-Zx-OfP">
-                                                        <rect key="frame" x="0.0" y="20.5" width="229.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="via office" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-Zx-OfP">
+                                                        <rect key="frame" x="0.0" y="19" width="229.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12h12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIi-2B-l2e">
-                                                <rect key="frame" x="330" y="8" width="44" height="41"/>
+                                                <rect key="frame" x="330" y="8" width="44" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -101,6 +102,7 @@
                         <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                         <viewLayoutGuide key="safeArea" id="LIQ-4H-FkI"/>
                         <connections>
+                            <outlet property="boxContainer" destination="PfB-Fy-b2e" id="F2D-8Z-J4V"/>
                             <outlet property="callInfoLabel" destination="etZ-Zx-OfP" id="Et7-9Q-ESz"/>
                             <outlet property="callNumberLabel" destination="Bhh-QI-Wo2" id="Gxa-jF-yMz"/>
                             <outlet property="callTimeLabel" destination="sIi-2B-l2e" id="iXe-CM-jFD"/>
@@ -117,8 +119,11 @@
     <resources>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="phone.arrow.up.right" catalog="system" width="128" height="115"/>
-        <namedColor name="Colors/background">
+        <namedColor name="Colors/secondaryBackground">
             <color red="0.054901960784313725" green="0.5607843137254902" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Colors/secondaryText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
