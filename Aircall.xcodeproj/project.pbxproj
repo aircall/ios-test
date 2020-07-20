@@ -31,6 +31,8 @@
 		49E4DA3D24B77F480090AFB7 /* DirectionViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA3C24B77F480090AFB7 /* DirectionViewComponent.swift */; };
 		49E4DA3F24B77F540090AFB7 /* CallStatusConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA3E24B77F540090AFB7 /* CallStatusConverter.swift */; };
 		49F8217D24C59B5900BAE914 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8217C24C59B5900BAE914 /* UIView+Style.swift */; };
+		49F8217F24C5ACC500BAE914 /* URLResponse+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8217E24C5ACC500BAE914 /* URLResponse+Validate.swift */; };
+		49F8218124C5ADB100BAE914 /* URLRequest+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8218024C5ADB100BAE914 /* URLRequest+Codable.swift */; };
 		49FCC53B24C484D500458DCA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53A24C484D500458DCA /* DateConverterTests.swift */; };
 		49FCC53D24C4858800458DCA /* DurationConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53C24C4858800458DCA /* DurationConverterTests.swift */; };
 		49FCC53F24C48A4300458DCA /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCC53E24C48A4300458DCA /* CallRepository.swift */; };
@@ -83,6 +85,8 @@
 		49E4DA3C24B77F480090AFB7 /* DirectionViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewComponent.swift; sourceTree = "<group>"; };
 		49E4DA3E24B77F540090AFB7 /* CallStatusConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatusConverter.swift; sourceTree = "<group>"; };
 		49F8217C24C59B5900BAE914 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
+		49F8217E24C5ACC500BAE914 /* URLResponse+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Validate.swift"; sourceTree = "<group>"; };
+		49F8218024C5ADB100BAE914 /* URLRequest+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Codable.swift"; sourceTree = "<group>"; };
 		49FCC53A24C484D500458DCA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53C24C4858800458DCA /* DurationConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConverterTests.swift; sourceTree = "<group>"; };
 		49FCC53E24C48A4300458DCA /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 			children = (
 				49FCC54B24C4B61800458DCA /* RepositoryAdapter */,
 				49FCC54024C48B1700458DCA /* DataSource */,
+				49F8217E24C5ACC500BAE914 /* URLResponse+Validate.swift */,
+				49F8218024C5ADB100BAE914 /* URLRequest+Codable.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				4991974324B8A91F0007EC5B /* DurationConverter.swift in Sources */,
 				49F8217D24C59B5900BAE914 /* UIView+Style.swift in Sources */,
 				49E4DA3924B779030090AFB7 /* CallViewComponent.swift in Sources */,
+				49F8218124C5ADB100BAE914 /* URLRequest+Codable.swift in Sources */,
 				49E4DA3B24B77F2D0090AFB7 /* CallerConverter.swift in Sources */,
 				4938FEFD24B720970066B4CD /* SceneDelegate.swift in Sources */,
 				49E4DA1C24B743FC0090AFB7 /* CallViewCell.swift in Sources */,
@@ -583,6 +590,7 @@
 				49E4DA1724B733BC0090AFB7 /* Duration.swift in Sources */,
 				49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */,
 				49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */,
+				49F8217F24C5ACC500BAE914 /* URLResponse+Validate.swift in Sources */,
 				49FCC54324C48D3400458DCA /* AircallRestDataSource.swift in Sources */,
 				49E4DA2924B75F4F0090AFB7 /* CallDetailsPageViewModel.swift in Sources */,
 				49E4DA3D24B77F480090AFB7 /* DirectionViewComponent.swift in Sources */,

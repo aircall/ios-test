@@ -11,5 +11,5 @@ import Combine
 
 protocol CallRepository {
     func loadAll() -> AnyPublisher<[Call], Error>
-    func save(call: Call) -> AnyPublisher<Call, Error>
+    func archive(call: Call) -> AnyPublisher<Call, Error>
 }

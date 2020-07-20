@@ -59,6 +59,7 @@ class AircallRestDataSource {
     func findActivities() -> AnyPublisher<[Call], Error> {
         return session
             .dataTaskPublisher(for: AircallRestEndpoint.activities.url(relativeTo: baseURL))
+            .validate()
             .map(\.data)
             .decode(type: [Call].self, decoder: decoder)
             .eraseToAnyPublisher()
@@ -71,40 +72,13 @@ class AircallRestDataSource {
             
             return session
                 .dataTaskPublisher(for: request)
+                .validate()
+                .map { _ in () }
                 .eraseToAnyPublisher()
-                .eraseToAnyError()
         }
         catch {
             return Fail(error: error).eraseToAnyPublisher()
         }
-    }
-}
-
-extension URLRequest {
-    func body<Item: Encodable, Encoder: TopLevelEncoder>(_ body: Item, encoder: Encoder) throws -> Self
-        where Encoder.Output == Data {
-            var request = self
-            
-            request.httpMethod = "POST"
-            request.httpBody = try encoder.encode(body)
-            
-            return request
-    }
-}
-
-extension AnyPublisher {
-    func eraseToAnyError() -> AnyPublisher<Output, Error> {
-        mapError { $0 as Error }
-            .eraseToAnyPublisher()
-    }
-}
-
-extension URLSession.DataTaskPublisher {
-    /// An AnyPublisher also return types
-    public func eraseToAnyPublisher() -> AnyPublisher<Void, URLError> {
-        self
-            .map { _ in () }
-            .eraseToAnyPublisher()
     }
 }
 
