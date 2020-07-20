@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		4938FEFB24B720970066B4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938FEFA24B720970066B4CD /* AppDelegate.swift */; };
 		4938FEFD24B720970066B4CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938FEFC24B720970066B4CD /* SceneDelegate.swift */; };
-		4938FEFF24B720970066B4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938FEFE24B720970066B4CD /* ViewController.swift */; };
 		4938FF0224B720970066B4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938FF0024B720970066B4CD /* Main.storyboard */; };
 		4938FF0424B720980066B4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4938FF0324B720980066B4CD /* Assets.xcassets */; };
 		4938FF0724B720980066B4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938FF0524B720980066B4CD /* LaunchScreen.storyboard */; };
 		4991974324B8A91F0007EC5B /* DurationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4991974224B8A91F0007EC5B /* DurationConverter.swift */; };
 		49E4DA0824B732260090AFB7 /* StoryboardScenes.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0424B732260090AFB7 /* StoryboardScenes.generated.swift */; };
 		49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0524B732260090AFB7 /* Assets.generated.swift */; };
-		49E4DA0A24B732260090AFB7 /* ServiceResolver.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0624B732260090AFB7 /* ServiceResolver.generated.swift */; };
-		49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0724B732260090AFB7 /* Register.generated.swift */; };
 		49E4DA1424B733390090AFB7 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1324B733390090AFB7 /* Call.swift */; };
 		49E4DA1724B733BC0090AFB7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1624B733BC0090AFB7 /* Duration.swift */; };
 		49E4DA1924B73D370090AFB7 /* ActivityFeedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1824B73D370090AFB7 /* ActivityFeedPageViewController.swift */; };
@@ -60,7 +57,6 @@
 		4938FEF724B720970066B4CD /* Aircall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aircall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4938FEFA24B720970066B4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4938FEFC24B720970066B4CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4938FEFE24B720970066B4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4938FF0124B720970066B4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4938FF0324B720980066B4CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4938FF0624B720980066B4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,8 +66,6 @@
 		4991974224B8A91F0007EC5B /* DurationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConverter.swift; sourceTree = "<group>"; };
 		49E4DA0424B732260090AFB7 /* StoryboardScenes.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.generated.swift; sourceTree = "<group>"; };
 		49E4DA0524B732260090AFB7 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
-		49E4DA0624B732260090AFB7 /* ServiceResolver.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResolver.generated.swift; sourceTree = "<group>"; };
-		49E4DA0724B732260090AFB7 /* Register.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.generated.swift; sourceTree = "<group>"; };
 		49E4DA1324B733390090AFB7 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		49E4DA1624B733BC0090AFB7 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		49E4DA1824B73D370090AFB7 /* ActivityFeedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedPageViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +143,6 @@
 				49E4DA0F24B733090090AFB7 /* App */,
 				4938FEFA24B720970066B4CD /* AppDelegate.swift */,
 				4938FEFC24B720970066B4CD /* SceneDelegate.swift */,
-				4938FEFE24B720970066B4CD /* ViewController.swift */,
 				4938FF0024B720970066B4CD /* Main.storyboard */,
 				4938FF0324B720980066B4CD /* Assets.xcassets */,
 				4938FF0524B720980066B4CD /* LaunchScreen.storyboard */,
@@ -190,8 +183,6 @@
 			children = (
 				49E4DA0424B732260090AFB7 /* StoryboardScenes.generated.swift */,
 				49E4DA0524B732260090AFB7 /* Assets.generated.swift */,
-				49E4DA0624B732260090AFB7 /* ServiceResolver.generated.swift */,
-				49E4DA0724B732260090AFB7 /* Register.generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -409,7 +400,6 @@
 			buildConfigurationList = 4938FF1624B720980066B4CD /* Build configuration list for PBXNativeTarget "Aircall" */;
 			buildPhases = (
 				ECD448326523452734FBE770 /* [CP] Check Pods Manifest.lock */,
-				10B45C617ABE386C22E6B3C9 /* [CP-User] 🛠️ Generate injection */,
 				A8B147ABF03EB1B11A0AA12A /* [CP-User] 🛠️ Generate resources */,
 				4938FEF324B720970066B4CD /* Sources */,
 				4938FEF424B720970066B4CD /* Frameworks */,
@@ -503,22 +493,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10B45C617ABE386C22E6B3C9 /* [CP-User] 🛠️ Generate injection */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				.annotation.yml,
-			);
-			name = "[CP-User] 🛠️ Generate injection";
-			outputFileListPaths = (
-				.annotation.outputs.xcfilelist,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/AnnotationInject/Scripts/annotationinject\" --config .annotation.yml\ntouch .annotation.yml\n";
-		};
 		5B827B3829AE1D0DA9411567 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -594,8 +568,6 @@
 				49E4DA0824B732260090AFB7 /* StoryboardScenes.generated.swift in Sources */,
 				49E4DA1424B733390090AFB7 /* Call.swift in Sources */,
 				49E4DA2224B74FF00090AFB7 /* ActivityFeedPageViewModel.swift in Sources */,
-				4938FEFF24B720970066B4CD /* ViewController.swift in Sources */,
-				49E4DA0A24B732260090AFB7 /* ServiceResolver.generated.swift in Sources */,
 				49E4DA1924B73D370090AFB7 /* ActivityFeedPageViewController.swift in Sources */,
 				4938FEFB24B720970066B4CD /* AppDelegate.swift in Sources */,
 				4991974324B8A91F0007EC5B /* DurationConverter.swift in Sources */,
@@ -605,7 +577,6 @@
 				49E4DA1C24B743FC0090AFB7 /* CallViewCell.swift in Sources */,
 				49E4DA3F24B77F540090AFB7 /* CallStatusConverter.swift in Sources */,
 				49E4DA1724B733BC0090AFB7 /* Duration.swift in Sources */,
-				49E4DA0B24B732260090AFB7 /* Register.generated.swift in Sources */,
 				49E4DA1F24B7473B0090AFB7 /* CallDataSource.swift in Sources */,
 				49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */,
 				49FCC54324C48D3400458DCA /* AircallRestDataSource.swift in Sources */,
