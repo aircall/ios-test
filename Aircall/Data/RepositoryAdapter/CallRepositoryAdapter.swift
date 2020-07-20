@@ -12,7 +12,7 @@ import Combine
 final class CallRepositoryAdapter: CallRepository {
     private let aircall: AircallRestDataSource
     
-    init(aircall: AircallRestDataSource = .default()) {
+    init(aircall: AircallRestDataSource = CacheDataSourceProxy(dataSource: AircallRestClient.default())) {
         self.aircall = aircall
     }
     

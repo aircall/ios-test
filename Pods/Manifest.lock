@@ -1,4 +1,7 @@
 PODS:
+  - Cache (5.2.0)
+  - CombineExpectations (0.5.0)
+  - ReachabilitySwift (5.0.0)
   - Reusable (4.1.1):
     - Reusable/Storyboard (= 4.1.1)
     - Reusable/View (= 4.1.1)
@@ -7,18 +10,36 @@ PODS:
   - SwiftGen (6.1.0)
 
 DEPENDENCIES:
+  - Cache
+  - CombineExpectations (from `https://github.com/groue/CombineExpectations`, tag `v0.5.0`)
+  - ReachabilitySwift
   - Reusable
   - SwiftGen
 
 SPEC REPOS:
   trunk:
+    - Cache
+    - ReachabilitySwift
     - Reusable
     - SwiftGen
 
+EXTERNAL SOURCES:
+  CombineExpectations:
+    :git: https://github.com/groue/CombineExpectations
+    :tag: v0.5.0
+
+CHECKOUT OPTIONS:
+  CombineExpectations:
+    :git: https://github.com/groue/CombineExpectations
+    :tag: v0.5.0
+
 SPEC CHECKSUMS:
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  CombineExpectations: 0a28cbb6a086985f5fece65f7df3b9accd150ba9
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: f6912e8d7b157827b9e8e8fd92c5b31bcffaf909
+PODFILE CHECKSUM: 15e252c68ed9035540cd48df0681651b7d2852fe
 
 COCOAPODS: 1.9.3
