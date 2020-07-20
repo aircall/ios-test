@@ -11,14 +11,25 @@ import Combine
 
 class ActivityFeedPageViewModel {
     struct State {
-        let calls: [Call]
+        var calls: [Call]
         var selectedCall: Call?
     }
     
     @Published private(set) var state: State
+    private let callRepository: CallRepository
+    private var bag: Set<AnyCancellable> = []
     
-    init(state: State) {
+    init(state: State, callRepository: CallRepository) {
         self._state = Published(initialValue: state)
+        self.callRepository = callRepository
+    }
+    
+    func load() {
+        callRepository
+            .loadAll()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { [weak self] in self?.state.calls = $0 })
+            .store(in: &bag)
     }
     
     func selectAction(call: Call?) {
