@@ -13,9 +13,7 @@ import Combine
 class ActivityFeedPageViewController: UITableViewController {
     var viewModel: ActivityFeedPageViewModel = ActivityFeedPageViewModel(
         state: .init(calls: []),
-        callRepository: CallRepositoryAdapter(
-            aircall: AircallRestDataSource(baseURL: URL(string: "https://aircall-job.herokuapp.com")!)
-        )
+        callRepository: CallRepositoryAdapter()
     )
     
     private lazy var dataSource = CallDataSource(tableView: tableView)

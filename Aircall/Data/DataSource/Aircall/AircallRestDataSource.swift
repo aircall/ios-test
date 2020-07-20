@@ -52,6 +52,10 @@ class AircallRestDataSource {
         self.baseURL = baseURL
     }
     
+    static func `default`() -> AircallRestDataSource {
+        AircallRestDataSource(baseURL: URL(string: "https://aircall-job.herokuapp.com")!)
+    }
+    
     func findActivities() -> AnyPublisher<[Call], Error> {
         return session
             .dataTaskPublisher(for: AircallRestEndpoint.activities.url(relativeTo: baseURL))
