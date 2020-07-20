@@ -13,6 +13,7 @@
 		4938FF0424B720980066B4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4938FF0324B720980066B4CD /* Assets.xcassets */; };
 		4938FF0724B720980066B4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938FF0524B720980066B4CD /* LaunchScreen.storyboard */; };
 		4991974324B8A91F0007EC5B /* DurationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4991974224B8A91F0007EC5B /* DurationConverter.swift */; };
+		49E1E79D24C6176E00AA1512 /* CallRepositoryAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E79C24C6176E00AA1512 /* CallRepositoryAdapterTests.swift */; };
 		49E4DA0824B732260090AFB7 /* StoryboardScenes.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0424B732260090AFB7 /* StoryboardScenes.generated.swift */; };
 		49E4DA0924B732260090AFB7 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA0524B732260090AFB7 /* Assets.generated.swift */; };
 		49E4DA1424B733390090AFB7 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4DA1324B733390090AFB7 /* Call.swift */; };
@@ -69,6 +70,7 @@
 		4938FF0D24B720980066B4CD /* AircallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4938FF1324B720980066B4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4991974224B8A91F0007EC5B /* DurationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConverter.swift; sourceTree = "<group>"; };
+		49E1E79C24C6176E00AA1512 /* CallRepositoryAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepositoryAdapterTests.swift; sourceTree = "<group>"; };
 		49E4DA0424B732260090AFB7 /* StoryboardScenes.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.generated.swift; sourceTree = "<group>"; };
 		49E4DA0524B732260090AFB7 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		49E4DA1324B733390090AFB7 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
@@ -186,6 +188,14 @@
 				49E4DA1B24B743FC0090AFB7 /* CallViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		49E1E79B24C6175100AA1512 /* RepositoryAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				49E1E79C24C6176E00AA1512 /* CallRepositoryAdapterTests.swift */,
+			);
+			path = RepositoryAdapter;
 			sourceTree = "<group>";
 		};
 		49E4DA0324B732260090AFB7 /* Generated */ = {
@@ -350,6 +360,7 @@
 		49FCC54424C4B3B700458DCA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				49E1E79B24C6175100AA1512 /* RepositoryAdapter */,
 				49FCC54524C4B3BC00458DCA /* DataSource */,
 			);
 			path = Data;
@@ -617,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1E79D24C6176E00AA1512 /* CallRepositoryAdapterTests.swift in Sources */,
 				49FCC53B24C484D500458DCA /* DateConverterTests.swift in Sources */,
 				49FCC55124C4B6F700458DCA /* CallTests.swift in Sources */,
 				49FCC54824C4B3F100458DCA /* AircallRestEndpointTests.swift in Sources */,
