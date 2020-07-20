@@ -5,6 +5,8 @@ platform :ios, "13"
 target :Aircall do
   script_phase(Phase.gen_resources)
 
+  pod 'Cache'
+  pod 'ReachabilitySwift'
   pod 'Reusable'
   pod 'SwiftGen'
 
