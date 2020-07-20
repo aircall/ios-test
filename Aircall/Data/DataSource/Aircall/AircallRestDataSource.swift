@@ -27,7 +27,12 @@ enum AircallRestEndpoint {
     }
 }
 
-class AircallRestDataSource {
+protocol AircallRestDataSource {
+    func findActivities() -> AnyPublisher<[Call], Error>
+    func saveActivity(call: Call) -> AnyPublisher<Void, Error>
+}
+
+class AircallRestClient: AircallRestDataSource {
     private let session: URLSession
     private let baseURL: URL
     private lazy var encoder: JSONEncoder = {
@@ -52,8 +57,8 @@ class AircallRestDataSource {
         self.baseURL = baseURL
     }
     
-    static func `default`() -> AircallRestDataSource {
-        AircallRestDataSource(baseURL: URL(string: "https://aircall-job.herokuapp.com")!)
+    static func `default`() -> AircallRestClient {
+        AircallRestClient(baseURL: URL(string: "https://aircall-job.herokuapp.com")!)
     }
     
     func findActivities() -> AnyPublisher<[Call], Error> {
