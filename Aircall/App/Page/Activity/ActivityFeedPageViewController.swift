@@ -12,9 +12,7 @@ import Combine
 
 class ActivityFeedPageViewController: UITableViewController {
     var viewModel: ActivityFeedPageViewModel = ActivityFeedPageViewModel(
-        state: .init(calls: []),
-        callRepository: CallRepositoryAdapter()
-    )
+        state: .init(calls: []))
     
     private lazy var dataSource = CallDataSource(tableView: tableView)
     private var bag: Set<AnyCancellable> = []
@@ -23,18 +21,13 @@ class ActivityFeedPageViewController: UITableViewController {
         title = "Activity"
         
         viewModel.load()
+        bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         viewModel.selectAction(call: nil)
-        bind()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        bag.removeAll()
     }
     
     private func bind() {
@@ -57,7 +50,9 @@ class ActivityFeedPageViewController: UITableViewController {
     
     private func showCallDetails(call: Call) {
         let viewController = CallDetailsPageViewController.instantiate(
-            viewModel: CallDetailsPageViewModel(call: call)
+            viewModel: CallDetailsPageViewModel(call: call) { [viewModel] in
+                viewModel.onCallArchived()
+            }
         )
         
         navigationController?.pushViewController(viewController, animated: true)

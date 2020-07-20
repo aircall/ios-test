@@ -17,11 +17,17 @@ final class CallRepositoryAdapter: CallRepository {
     }
     
     func loadAll() -> AnyPublisher<[Call], Error> {
-        aircall.findActivities()
+        aircall
+            .findActivities()
+            .map { $0.filter { !$0.isArchived } }
+            .eraseToAnyPublisher()
     }
     
-    func save(call: Call) -> AnyPublisher<Call, Error> {
-        aircall
+    func archive(call: Call) -> AnyPublisher<Call, Error> {
+        var call = call
+        call.isArchived = true
+
+        return aircall
             .saveActivity(call: call)
             .map { call }
             .eraseToAnyPublisher()

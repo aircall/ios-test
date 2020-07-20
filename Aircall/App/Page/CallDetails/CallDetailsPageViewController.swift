@@ -22,7 +22,10 @@ class CallDetailsPageViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        navigationItem.rightBarButtonItem = .archive()
+        navigationItem.rightBarButtonItem = .archive(
+            target: viewModel!,
+            action: #selector(CallDetailsPageViewModel.archiveAction)
+        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,11 +61,11 @@ class CallDetailsPageView: UIView {
 }
 
 extension UIBarButtonItem {
-    static func archive() -> UIBarButtonItem {
+    static func archive(target: Any, action: Selector) -> UIBarButtonItem {
         UIBarButtonItem(
             image: UIImage(systemName: "archivebox"),
             style: .plain,
-            target: nil,
-            action: nil)
+            target: target,
+            action: action)
     }
 }
