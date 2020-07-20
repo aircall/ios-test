@@ -26,6 +26,8 @@ enum CallInfoViewComponent {
     /// Render call info based on its direction
     static func render(_ call: Call, detailed: Bool = false, in label: UILabel) {
         switch (call.direction) {
+        case .inbound where detailed:
+            label.text = "via \(call.via)"
         case .inbound:
             label.text = CallStatusConverter.string(status: call.callType)
         case .outbound where detailed:
@@ -38,7 +40,8 @@ enum CallInfoViewComponent {
 
 enum CallDurationViewComponent {
     static func render(_ duration: Duration, status: Call.Status, in label: UILabel) {
-        label.isHidden = status != .answered
-        label.text = DurationConverter.string(duration: duration)
+        label.text = status == .answered
+            ? DurationConverter.string(duration: duration)
+            : CallStatusConverter.string(status: status)
     }
 }
