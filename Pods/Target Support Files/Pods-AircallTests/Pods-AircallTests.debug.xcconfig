@@ -1,10 +1,13 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Cache/Cache.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Reusable/Reusable.modulemap"
-OTHER_LDFLAGS = $(inherited) -framework "CoreTelephony" -framework "Foundation" -framework "SystemConfiguration" -framework "UIKit"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Cache/Cache.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Reusable/Reusable.modulemap"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CombineExpectations"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Cache/Cache.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CombineExpectations/GRDBCombine.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Reusable/Reusable.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CombineExpectations" -framework "Combine" -framework "CoreTelephony" -framework "Foundation" -framework "SystemConfiguration" -framework "UIKit" -framework "XCTest"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Cache/Cache.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CombineExpectations/GRDBCombine.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Reusable/Reusable.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Cache" "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift" "${PODS_CONFIGURATION_BUILD_DIR}/Reusable"
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Cache" "${PODS_CONFIGURATION_BUILD_DIR}/CombineExpectations" "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift" "${PODS_CONFIGURATION_BUILD_DIR}/Reusable"
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

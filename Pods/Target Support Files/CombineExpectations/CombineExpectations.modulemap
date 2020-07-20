@@ -1,0 +1,6 @@
+module GRDBCombine {
+  umbrella header "CombineExpectations-umbrella.h"
+
+  export *
+  module * { export * }
+}

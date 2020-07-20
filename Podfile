@@ -12,5 +12,7 @@ target :Aircall do
 
   target :AircallTests do
     inherit! :search_paths
+
+    pod 'CombineExpectations', :git => 'https://github.com/groue/CombineExpectations', :tag => 'v0.5.0'
   end
 end
