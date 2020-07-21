@@ -3,14 +3,29 @@
 - Cocoapods (pods are committed so no need to install it if you don't)
 - Xcode 11 (iOS 13)
 
-## Improvments
+## Completion
+
+Completion: ~80%. Remaing part would be handling archiving when dealing with cache. Most challening part was caching: it is tedious to do something not too complicated (also see Known Bugs).
+
+## Improvements
 
 - Write a lot more tests (especially on Data layer)
 - Handle loading/failing cases in UI
-- Better caching
+- Handling archiving while using cache
 - Dependency injection (here dependencies are hardcoded using default argument values)
 - DTO models for Data layer
 - Better design 🤷
+
+### Known Bugs
+
+- When deactiving/activing internet and archiving call, call is still visible in list (mostly Reachability considering device is still offline).
+
+## Libraries
+
+Project rely on very few libraries:
+- `Reusable`; `SwiftGen` for compile checking on resources (less crashes because of mispelling/renaming)
+- `Cache`; `ReachabilitySwift` for cache
+- `Combine` for Rx programming. Not familiar with it yet so be please be lenient :D
 
 ## Architecture
 Architecture relies on:
