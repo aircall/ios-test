@@ -176,7 +176,7 @@
         <image name="icon_notes" width="32" height="32"/>
         <image name="icon_tag" width="32" height="32"/>
         <namedColor name="Bunker">
-            <color red="0.062745098039215685" green="0.090196078431372548" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HintOfRed">
             <color red="0.98431372549019602" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

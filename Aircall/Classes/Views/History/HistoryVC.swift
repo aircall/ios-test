@@ -28,6 +28,11 @@ class HistoryVC: UITableViewController {
     bindViewModel()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.prefersLargeTitles = true
+  }
+
   // MARK: - Setup UI
 
   /// UI Config Navigation Bar

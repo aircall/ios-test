@@ -26,6 +26,7 @@ class HistoryDetailVC: UITableViewController {
 
   /// UI Config Navigation Bar
   private func setupNavBar() {
+    navigationItem.largeTitleDisplayMode = .never
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       image: UIImage(systemName: "archivebox"),
       style: UIBarButtonItem.Style.plain,
