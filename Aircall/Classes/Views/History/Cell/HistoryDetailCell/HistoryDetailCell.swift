@@ -47,7 +47,7 @@ class HistoryDetailCell: HistoryDefaultCell {
 
   // MARK: - Methods
 
-  /// Setup cell at sepcific section : Contact or Call
+  /// Setup cell at specific section : Contact or Call
   func setupCell(at indexPath: IndexPath, section: HeaderSectionType, with activity: Activity) {
     switch section {
     case .contact:
