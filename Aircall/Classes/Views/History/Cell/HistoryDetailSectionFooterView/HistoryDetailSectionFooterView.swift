@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// HistoryDetail section footerView
+/// Custom footer on grouped tableView
 class HistoryDetailSectionFooterView: UITableViewHeaderFooterView {
 
   // MARK: - Properties

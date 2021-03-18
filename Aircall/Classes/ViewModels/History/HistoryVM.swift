@@ -40,7 +40,7 @@ class HistoryVM {
       .map({ (result: Result<[Activity], NetworkError>) -> [Activity] in
         switch result {
         case .success(let activities):
-          return activities.filter { !$0.is_archived }
+          return activities.filter { !$0.isArchived }
         case .failure(let error):
           print(error.localizedDescription)
           return []
@@ -71,7 +71,7 @@ class HistoryVM {
       .map({ (result: Result<[Activity], NetworkError>) -> [Activity] in
         switch result {
         case .success(let activities):
-          return activities.filter { !$0.is_archived }
+          return activities.filter { !$0.isArchived }
         case .failure(let error):
           print(error.localizedDescription)
           return []

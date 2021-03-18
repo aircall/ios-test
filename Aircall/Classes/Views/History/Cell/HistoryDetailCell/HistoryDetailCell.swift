@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Cell for history detail viewcontroller
 class HistoryDetailCell: HistoryDefaultCell {
 
   // MARK: - Properties
@@ -45,6 +46,8 @@ class HistoryDetailCell: HistoryDefaultCell {
   }
 
   // MARK: - Methods
+
+  /// Setup cell at sepcific section : Contact or Call
   func setupCell(at indexPath: IndexPath, section: HeaderSectionType, with activity: Activity) {
     switch section {
     case .contact:
@@ -54,6 +57,7 @@ class HistoryDetailCell: HistoryDefaultCell {
     }
   }
 
+  /// Setup contact information cell
   private func setupContactCellWith(_ activity: Activity) {
     accessoryType = .detailButton
 
@@ -64,6 +68,7 @@ class HistoryDetailCell: HistoryDefaultCell {
     titleLabel.text = activity.from
   }
 
+  /// Setup call information cell
   private func setupCallCellWith(_ activity: Activity, at row: RowType) {
     accessoryType = .none
 
@@ -74,7 +79,7 @@ class HistoryDetailCell: HistoryDefaultCell {
     if row == .callRow {
       setupIcon(activity: activity)
       titleLabel.text = activity.direction == .inbound ? "Incoming call" : "Outgoing call"
-      subtitleLabel.text = activity.call_type.rawValue.capitalized
+      subtitleLabel.text = activity.callType.rawValue.capitalized
     } else {
       titleLabel.text = activity.via
       subtitleLabel.text = activity.to ?? "Unknown"

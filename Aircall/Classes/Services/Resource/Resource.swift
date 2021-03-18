@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Create request for URLSession
 struct Resource<T: Decodable> {
   private let url: URL
   private let method: HTTPMethod
@@ -14,7 +15,7 @@ struct Resource<T: Decodable> {
   private let body: [String: Any]
   private let header: [String:String] = [:]
 
-  /// Created the necessary to make a request
+  /// Create request for URLSession
   var request: URLRequest? {
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
 

@@ -13,16 +13,19 @@ class HistoryDetailVM {
   // MARK: - Properties
   var activity: Activity
 
+  /// Array to determine how many section should be displayed
   let tableViewCells = [
     HistoryDetailCell.reuseIdentifier,
     HistoryDetailCell.reuseIdentifier
   ]
 
+  /// Array for register custom header & footer view
   let sectionHeaderFooterViews = [
     HistoryDetailSectionHeaderView.reuseIdentifier,
     HistoryDetailSectionFooterView.reuseIdentifier
   ]
 
+  /// Array of section title to display
   let sectionHeaderTitle = [
     "Contact Information",
     "Call Information"

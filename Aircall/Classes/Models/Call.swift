@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Call model
+/// Model  is used when all archived calls  are reset
 struct Call: Codable {
   let message: String
 }

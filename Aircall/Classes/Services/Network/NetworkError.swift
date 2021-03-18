@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Enum representing error type
 enum NetworkError: Error {
   case unknown
   case invalidRequest

@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum EndPoint: CustomStringConvertible {
+/// Enum representing routes API
+enum Routes: CustomStringConvertible {
   case activities
   case activitiesBy(id: Int)
   case archiveActivity(id: Int)

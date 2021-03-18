@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Cell for history viewcontroller
 class HistoryItemCell: HistoryDefaultCell {
 
   // MARK: - Properties
@@ -39,13 +40,15 @@ class HistoryItemCell: HistoryDefaultCell {
   }
 
   // MARK: - Methods
+
+  /// Update cell ui with activity payload
   func setupCellWith(_ activity: Activity) {
     setupIcon(activity: activity)
 
     fromLabel.text = activity.from
     toLabel.text = activity.to ?? "Unknown"
-    dateLabel.text = activity.created_at.getFormattedDate(format: "MMM d")
-    timeLabel.text = activity.created_at.getFormattedDate(format: "HH:mm")
+    dateLabel.text = activity.created.getFormattedDate(format: "MMM d")
+    timeLabel.text = activity.created.getFormattedDate(format: "HH:mm")
   }
 
 }

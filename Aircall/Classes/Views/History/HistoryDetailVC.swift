@@ -32,7 +32,7 @@ class HistoryDetailVC: UITableViewController {
       target: self, action: #selector(self.archiveAction))
 
     guard let activity = viewModel?.activity else { return }
-    navigationItem.title = activity.created_at.getFormattedDate(format: "MMM d, HH:mm")
+    navigationItem.title = activity.created.getFormattedDate(format: "MMM d, HH:mm")
   }
 
   /// UI Config TableView

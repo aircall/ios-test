@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// HistoryDetail section header view
+/// Custom header view on grouped tableView
 class HistoryDetailSectionHeaderView: UITableViewHeaderFooterView {
 
   // MARK: - Properties
@@ -31,6 +33,8 @@ class HistoryDetailSectionHeaderView: UITableViewHeaderFooterView {
   }
 
   // MARK: - Methods
+
+  /// Update ui cell with activity payload
   func setupSectionHeader(at section: HeaderSectionType, title: String, _ activity: Activity) {
     sectionLabel.text = title
     durationLabel.text = activity.duration.getDuration()
