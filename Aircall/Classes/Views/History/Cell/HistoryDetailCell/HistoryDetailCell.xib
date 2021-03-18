@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HistoryDetailCell" customModule="Aircall" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qif-ja-hsb">
+                        <rect key="frame" x="10" y="2" width="40" height="40"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="IfS-ja-ptG"/>
+                            <constraint firstAttribute="width" constant="40" id="rBc-OL-sPs"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-AO-ewh">
+                        <rect key="frame" x="41" y="3.5" width="44" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-EJ-bUO">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buJ-LH-NYv">
+                                <rect key="frame" x="0.0" y="22.5" width="44" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_inbound" translatesAutoresizingMaskIntoConstraints="NO" id="A05-k3-GLp">
+                        <rect key="frame" x="5" y="9" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="bP2-MH-s4p"/>
+                            <constraint firstAttribute="height" constant="26" id="gR8-cp-h7g"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7qz-AO-ewh" firstAttribute="leading" secondItem="A05-k3-GLp" secondAttribute="trailing" constant="10" id="4G5-GG-H14"/>
+                    <constraint firstItem="A05-k3-GLp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AXB-af-Kgf"/>
+                    <constraint firstItem="qif-ja-hsb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LJi-4p-YLC"/>
+                    <constraint firstItem="qif-ja-hsb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="d8H-MX-ibn"/>
+                    <constraint firstItem="7qz-AO-ewh" firstAttribute="centerY" secondItem="qif-ja-hsb" secondAttribute="centerY" id="fhz-aT-ewO"/>
+                    <constraint firstItem="A05-k3-GLp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="icN-7V-6KH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="tintColor" name="RollingStone"/>
+            <connections>
+                <outlet property="iconInAndOutbound" destination="A05-k3-GLp" id="0ha-t3-bcR"/>
+                <outlet property="imageContainerView" destination="qif-ja-hsb" id="zWN-oT-w5e"/>
+                <outlet property="stackViewLeadingConstraint" destination="4G5-GG-H14" id="1bl-YX-gbu"/>
+                <outlet property="subtitleLabel" destination="buJ-LH-NYv" id="ETf-lF-tdn"/>
+                <outlet property="titleLabel" destination="FLX-EJ-bUO" id="Fnc-dS-Wcd"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_inbound" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.69803921568627447" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RollingStone">
+            <color red="0.43529411764705883" green="0.45490196078431372" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
