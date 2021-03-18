@@ -42,7 +42,6 @@ class NetworkManagerTest: XCTestCase {
 
     networkManager
       .request(resource)
-      .map({ $0 })
       .sink(receiveValue: { (result) in
         switch result {
           case .success(let call):
@@ -63,7 +62,6 @@ class NetworkManagerTest: XCTestCase {
 
     networkManager
       .request(resource)
-      .map({ $0 })
       .sink(receiveValue: { (result) in
         switch result {
           case .success(let activity):

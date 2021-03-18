@@ -14,6 +14,7 @@ struct Resource<T: Decodable> {
   private let body: [String: Any]
   private let header: [String:String] = [:]
 
+  /// Created the necessary to make a request
   var request: URLRequest? {
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
 

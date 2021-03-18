@@ -8,7 +8,6 @@
 import Foundation
 
 enum EndPoint: CustomStringConvertible {
-
   case activities
   case activitiesBy(id: Int)
   case archiveActivity(id: Int)

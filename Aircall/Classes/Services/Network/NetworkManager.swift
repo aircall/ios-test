@@ -12,6 +12,8 @@ struct NetworkManager {
 
   typealias Handler<T> = AnyPublisher<Result<T, NetworkError>, Never>
 
+  /// Wrap URLSession to make request
+  /// - Parameters : Takes a resource that contains : url, params, header, method, body
   func request<T: Decodable>(_ resource: Resource<T>) -> AnyPublisher<Result<T, NetworkError>, Never> {
     guard let request = resource.request else { return .just(.failure(NetworkError.invalidRequest)) }
 

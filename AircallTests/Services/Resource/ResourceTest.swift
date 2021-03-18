@@ -12,8 +12,12 @@ class ResourceTest: XCTestCase {
 
   func testResourceInit() {
     XCTAssertNotNil(
-      Resource<String>(url: URL(string: "https://aircall.io/")!, params: ["":""], body: ["":""])
-      ,"Resource should be init with one of required params"
+      Resource<String>(
+        url: URL(string: "https://aircall.io/")!,
+        params: ["":""],
+        body: ["":""]
+      ),
+      "Resource should be init with one of required params"
     )
   }
 
