@@ -16,14 +16,21 @@ class HistoryDetailSectionHeaderView: UITableViewHeaderFooterView {
     return UINib(nibName: String(describing: self), bundle: nil)
   }
 
+  // MARK: - IBOutlet
   @IBOutlet weak var sectionLabel: UILabel!
   @IBOutlet weak var durationLabel: UILabel!
+
+  // MARK: - LifeCycle
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
 
   override func prepareForReuse() {
     super.prepareForReuse()
     sectionLabel.text = ""
   }
 
+  // MARK: - Methods
   func setupSectionHeader(at section: HeaderSectionType, title: String, _ activity: Activity) {
     sectionLabel.text = title
     durationLabel.text = activity.duration.getDuration()

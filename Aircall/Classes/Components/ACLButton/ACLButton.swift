@@ -15,10 +15,12 @@ class ACLButton: UIButton {
     return String(describing: type(of: self))
   }
 
+  // MARK: - IBOutlet
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var buttonIcon: UIImageView!
   @IBOutlet weak var buttonLabel: UILabel!
 
+  // MARK: - IBInspectable
   @IBInspectable var icon: UIImage = UIImage() {
     didSet {
       buttonIcon.image = icon
@@ -96,12 +98,12 @@ class ACLButton: UIButton {
   private func setupXib() {
     containerView.backgroundColor = buttonBackgroundColor
 
-    // Border with color
+    /// Apply style to the layer
     containerView.layer.borderWidth = borderWidth
     containerView.layer.borderColor = borderColor.cgColor
     containerView.layer.cornerRadius = cornerRadius
 
-    // Shadow
+    /// Apply shadow to the layer
     containerView.layer.shadowColor = shadowColor.cgColor
     containerView.layer.shadowOffset = shadowOffset
     containerView.layer.shadowOpacity = 0.7
@@ -110,6 +112,8 @@ class ACLButton: UIButton {
   }
 
   // MARK: - Methods
+
+  /// Send touch event through subviews
   override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
     if let _ = super.hitTest(point, with: event) {
         return self
@@ -117,36 +121,6 @@ class ACLButton: UIButton {
 
     return nil
   }
-
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    super.touchesBegan(touches, with: event)
-
-    // Scale down animation on touch In
-    UIView.animate(
-      withDuration: 0.5,
-      delay: 0,
-      usingSpringWithDamping: 0.6,
-      initialSpringVelocity: 0,
-      options: .beginFromCurrentState,
-      animations: {
-        self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-      })
-  }
-
-  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    super.touchesEnded(touches, with: event)
-
-    // Scale up animation on touch up
-    UIView.animate(
-      withDuration: 0.5,
-      delay: 0,
-      usingSpringWithDamping: 0.6,
-      initialSpringVelocity: 0,
-      options: .beginFromCurrentState,
-      animations: {
-        self.transform = CGAffineTransform.identity
-      })
-   }
 
   private func loadViewFromNib() {
     let bundle = Bundle(for:type(of: self))

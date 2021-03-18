@@ -12,6 +12,7 @@ class HistoryItemCell: HistoryDefaultCell {
   // MARK: - Properties
   static let identifier = "HistoryItemCell"
 
+  // MARK: - IBOutlet
   @IBOutlet weak var fromLabel: UILabel!
   @IBOutlet weak var toLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
@@ -37,6 +38,7 @@ class HistoryItemCell: HistoryDefaultCell {
     layoutMargins = .zero
   }
 
+  // MARK: - Methods
   func setupCellWith(_ activity: Activity) {
     setupIcon(activity: activity)
 

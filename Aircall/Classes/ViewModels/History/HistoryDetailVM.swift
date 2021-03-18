@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 class HistoryDetailVM {
-
-  // MARK: Properties
+  
+  // MARK: - Properties
   var activity: Activity
 
   let tableViewCells = [
@@ -23,14 +23,14 @@ class HistoryDetailVM {
     HistoryDetailSectionFooterView.reuseIdentifier
   ]
 
-  let sectionHeaderTitle = ["Contact Information", "Call Information"]
+  let sectionHeaderTitle = [
+    "Contact Information",
+    "Call Information"
+  ]
 
-  private var networkManager: NetworkManager
-
-  // MARK: Initializer
-  init(activity: Activity, networkManager: NetworkManager = NetworkManager()) {
+  // MARK: - Initializer
+  init(activity: Activity) {
     self.activity = activity
-    self.networkManager = networkManager
   }
 
 }

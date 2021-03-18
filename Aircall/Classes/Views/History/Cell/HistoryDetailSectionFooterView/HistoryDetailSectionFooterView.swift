@@ -16,6 +16,9 @@ class HistoryDetailSectionFooterView: UITableViewHeaderFooterView {
     return UINib(nibName: String(describing: self), bundle: nil)
   }
 
+  var didPressCopy: (() -> Void)?
+
+  // MARK: - IBOutlet
   @IBOutlet weak var containerView: UIView!
   
   // MARK: - Life Cycle
@@ -23,4 +26,9 @@ class HistoryDetailSectionFooterView: UITableViewHeaderFooterView {
     super.awakeFromNib()
   }
 
+  // MARK: - Actions
+  @IBAction func copyCallAction(_ sender: Any) {
+    guard  let didPressCopy = didPressCopy else { return }
+    didPressCopy()
+  }
 }

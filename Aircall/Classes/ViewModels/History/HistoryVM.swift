@@ -18,13 +18,15 @@ class HistoryVM {
   private var networkManager: NetworkManager
   private var cancellables = Set<AnyCancellable>()
 
-  // MARK: Initializer
+  // MARK: - Initializer
   init(networkManager: NetworkManager = NetworkManager()) {
     self.networkManager = networkManager
     loadActivities()
   }
 
-  // MARK: Methods
+  // MARK: - Methods
+
+  /// Network request to fetch all activities
   func loadActivities() {
     isLoading = true
 
@@ -52,6 +54,7 @@ class HistoryVM {
       .store(in: &cancellables)
   }
 
+  /// Network request to reset & fetch again all activities
   func resetActivities() {
     isLoading = true
 
@@ -82,6 +85,7 @@ class HistoryVM {
       .store(in: &cancellables)
   }
 
+  /// Network request to update specific activity
   func updateActivity(by id: Int) {
     networkManager
       .request(Resource<Activity>.updateActivitiesBy(id: id))

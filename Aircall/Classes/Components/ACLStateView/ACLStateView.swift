@@ -16,6 +16,7 @@ class ACLStateView: UIView {
 
   var didPressActionButton: (() -> Void)?
 
+  // MARK: - IBOutlet
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var actionButton: UIButton!
@@ -42,16 +43,17 @@ class ACLStateView: UIView {
     actionButton.setTitle(buttonTitle, for: .normal)
   }
 
+  // MARK: - Setup UI
   private func setupXib() {
     actionButton.addTarget(self, action: #selector(handlePressAction), for: .touchUpInside)
   }
 
+  // MARK: - Methods
   @objc private func handlePressAction() {
     guard let didPressAction = didPressActionButton else { return }
     didPressAction()
   }
 
-  // MARK: - Methods
   private func loadViewFromNib() {
     let bundle = Bundle(for:type(of: self))
     let nib = UINib(nibName: nibName, bundle: bundle)
@@ -62,4 +64,5 @@ class ACLStateView: UIView {
 
     addSubview(containerView)
    }
+
 }

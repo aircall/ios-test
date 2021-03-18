@@ -19,6 +19,7 @@ class HistoryDetailCell: HistoryDefaultCell {
   private let MIN_LEADING_CONSTRAINT: CGFloat = 10
   private let MAX_LEADING_CONSTRAINT: CGFloat = 32
 
+  // MARK: - IBOutlet
   @IBOutlet weak var imageContainerView: UIView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var subtitleLabel: UILabel!
@@ -43,6 +44,7 @@ class HistoryDetailCell: HistoryDefaultCell {
     imageContainerView.layer.cornerRadius = 16
   }
 
+  // MARK: - Methods
   func setupCell(at indexPath: IndexPath, section: HeaderSectionType, with activity: Activity) {
     switch section {
     case .contact:

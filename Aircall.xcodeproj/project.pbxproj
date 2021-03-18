@@ -12,7 +12,7 @@
 		411620232601745A00750E8A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411620222601745A00750E8A /* NetworkManager.swift */; };
 		4116202D2601753C00750E8A /* Resource+Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4116202C2601753C00750E8A /* Resource+Activities.swift */; };
 		412D49B5260251F900E8C3BA /* Publisher+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D49B4260251F900E8C3BA /* Publisher+Utils.swift */; };
-		412D49C326027C5B00E8C3BA /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D49C226027C5B00E8C3BA /* UIImage+Color.swift */; };
+		412D49C326027C5B00E8C3BA /* UIImageView+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D49C226027C5B00E8C3BA /* UIImageView+Color.swift */; };
 		412D49C92602928200E8C3BA /* HeaderSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D49C82602928200E8C3BA /* HeaderSectionType.swift */; };
 		412D49D4260298C600E8C3BA /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D49D3260298C600E8C3BA /* RowType.swift */; };
 		4144755526012D0F00958352 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4144755426012D0F00958352 /* History.storyboard */; };
@@ -33,6 +33,12 @@
 		416D7757260372660063821E /* ACLStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D7756260372660063821E /* ACLStateView.swift */; };
 		416D775C260372750063821E /* ACLStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416D775B260372750063821E /* ACLStateView.xib */; };
 		416D776126037C410063821E /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D776026037C410063821E /* Call.swift */; };
+		416D7769260395A90063821E /* String+DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D7768260395A90063821E /* String+DateTest.swift */; };
+		416D777926039D020063821E /* String+DurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D777826039D020063821E /* String+DurationTest.swift */; };
+		416D777D26039F4F0063821E /* UIColor+NameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D777C26039F4F0063821E /* UIColor+NameTest.swift */; };
+		416D77812603A0AF0063821E /* UIImageView+ColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D77802603A0AF0063821E /* UIImageView+ColorTest.swift */; };
+		416D77892603A34D0063821E /* ResourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D77882603A34D0063821E /* ResourceTest.swift */; };
+		416D778F2603A8200063821E /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D778E2603A8200063821E /* NetworkManagerTest.swift */; };
 		4170912D2602A58B0079C146 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170912C2602A58B0079C146 /* String+Date.swift */; };
 		4170913B2602B7070079C146 /* HistoryDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170913A2602B7070079C146 /* HistoryDefaultCell.swift */; };
 		417091462602BDFF0079C146 /* CallDirectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417091452602BDFF0079C146 /* CallDirectionType.swift */; };
@@ -49,18 +55,10 @@
 		41B0BAB62601657700A64DD9 /* HistoryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0BAB42601657700A64DD9 /* HistoryDetailCell.xib */; };
 		41E53B87260124F90071669D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E53B86260124F90071669D /* AppDelegate.swift */; };
 		41E53B89260124F90071669D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E53B88260124F90071669D /* SceneDelegate.swift */; };
-		41E53B9E260124FA0071669D /* AircallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E53B9D260124FA0071669D /* AircallTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		41E53B9A260124FA0071669D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 41E53B7B260124F90071669D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41E53B82260124F90071669D;
-			remoteInfo = Aircall;
-		};
-		41E53BA5260124FA0071669D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 41E53B7B260124F90071669D /* Project object */;
 			proxyType = 1;
@@ -75,7 +73,7 @@
 		411620222601745A00750E8A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4116202C2601753C00750E8A /* Resource+Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resource+Activities.swift"; sourceTree = "<group>"; };
 		412D49B4260251F900E8C3BA /* Publisher+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Utils.swift"; sourceTree = "<group>"; };
-		412D49C226027C5B00E8C3BA /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		412D49C226027C5B00E8C3BA /* UIImageView+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Color.swift"; sourceTree = "<group>"; };
 		412D49C82602928200E8C3BA /* HeaderSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionType.swift; sourceTree = "<group>"; };
 		412D49D3260298C600E8C3BA /* RowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
 		4144755426012D0F00958352 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -97,6 +95,12 @@
 		416D7756260372660063821E /* ACLStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACLStateView.swift; sourceTree = "<group>"; };
 		416D775B260372750063821E /* ACLStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACLStateView.xib; sourceTree = "<group>"; };
 		416D776026037C410063821E /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		416D7768260395A90063821E /* String+DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateTest.swift"; sourceTree = "<group>"; };
+		416D777826039D020063821E /* String+DurationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DurationTest.swift"; sourceTree = "<group>"; };
+		416D777C26039F4F0063821E /* UIColor+NameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+NameTest.swift"; sourceTree = "<group>"; };
+		416D77802603A0AF0063821E /* UIImageView+ColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ColorTest.swift"; sourceTree = "<group>"; };
+		416D77882603A34D0063821E /* ResourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTest.swift; sourceTree = "<group>"; };
+		416D778E2603A8200063821E /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		4170912C2602A58B0079C146 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		4170913A2602B7070079C146 /* HistoryDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDefaultCell.swift; sourceTree = "<group>"; };
 		417091452602BDFF0079C146 /* CallDirectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectionType.swift; sourceTree = "<group>"; };
@@ -115,9 +119,7 @@
 		41E53B86260124F90071669D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41E53B88260124F90071669D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		41E53B99260124FA0071669D /* AircallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		41E53B9D260124FA0071669D /* AircallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallTests.swift; sourceTree = "<group>"; };
 		41E53B9F260124FA0071669D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41E53BA4260124FA0071669D /* AircallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,13 +131,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		41E53B96260124FA0071669D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41E53BA1260124FA0071669D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,7 +197,7 @@
 				4170912C2602A58B0079C146 /* String+Date.swift */,
 				416377E62602D2BA00B2889F /* String+Duration.swift */,
 				4144758226012F4400958352 /* UIColor+Name.swift */,
-				412D49C226027C5B00E8C3BA /* UIImage+Color.swift */,
+				412D49C226027C5B00E8C3BA /* UIImageView+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +295,50 @@
 			path = ACLStateView;
 			sourceTree = "<group>";
 		};
+		416D77662603954D0063821E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				416D7767260395940063821E /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		416D7767260395940063821E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				416D7768260395A90063821E /* String+DateTest.swift */,
+				416D777826039D020063821E /* String+DurationTest.swift */,
+				416D777C26039F4F0063821E /* UIColor+NameTest.swift */,
+				416D77802603A0AF0063821E /* UIImageView+ColorTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		416D77742603981A0063821E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				416D7775260398210063821E /* Network */,
+				416D77872603A2F10063821E /* Resource */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		416D7775260398210063821E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				416D778E2603A8200063821E /* NetworkManagerTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		416D77872603A2F10063821E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				416D77882603A34D0063821E /* ResourceTest.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		417091392602B6E00079C146 /* HistoryDefaultCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,7 +427,6 @@
 			children = (
 				41E53B83260124F90071669D /* Aircall.app */,
 				41E53B99260124FA0071669D /* AircallTests.xctest */,
-				41E53BA4260124FA0071669D /* AircallUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,7 +447,8 @@
 		41E53B9C260124FA0071669D /* AircallTests */ = {
 			isa = PBXGroup;
 			children = (
-				41E53B9D260124FA0071669D /* AircallTests.swift */,
+				416D77742603981A0063821E /* Services */,
+				416D77662603954D0063821E /* Helpers */,
 				41E53B9F260124FA0071669D /* Info.plist */,
 			);
 			path = AircallTests;
@@ -453,24 +492,6 @@
 			productReference = 41E53B99260124FA0071669D /* AircallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		41E53BA3260124FA0071669D /* AircallUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41E53BB3260124FA0071669D /* Build configuration list for PBXNativeTarget "AircallUITests" */;
-			buildPhases = (
-				41E53BA0260124FA0071669D /* Sources */,
-				41E53BA1260124FA0071669D /* Frameworks */,
-				41E53BA2260124FA0071669D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				41E53BA6260124FA0071669D /* PBXTargetDependency */,
-			);
-			name = AircallUITests;
-			productName = AircallUITests;
-			productReference = 41E53BA4260124FA0071669D /* AircallUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -484,10 +505,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					41E53B98260124FA0071669D = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 41E53B82260124F90071669D;
-					};
-					41E53BA3260124FA0071669D = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 41E53B82260124F90071669D;
 					};
@@ -508,7 +525,6 @@
 			targets = (
 				41E53B82260124F90071669D /* Aircall */,
 				41E53B98260124FA0071669D /* AircallTests */,
-				41E53BA3260124FA0071669D /* AircallUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,13 +555,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41E53BA2260124FA0071669D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -568,7 +577,7 @@
 				4170912D2602A58B0079C146 /* String+Date.swift in Sources */,
 				4163401A26023F7800992606 /* Activity.swift in Sources */,
 				416377E72602D2BA00B2889F /* String+Duration.swift in Sources */,
-				412D49C326027C5B00E8C3BA /* UIImage+Color.swift in Sources */,
+				412D49C326027C5B00E8C3BA /* UIImageView+Color.swift in Sources */,
 				412D49C92602928200E8C3BA /* HeaderSectionType.swift in Sources */,
 				41E53B87260124F90071669D /* AppDelegate.swift in Sources */,
 				41E53B89260124F90071669D /* SceneDelegate.swift in Sources */,
@@ -591,14 +600,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E53B9E260124FA0071669D /* AircallTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41E53BA0260124FA0071669D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				416D77812603A0AF0063821E /* UIImageView+ColorTest.swift in Sources */,
+				416D777926039D020063821E /* String+DurationTest.swift in Sources */,
+				416D77892603A34D0063821E /* ResourceTest.swift in Sources */,
+				416D777D26039F4F0063821E /* UIColor+NameTest.swift in Sources */,
+				416D778F2603A8200063821E /* NetworkManagerTest.swift in Sources */,
+				416D7769260395A90063821E /* String+DateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,11 +616,6 @@
 			isa = PBXTargetDependency;
 			target = 41E53B82260124F90071669D /* Aircall */;
 			targetProxy = 41E53B9A260124FA0071669D /* PBXContainerItemProxy */;
-		};
-		41E53BA6260124FA0071669D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 41E53B82260124F90071669D /* Aircall */;
-			targetProxy = 41E53BA5260124FA0071669D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -837,46 +839,6 @@
 			};
 			name = Release;
 		};
-		41E53BB4260124FA0071669D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLSXUWGCDJ;
-				INFOPLIST_FILE = AircallUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.ravirajendran.AircallUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Aircall;
-			};
-			name = Debug;
-		};
-		41E53BB5260124FA0071669D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLSXUWGCDJ;
-				INFOPLIST_FILE = AircallUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.ravirajendran.AircallUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Aircall;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -903,15 +865,6 @@
 			buildConfigurations = (
 				41E53BB1260124FA0071669D /* Debug */,
 				41E53BB2260124FA0071669D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41E53BB3260124FA0071669D /* Build configuration list for PBXNativeTarget "AircallUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				41E53BB4260124FA0071669D /* Debug */,
-				41E53BB5260124FA0071669D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

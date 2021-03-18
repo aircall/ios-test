@@ -49,7 +49,7 @@
         <!--History DetailVC-->
         <scene sceneID="q69-Z8-K6I">
             <objects>
-                <tableViewController storyboardIdentifier="HistoryDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eD9-Ma-15E" customClass="HistoryDetailVC" customModule="Aircall" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HistoryDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eD9-Ma-15E" customClass="HistoryDetailVC" customModule="Aircall" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="uaV-7g-b4X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

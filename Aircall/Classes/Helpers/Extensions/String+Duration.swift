@@ -12,7 +12,7 @@ extension String {
   func getDuration() -> String {
     guard let duration = Int(self) else { return self }
 
-    return duration > 60 ? "(\(duration / 60) min)" : "(\(duration) sec)"
+    return duration >= 60 ? "(\(duration / 60) min)" : "(\(duration) sec)"
   }
 
 }

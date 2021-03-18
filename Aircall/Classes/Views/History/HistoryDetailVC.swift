@@ -9,6 +9,9 @@ import UIKit
 
 class HistoryDetailVC: UITableViewController {
 
+  // MARK: - Properties
+  static let identifier = "HistoryDetailVC"
+
   var viewModel: HistoryDetailVM?
   var didPressArchive: ((_ activity: Activity) -> Void)?
 
@@ -20,6 +23,8 @@ class HistoryDetailVC: UITableViewController {
   }
 
   // MARK: - Setup UI
+
+  /// UI Config Navigation Bar
   private func setupNavBar() {
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       image: UIImage(systemName: "archivebox"),
@@ -30,13 +35,16 @@ class HistoryDetailVC: UITableViewController {
     navigationItem.title = activity.created_at.getFormattedDate(format: "MMM d, HH:mm")
   }
 
+  /// UI Config TableView
   private func setupTableView() {
     guard let viewModel = viewModel else { return }
 
+    /// Register cell row
     viewModel.tableViewCells.forEach { cell in
       tableView.register(UINib(nibName: cell, bundle: nil), forCellReuseIdentifier: cell)
     }
 
+    /// Register Header & Footer view
     viewModel.sectionHeaderFooterViews.forEach { section in
       tableView.register(UINib(nibName: section, bundle: nil), forHeaderFooterViewReuseIdentifier: section)
     }
@@ -47,6 +55,7 @@ class HistoryDetailVC: UITableViewController {
     tableView.tableFooterView = UIView()
   }
 
+  /// Send an action to parent VC to archive a call
   @objc func archiveAction() {
     guard let viewModel = viewModel,
           let didPressArchive = didPressArchive else { return }
@@ -105,7 +114,7 @@ extension HistoryDetailVC {
   override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     switch section {
     case HeaderSectionType.call.rawValue:
-      return 100
+      return 125
     default:
       return 0
     }
@@ -120,7 +129,6 @@ extension HistoryDetailVC {
           let headerSection = HeaderSectionType(rawValue: section) else { return nil }
 
     headerView.setupSectionHeader(at: headerSection, title: viewModel.sectionHeaderTitle[section], viewModel.activity)
-
     return headerView
   }
 

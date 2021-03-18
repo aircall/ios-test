@@ -12,7 +12,7 @@ class HistoryVC: UITableViewController {
 
   // MARK: - Properties
   let viewModel = HistoryVM()
-  let spinnerIndicator = UIActivityIndicatorView(style: .medium)
+  let activityIndicator = UIActivityIndicatorView(style: .medium)
 
   var stateView: ACLStateView?
 
@@ -22,21 +22,25 @@ class HistoryVC: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavBar()
-    setupSpinner()
+    setupActivityIndicator()
     setupTableView()
     setupStateView()
     bindViewModel()
   }
 
   // MARK: - Setup UI
+
+  /// UI Config Navigation Bar
   private func setupNavBar() {
     navigationItem.title = "History"
   }
 
-  private func setupSpinner() {
-    spinnerIndicator.hidesWhenStopped = true
+  /// Config activity indicator
+  private func setupActivityIndicator() {
+    activityIndicator.hidesWhenStopped = true
   }
 
+  /// UI Config tableView
   private func setupTableView() {
     tableView.register(
       UINib(nibName: "\(HistoryItemCell.self)", bundle: nil),
@@ -47,25 +51,28 @@ class HistoryVC: UITableViewController {
     tableView.layoutMargins = .zero
     tableView.separatorInset = .zero
     tableView.tableFooterView = UIView()
-    tableView.backgroundView = spinnerIndicator
+    tableView.backgroundView = activityIndicator
   }
 
+  /// Display state view  when all calls are archived
+  /// Posibility to reset archived calls
   private func setupStateView() {
     stateView = ACLStateView(message: "All calls are archived", buttonTitle: "Reset calls")
     stateView?.didPressActionButton = {[weak self] in
       guard let self = self else { return }
       self.viewModel.resetActivities()
-      self.tableView.backgroundView = self.spinnerIndicator
+      self.tableView.backgroundView = self.activityIndicator
     }
   }
 
+  /// Bind with viewModel
   private func bindViewModel() {
     viewModel.$isLoading
       .sink {[unowned self] isLoading in
         if !isLoading {
-          self.spinnerIndicator.stopAnimating()
+          self.activityIndicator.stopAnimating()
         } else {
-          self.spinnerIndicator.startAnimating()
+          self.activityIndicator.startAnimating()
         }
       }
       .store(in: &cancellables)
@@ -86,15 +93,17 @@ class HistoryVC: UITableViewController {
       .store(in: &cancellables)
   }
 
+  /// update specific activity with the id
   private func handleArhiveAction(by id: Int) {
     viewModel.updateActivity(by: id)
   }
 
+  /// Show history detail viewController
   private func showDetailViewAt(_ index: Int) {
     guard let detailVC = UIStoryboard(
             name: "History",
             bundle: nil
-    ).instantiateViewController(identifier: "HistoryDetail") as? HistoryDetailVC else { return }
+    ).instantiateViewController(identifier: HistoryDetailVC.identifier) as? HistoryDetailVC else { return }
 
     let detailViewModel = HistoryDetailVM(activity: viewModel.activities[index])
     detailVC.viewModel = detailViewModel

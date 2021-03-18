@@ -12,7 +12,6 @@ enum NetworkError: Error {
   case unknown
   case invalidRequest
   case invalidResponse
-  case apiError(reason: String)
   case dataError(statusCode: Int, data: Data)
   case parserError(reason: String)
 }
