@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				41162017260173D800750E8A /* Network */,
-				416340042602338700992606 /* Resource */,
+				416340042602338700992606 /* Resources */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,13 +277,13 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		416340042602338700992606 /* Resource */ = {
+		416340042602338700992606 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				41634005260233D100992606 /* Resource.swift */,
 				4116202C2601753C00750E8A /* Resource+Activities.swift */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		416D77552603724E0063821E /* ACLStateView */ = {
