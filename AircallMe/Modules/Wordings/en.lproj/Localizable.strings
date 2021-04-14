@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Wordings
+
+  Created by Rudy Frémont on 10/04/2021.
+  
+*/
+
+"tabbar.todo.title" = "To-do";
+"tabbar.history.title" = "History";
+"tabbar.keypad.title" = "Keypad";
+"tabbar.people.title" = "People";
+
+"history.default.from.to.value.text" = "unknown number";
+
+"history.list.model.inbound.to" = "on %@";
+"history.list.model.outbound.by" = "made by %@";
+"history.list.action.archive.title" = "Archive";
+
+"history.detail.contact.information.text" = "Contact Information";
+"history.detail.call.information.text" = "Call Information";
+"history.detail.action.notes.title" = "Notes";
+"history.detail.action.tags.title" = "Tags";
+"history.detail.action.assign.title" = "Assign";
+"history.detail.action.copy.call.id.title" = "Copy call ID";
+"history.detail.contact.information.french" = "French Republic";
+"history.detail.incomming.call.missed" = "Incoming call missed";
+"history.detail.incomming.call.answer" = "Incoming call answered";
+"history.detail.incomming.call.voicemail" = "Voicemail";
+
+"history.detail.incomming.call.missed.detail" = "Abandoned by caller in the first 10 sec";
+
+"common.technical.alert.title" = "Oups an error occurs";
+"common.technical.alert.message" = "An error occurs !\nRetry ?";
+"common.technical.alert.cancel" = "Cancel";
+"common.technical.alert.retry" = "Retry";
+
