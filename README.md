@@ -3,43 +3,7 @@
 
 # Aircall - iOS Technical test
 
-  
-
-## Summary
-
-  
-
-The purpose of this test is to give you an opportunity to showcase your coding skills.
-
-To doing so, you will build a small Aircall iOS app from scratch.
-
-  
-
-### General rules
-
-- You are free to use the architecture you prefer
-
-- You are free to use the libraries you want
-
-- You are free to use UIKit or SwiftUI
-
-- The app must compatible with iOS 13+
-
-  
-
-### Things you need to implement
-
-1. Display a ****list of calls**** page
-
-2. Click on call from the list will redirect to ****call details**** page
-
-3. You should be able to ****archive a call**** from List and Details page
-
-=> Archived calls will no longer be visible from ****list of calls****
-
-  
-
-### Where to focus
+##### Where to focus
 
 1. We will pay attention on the architecture of your app
 
@@ -49,98 +13,40 @@ To doing so, you will build a small Aircall iOS app from scratch.
 
 4. Don't pay too much attention on design stuff, it's not a criteria for us. After all, you are a developer not a designer !
 
-  
 
-List of calls |  Call details
+### Write a brief outline of the architecture of your app.
 
-:-------------------------:|:-------------------------:
+I separeted my code in layers:
+- user interface layer
+- data access layer
+- business logic layer
 
-![](assets/activity_feed.png) | ![](assets/call_detail.png)
+i created framework so that it's easier to see the separations and this allow us to make public only what we need to make public.
 
-  
+I choose to have a repository between my viewModels and network layer, so the viewModel won't depend on the network layer and it will be easier to have a persistent layer in the future that may be used to have a local repository.
 
-### Need help ?
+### Explain why you decided to use each third party libraries.
 
-  
+I decided to use Quick and Nimble to improve readability in my tests.
+I would have used SwiftLint for a long-term project
 
-Don't hesitate to ask any question regarding the test at ios@aircall.io
+### What was the most difficult part of the challenge ?
 
-  
+The most difficult part of this challenge is to decide when it's enough. Since software can be always be improved and this is a technical test, it was hard form me to decide if what i'm doing it's overkill for a little project or it's what's expected.
 
-  
 
-## API documentation
+### Estimate your percentage of completion and how much time you would need to finish
 
-  
+What's missing:
+CallsView UI
+CallDetail UI
+DateFormatter
 
-### Routes
+I would say 1 day to finish all this.
+The percentage of complition i would say it's 60%
 
-  
+### Wrapping Up
 
-Here is the API address: https://aircall-job.herokuapp.com.
-
-  
-
-As you can see, it's hosted on a free Heroku server, which means that the first time you will fetch the API, it will take few seconds to answer.
-
-  
-
-- ****GET**** - https://aircall-job.herokuapp.com/activities: get calls to display in the Activity Feed
-
-- ****GET**** - https://aircall-job.herokuapp.com/activities/:id: retrieve a specific call details
-
-- ****POST**** - https://aircall-job.herokuapp.com/activities/:id: update a call. The only field updatable is `is_archived (bool)`. You'll need to send a JSON in the request body:
-
-```
-
-{
-
-is_archived: true
-
-}
-
-```
-
-- ****GET**** - https://aircall-job.herokuapp.com/reset: Reset all calls to initial state (usefull if you archived all calls).
-
-  
-
-  
-
-### Call object
-
-  
-
-- ****id**** - unique ID of call
-
-- ****created_at**** - creation date
-
-- ****direction**** - `inbound` or `outbound` call
-
-- ****from**** - caller's number
-
-- ****to**** - callee's number
-
-- ****via**** - Aircall number used for the call
-
-- ****duration**** - duration of a call (in seconds)
-
-- ****is_archived**** - call is archived or not
-
-- ****call_type**** - can be a `missed`, `answered` or `voicemail` call.
-
-  
-
-  
-
-## Submission
-
-  
-You are ready, submit a pull request on this repository and ping your point of contact at Aircall.
-
-Don't forget to include a ****README**** file with the following:
-
-- Write a brief outline of the architecture of your app.
-- Explain why you decided to use each third party libraries.
-- What was the most difficult part of the challenge ?
-- Estimate your percentage of completion and how much time you would need to finish
+I like this kind of technical test, since i think it's better than small and faster technical tests.
+Although i regret not having consecutive hours to do this tests.
+Hopefully we can have a talk about my test, since it's the best part.
