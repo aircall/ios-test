@@ -15,12 +15,10 @@ class CallDetailViewModelTests: QuickSpec {
     override func spec() {
         var repository: CallRepositoryMock!
         var viewModel: CallDetailViewModel!
-        var disposables: Set<AnyCancellable>!
 
         beforeEach {
             repository = CallRepositoryMock()
             viewModel = CallDetailViewModel(call: Call(), callRepository: repository)
-            disposables = []
         }
 
         describe("a CallDetailViewModel") {
