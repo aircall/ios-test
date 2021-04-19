@@ -14,13 +14,13 @@ import Combine
 class CallsViewModelTests: QuickSpec {
 
     override func spec() {
-        var session: SessionMock!
+        var repository: CallRepositoryMock!
         var viewModel: CallsViewModel!
         var disposables: Set<AnyCancellable>!
 
         beforeEach {
-            session = SessionMock()
-            viewModel = CallsViewModel(session: session)
+            repository = CallRepositoryMock()
+            viewModel = CallsViewModel(callRepository: repository)
             disposables = []
         }
 
@@ -29,7 +29,7 @@ class CallsViewModelTests: QuickSpec {
 
                 context("and calls are fetched") {
                     beforeEach {
-                        setupSession()
+                        setupRepository()
 
                         viewModel.onAppear()
                     }
@@ -50,9 +50,9 @@ class CallsViewModelTests: QuickSpec {
                 }
             }
 
-            context("when we delete a call") {
+            context("when we archive a call") {
                 beforeEach {
-                    setupSession()
+                    setupRepository()
 
                     viewModel.onAppear()
 
@@ -90,16 +90,13 @@ class CallsViewModelTests: QuickSpec {
 
         }
 
-        func setupSession() {
-            session.responsePathForRequest = { request in
-                switch request {
-                case .calls:
-                    return Bundle(for: type(of: self)).path(forResource: "Calls", ofType: "json")!
-                default:
-                    fail("this request should not be called")
-                    return ""
-                }
-            }
+        func setupRepository() {
+            let path = Bundle(for: type(of: self)).path(forResource: "Calls", ofType: "json")!
+            let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: [])
+            let calls = try! JSONDecoder().decode([Call].self, from: data)
+
+            repository.persistedCalls = calls
+            repository.calls = calls
         }
     }
 }

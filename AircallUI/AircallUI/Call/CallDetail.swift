@@ -10,22 +10,20 @@ import Core
 
 struct CallDetail: View {
 
-    private let call: Call
+    private let viewModel: CallDetailViewModel
 
-    init(_ call: Call) {
-        self.call = call
+    init(viewModel: CallDetailViewModel) {
+        self.viewModel = viewModel
     }
 
     var body: some View {
         Text("Hello, World!")
-            .navigationBarItems(trailing: Button(action: {}, label: {
-                Image(systemName: .archiveboxFill)
-            }))
+            .navigationBarItems(trailing: archiveButton)
     }
-}
 
-struct CallDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        CallDetail(Call())
+    private var archiveButton: some View {
+        Button(action: viewModel.archiveCall, label: {
+            Image(systemName: .archiveboxFill)
+        })
     }
 }

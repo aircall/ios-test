@@ -15,8 +15,9 @@ public struct Call: Decodable, Identifiable {
     public let to: String?
     public let airCallNumber: String
     let duration: String
-    let isArchived: Bool
     let type: `Type`
+
+    private(set) var isArchived: Bool
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -39,6 +40,10 @@ public struct Call: Decodable, Identifiable {
         case missed
         case answered
         case voicemail
+    }
+
+    mutating func archive() {
+        isArchived = true
     }
 }
 

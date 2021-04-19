@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3D20248C2628A5C000A5FADE /* NetworkingMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20248B2628A5C000A5FADE /* NetworkingMocks.framework */; platformFilter = ios; };
 		3D20249C2628A8DE00A5FADE /* Calls.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D20249B2628A8DE00A5FADE /* Calls.json */; };
+		3D2024BE262B1F7700A5FADE /* CallRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2024BD262B1F7700A5FADE /* CallRepositoryMock.swift */; };
+		3D2024CB262B200E00A5FADE /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2024C7262B1FDC00A5FADE /* CallRepository.swift */; };
+		3D2024CC262B200E00A5FADE /* CallRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2024C3262B1FB500A5FADE /* CallRepositoryType.swift */; };
+		3D2024D2262C5E8A00A5FADE /* CallDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2024D1262C5E8A00A5FADE /* CallDetailViewModel.swift */; };
 		3D4B5BD526261DC0005A1CF8 /* CallsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B5BD426261DC0005A1CF8 /* CallsViewModelTests.swift */; };
 		3D4B5BD726261DC0005A1CF8 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D775E822625FE7C0013A7D4 /* Core.framework */; platformFilter = ios; };
 		3D4B5BE326261EC3005A1CF8 /* Nimble in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 3D4B5BE226261EC3005A1CF8 /* Nimble */; };
@@ -17,6 +21,7 @@
 		3D775E912625FEA70013A7D4 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D775E8F2625FEA70013A7D4 /* Call.swift */; };
 		3D775E922625FEA70013A7D4 /* CallsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D775E902625FEA70013A7D4 /* CallsViewModel.swift */; };
 		3D775E9F2625FEF80013A7D4 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D775E9E2625FEF80013A7D4 /* Networking.framework */; platformFilter = ios; };
+		3DEBEA6C262D7DA000618B58 /* CallDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBEA6B262D7DA000618B58 /* CallDetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,10 @@
 		3D2024842628A51700A5FADE /* NetworkingMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D20248B2628A5C000A5FADE /* NetworkingMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D20249B2628A8DE00A5FADE /* Calls.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Calls.json; sourceTree = "<group>"; };
+		3D2024BD262B1F7700A5FADE /* CallRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepositoryMock.swift; sourceTree = "<group>"; };
+		3D2024C3262B1FB500A5FADE /* CallRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepositoryType.swift; sourceTree = "<group>"; };
+		3D2024C7262B1FDC00A5FADE /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
+		3D2024D1262C5E8A00A5FADE /* CallDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailViewModel.swift; sourceTree = "<group>"; };
 		3D4B5BD226261DC0005A1CF8 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4B5BD426261DC0005A1CF8 /* CallsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewModelTests.swift; sourceTree = "<group>"; };
 		3D4B5BD626261DC0005A1CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 		3D775E8F2625FEA70013A7D4 /* Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Call.swift; path = ../../aircall/aircall/Core/Call.swift; sourceTree = "<group>"; };
 		3D775E902625FEA70013A7D4 /* CallsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallsViewModel.swift; path = ../../aircall/aircall/Core/CallsViewModel.swift; sourceTree = "<group>"; };
 		3D775E9E2625FEF80013A7D4 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEBEA6B262D7DA000618B58 /* CallDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +85,21 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
+		3D2024BC262B1F5B00A5FADE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2024BD262B1F7700A5FADE /* CallRepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		3D4B5BD326261DC0005A1CF8 /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
 				3D4B5BD426261DC0005A1CF8 /* CallsViewModelTests.swift */,
+				3DEBEA6B262D7DA000618B58 /* CallDetailViewModelTests.swift */,
 				3D4B5BD626261DC0005A1CF8 /* Info.plist */,
+				3D2024BC262B1F5B00A5FADE /* Mocks */,
 				3D2024A92628D9FF00A5FADE /* Responses */,
 			);
 			path = CoreTests;
@@ -109,7 +129,10 @@
 			children = (
 				3D775E852625FE7C0013A7D4 /* Core.h */,
 				3D775E8F2625FEA70013A7D4 /* Call.swift */,
+				3D2024C3262B1FB500A5FADE /* CallRepositoryType.swift */,
+				3D2024C7262B1FDC00A5FADE /* CallRepository.swift */,
 				3D775E902625FEA70013A7D4 /* CallsViewModel.swift */,
+				3D2024D1262C5E8A00A5FADE /* CallDetailViewModel.swift */,
 				3D775E862625FE7C0013A7D4 /* Info.plist */,
 			);
 			path = Core;
@@ -243,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4B5BD526261DC0005A1CF8 /* CallsViewModelTests.swift in Sources */,
+				3DEBEA6C262D7DA000618B58 /* CallDetailViewModelTests.swift in Sources */,
+				3D2024BE262B1F7700A5FADE /* CallRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D775E922625FEA70013A7D4 /* CallsViewModel.swift in Sources */,
+				3D2024CC262B200E00A5FADE /* CallRepositoryType.swift in Sources */,
 				3D775E912625FEA70013A7D4 /* Call.swift in Sources */,
+				3D2024D2262C5E8A00A5FADE /* CallDetailViewModel.swift in Sources */,
+				3D2024CB262B200E00A5FADE /* CallRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

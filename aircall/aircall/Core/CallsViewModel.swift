@@ -13,26 +13,31 @@ public class CallsViewModel: ObservableObject {
 
     @Published public private(set) var calls: [Call] = []
 
-    private let session: SessionType
+    private let callRepository: CallRepositoryType
     private var disposables: Set<AnyCancellable> = []
 
-    public init(session: SessionType) {
-        self.session = session
+    public init(callRepository: CallRepositoryType) {
+        self.callRepository = callRepository
     }
 
     public func onAppear() {
-        session.dataTaskPublisher(for: .calls)
+        callRepository.fetchAll()
             .sink { error in
                 return
             } receiveValue: { [weak self] calls in
-                self?.calls = calls
+                self?.calls = calls.filter { $0.isArchived == false }
             }
             .store(in: &disposables)
     }
 
+    public func buildCallDetailViewModel(for call: Call) -> CallDetailViewModel {
+        CallDetailViewModel(call: call, callRepository: callRepository)
+    }
+
     public func onDelete(_ indexSet: IndexSet) {
         for index in indexSet {
-            session.dataTaskPublisher(for: .updateCall(id: String(calls[index].id)))
+            let id = String(calls[index].id)
+            callRepository.archiveCall(with: id)
                 .replaceError(with: ())
                 .sink { _ in }
                 .store(in: &disposables)
@@ -41,9 +46,9 @@ public class CallsViewModel: ObservableObject {
     }
 
     public func resetCalls() {
-        session.dataTaskPublisher(for: .reset)
+        callRepository.resetAll()
             .flatMap { [weak self] in
-                self?.session.dataTaskPublisher(for: .calls) ?? CurrentValueSubject([]).eraseToAnyPublisher()
+                self?.callRepository.fetchAll() ?? CurrentValueSubject([]).eraseToAnyPublisher()
             }
             .sink { _ in
             } receiveValue: { [weak self] (calls: [Call]) in

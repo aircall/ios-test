@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var session = Session()
-    lazy var callsViewModel = CallsViewModel(session: session)
+    lazy var callRepository = CallRepository(session: session)
+    lazy var callsViewModel = CallsViewModel(callRepository: callRepository)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
