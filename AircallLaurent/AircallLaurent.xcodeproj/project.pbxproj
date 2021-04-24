@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D3643102634B48500E6919D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36430F2634B48500E6919D /* AppDelegate.swift */; };
+		4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643112634B48500E6919D /* SceneDelegate.swift */; };
+		4D3643142634B48500E6919D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643132634B48500E6919D /* ViewController.swift */; };
+		4D3643172634B48500E6919D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643152634B48500E6919D /* Main.storyboard */; };
+		4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */; };
+		4D36431C2634B48600E6919D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36431B2634B48600E6919D /* Assets.xcassets */; };
+		4D36431F2634B48600E6919D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D36431D2634B48600E6919D /* LaunchScreen.storyboard */; };
+		4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643292634B48700E6919D /* AircallLaurentTests.swift */; };
+		4D3643352634B48700E6919D /* AircallLaurentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643342634B48700E6919D /* AircallLaurentUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D3643262634B48700E6919D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D3643042634B48500E6919D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D36430B2634B48500E6919D;
+			remoteInfo = AircallLaurent;
+		};
+		4D3643312634B48700E6919D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D3643042634B48500E6919D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D36430B2634B48500E6919D;
+			remoteInfo = AircallLaurent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D36430C2634B48500E6919D /* AircallLaurent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircallLaurent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D36430F2634B48500E6919D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D3643112634B48500E6919D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4D3643132634B48500E6919D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D3643162634B48500E6919D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D3643192634B48500E6919D /* AircallLaurent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AircallLaurent.xcdatamodel; sourceTree = "<group>"; };
+		4D36431B2634B48600E6919D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D36431E2634B48600E6919D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D3643202634B48600E6919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D3643252634B48700E6919D /* AircallLaurentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallLaurentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D3643292634B48700E6919D /* AircallLaurentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallLaurentTests.swift; sourceTree = "<group>"; };
+		4D36432B2634B48700E6919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D3643302634B48700E6919D /* AircallLaurentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallLaurentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D3643342634B48700E6919D /* AircallLaurentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallLaurentUITests.swift; sourceTree = "<group>"; };
+		4D3643362634B48700E6919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D3643092634B48500E6919D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D3643222634B48700E6919D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D36432D2634B48700E6919D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D3643032634B48500E6919D = {
+			isa = PBXGroup;
+			children = (
+				4D36430E2634B48500E6919D /* AircallLaurent */,
+				4D3643282634B48700E6919D /* AircallLaurentTests */,
+				4D3643332634B48700E6919D /* AircallLaurentUITests */,
+				4D36430D2634B48500E6919D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D36430D2634B48500E6919D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D36430C2634B48500E6919D /* AircallLaurent.app */,
+				4D3643252634B48700E6919D /* AircallLaurentTests.xctest */,
+				4D3643302634B48700E6919D /* AircallLaurentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D36430E2634B48500E6919D /* AircallLaurent */ = {
+			isa = PBXGroup;
+			children = (
+				4D36430F2634B48500E6919D /* AppDelegate.swift */,
+				4D3643112634B48500E6919D /* SceneDelegate.swift */,
+				4D3643132634B48500E6919D /* ViewController.swift */,
+				4D3643152634B48500E6919D /* Main.storyboard */,
+				4D36431B2634B48600E6919D /* Assets.xcassets */,
+				4D36431D2634B48600E6919D /* LaunchScreen.storyboard */,
+				4D3643202634B48600E6919D /* Info.plist */,
+				4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */,
+			);
+			path = AircallLaurent;
+			sourceTree = "<group>";
+		};
+		4D3643282634B48700E6919D /* AircallLaurentTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D3643292634B48700E6919D /* AircallLaurentTests.swift */,
+				4D36432B2634B48700E6919D /* Info.plist */,
+			);
+			path = AircallLaurentTests;
+			sourceTree = "<group>";
+		};
+		4D3643332634B48700E6919D /* AircallLaurentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D3643342634B48700E6919D /* AircallLaurentUITests.swift */,
+				4D3643362634B48700E6919D /* Info.plist */,
+			);
+			path = AircallLaurentUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D36430B2634B48500E6919D /* AircallLaurent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D3643392634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurent" */;
+			buildPhases = (
+				4D3643082634B48500E6919D /* Sources */,
+				4D3643092634B48500E6919D /* Frameworks */,
+				4D36430A2634B48500E6919D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AircallLaurent;
+			productName = AircallLaurent;
+			productReference = 4D36430C2634B48500E6919D /* AircallLaurent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D3643242634B48700E6919D /* AircallLaurentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D36433C2634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurentTests" */;
+			buildPhases = (
+				4D3643212634B48700E6919D /* Sources */,
+				4D3643222634B48700E6919D /* Frameworks */,
+				4D3643232634B48700E6919D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D3643272634B48700E6919D /* PBXTargetDependency */,
+			);
+			name = AircallLaurentTests;
+			productName = AircallLaurentTests;
+			productReference = 4D3643252634B48700E6919D /* AircallLaurentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D36432F2634B48700E6919D /* AircallLaurentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D36433F2634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurentUITests" */;
+			buildPhases = (
+				4D36432C2634B48700E6919D /* Sources */,
+				4D36432D2634B48700E6919D /* Frameworks */,
+				4D36432E2634B48700E6919D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D3643322634B48700E6919D /* PBXTargetDependency */,
+			);
+			name = AircallLaurentUITests;
+			productName = AircallLaurentUITests;
+			productReference = 4D3643302634B48700E6919D /* AircallLaurentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D3643042634B48500E6919D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4D36430B2634B48500E6919D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4D3643242634B48700E6919D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4D36430B2634B48500E6919D;
+					};
+					4D36432F2634B48700E6919D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4D36430B2634B48500E6919D;
+					};
+				};
+			};
+			buildConfigurationList = 4D3643072634B48500E6919D /* Build configuration list for PBXProject "AircallLaurent" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D3643032634B48500E6919D;
+			productRefGroup = 4D36430D2634B48500E6919D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D36430B2634B48500E6919D /* AircallLaurent */,
+				4D3643242634B48700E6919D /* AircallLaurentTests */,
+				4D36432F2634B48700E6919D /* AircallLaurentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D36430A2634B48500E6919D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D36431F2634B48600E6919D /* LaunchScreen.storyboard in Resources */,
+				4D36431C2634B48600E6919D /* Assets.xcassets in Resources */,
+				4D3643172634B48500E6919D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D3643232634B48700E6919D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D36432E2634B48700E6919D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D3643082634B48500E6919D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
+				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
+				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
+				4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D3643212634B48700E6919D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D36432C2634B48700E6919D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D3643352634B48700E6919D /* AircallLaurentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D3643272634B48700E6919D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D36430B2634B48500E6919D /* AircallLaurent */;
+			targetProxy = 4D3643262634B48700E6919D /* PBXContainerItemProxy */;
+		};
+		4D3643322634B48700E6919D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D36430B2634B48500E6919D /* AircallLaurent */;
+			targetProxy = 4D3643312634B48700E6919D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D3643152634B48500E6919D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D3643162634B48500E6919D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D36431D2634B48600E6919D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D36431E2634B48600E6919D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D3643372634B48700E6919D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D3643382634B48700E6919D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D36433A2634B48700E6919D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D36433B2634B48700E6919D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D36433D2634B48700E6919D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AircallLaurent.app/AircallLaurent";
+			};
+			name = Debug;
+		};
+		4D36433E2634B48700E6919D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AircallLaurent.app/AircallLaurent";
+			};
+			name = Release;
+		};
+		4D3643402634B48700E6919D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AircallLaurent;
+			};
+			name = Debug;
+		};
+		4D3643412634B48700E6919D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPG42P5LUG;
+				INFOPLIST_FILE = AircallLaurentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent.AircallLaurentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AircallLaurent;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D3643072634B48500E6919D /* Build configuration list for PBXProject "AircallLaurent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D3643372634B48700E6919D /* Debug */,
+				4D3643382634B48700E6919D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D3643392634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D36433A2634B48700E6919D /* Debug */,
+				4D36433B2634B48700E6919D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D36433C2634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D36433D2634B48700E6919D /* Debug */,
+				4D36433E2634B48700E6919D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D36433F2634B48700E6919D /* Build configuration list for PBXNativeTarget "AircallLaurentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D3643402634B48700E6919D /* Debug */,
+				4D3643412634B48700E6919D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D3643192634B48500E6919D /* AircallLaurent.xcdatamodel */,
+			);
+			currentVersion = 4D3643192634B48500E6919D /* AircallLaurent.xcdatamodel */;
+			path = AircallLaurent.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D3643042634B48500E6919D /* Project object */;
+}
