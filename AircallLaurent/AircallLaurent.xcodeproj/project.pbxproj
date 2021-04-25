@@ -31,6 +31,7 @@
 		4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072FB2635FB13001C0904 /* NibInstanciable.swift */; };
 		4D50730D2635FB14001C0904 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072FE2635FB14001C0904 /* Configurable.swift */; };
 		4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5073072635FB14001C0904 /* ConstraintType.swift */; };
+		4D5073242635FCAB001C0904 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5073232635FCAB001C0904 /* ActionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		4D5072FB2635FB13001C0904 /* NibInstanciable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstanciable.swift; sourceTree = "<group>"; };
 		4D5072FE2635FB14001C0904 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		4D5073072635FB14001C0904 /* ConstraintType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintType.swift; sourceTree = "<group>"; };
+		4D5073232635FCAB001C0904 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5072EF2635F8D3001C0904 /* ActionView.xib */,
+				4D5073232635FCAB001C0904 /* ActionView.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5073242635FCAB001C0904 /* ActionView.swift in Sources */,
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
 				4D50730A2635FB14001C0904 /* Reusable.swift in Sources */,
 				4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */,

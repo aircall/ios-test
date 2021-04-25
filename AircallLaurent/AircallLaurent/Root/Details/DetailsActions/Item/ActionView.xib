@@ -8,7 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="kDn-0k-tNr" id="Jjd-1q-2kR"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="7aH-2E-wX8"/>
+                <outlet property="imageView" destination="Mgq-Hb-DzP" id="TUd-fd-GI6"/>
+                <outlet property="textLabel" destination="Ffs-VJ-47k" id="ZlB-y7-VPG"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -36,12 +43,16 @@
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="qAe-h0-AT7" secondAttribute="bottom" constant="8" id="2Mo-Tx-dd2"/>
                         <constraint firstItem="qAe-h0-AT7" firstAttribute="top" secondItem="kDn-0k-tNr" secondAttribute="top" constant="8" id="C2h-M1-INe"/>
                         <constraint firstItem="qAe-h0-AT7" firstAttribute="leading" secondItem="kDn-0k-tNr" secondAttribute="leading" constant="16" id="FzV-qC-Ace"/>
                         <constraint firstAttribute="trailing" secondItem="qAe-h0-AT7" secondAttribute="trailing" constant="16" id="YGz-Aa-0DI"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Qqp-rt-7dM" appends="YES" id="N6G-Ek-8Cy"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,6 +65,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-12.318840579710146" y="334.15178571428572"/>
         </view>
+        <tapGestureRecognizer id="Qqp-rt-7dM">
+            <connections>
+                <action selector="tap:" destination="-1" id="vJL-ZB-823"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
