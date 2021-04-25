@@ -7,13 +7,23 @@
 
 import UIKit
 
-class HistoryDetailsActionViewController: UIViewController {
+class HistoryDetailsActionViewController: UIViewController, Themeable {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
   /******************** Outlets ********************/
+
+  @IBOutlet weak private var copyButton: UIButton!
+
+  @IBOutlet weak private var noteActionView: ActionView!
+  @IBOutlet weak private var tagsActionView: ActionView!
+  @IBOutlet weak private var assignActionView: ActionView!
+
+  /******************** Themeable ********************/
+
+  var themeColor: UIColor = .green
 
   /******************** Callbacks ********************/
 
@@ -22,7 +32,6 @@ class HistoryDetailsActionViewController: UIViewController {
   var shouldAddTags: (() -> Void)?
 
   var shouldAssign: (() -> Void)?
-
 
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle
@@ -38,7 +47,61 @@ class HistoryDetailsActionViewController: UIViewController {
   //----------------------------------------------------------------------------
 
   private func setup() {
+    setupView()
+    setupActionViews()
+    setupCopyButton()
+  }
 
+  private func setupView() {
+    view.backgroundColor = .clear
+  }
+
+  private func setupActionViews() {
+    setupNoteActionView()
+    setupTagsActionView()
+    setupAssignActionView()
+  }
+
+  private func setupNoteActionView() {
+    noteActionView.titleText = "Notes"
+
+    let image = UIImage(systemName: "note")
+    assert(image != nil, "Image not found") // Not handling error for this test
+
+    noteActionView.didTap = { [weak self] in
+      self?.shouldAddNote?()
+    }
+  }
+
+  private func setupTagsActionView() {
+    tagsActionView.titleText = "Tags"
+
+    let image = UIImage(systemName: "tag")
+    assert(image != nil, "Image not found") // Not handling error for this test
+    assignActionView.image = image
+
+    tagsActionView.didTap = { [weak self] in
+      self?.shouldAddTags?()
+    }
+  }
+
+  private func setupAssignActionView() {
+    assignActionView.titleText = "Assign"
+
+    let image = UIImage(systemName: "person.badge.plus")
+    assert(image != nil, "Image not found") // Not handling error for this test
+    assignActionView.image = image
+
+
+    assignActionView.didTap = { [weak self] in
+      self?.shouldAssign?()
+    }
+  }
+
+  private func setupCopyButton() {
+    let copyButtonTitle = "Copy call ID"
+    copyButton.setTitle(copyButtonTitle, for: .normal)
+    copyButton.setTitleColor(themeColor, for: .normal)
   }
 
 }
