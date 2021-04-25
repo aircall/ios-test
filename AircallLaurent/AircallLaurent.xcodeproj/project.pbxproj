@@ -33,6 +33,8 @@
 		4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5073072635FB14001C0904 /* ConstraintType.swift */; };
 		4D5073242635FCAB001C0904 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5073232635FCAB001C0904 /* ActionView.swift */; };
 		4D507329263600DE001C0904 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D507328263600DE001C0904 /* Themeable.swift */; };
+		4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */; };
+		4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,7 @@
 		4D5073072635FB14001C0904 /* ConstraintType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintType.swift; sourceTree = "<group>"; };
 		4D5073232635FCAB001C0904 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		4D507328263600DE001C0904 /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
+		4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,7 @@
 				4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */,
 				4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */,
 				4D5072DD2635F0A4001C0904 /* DetailsActions */,
+				4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -439,6 +443,7 @@
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
+				4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
 				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
 				4D50730D2635FB14001C0904 /* Configurable.swift in Sources */,
@@ -452,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
