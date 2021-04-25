@@ -20,10 +20,7 @@ class HistorySplitViewController: UISplitViewController {
     return HistoryListViewController()
   }()
 
-  private lazy var historyDetailsViewController: HistoryDetailsViewController =
-    {
-      return HistoryDetailsViewController()
-  }()
+  private var historyDetailsViewController: HistoryDetailsViewController?
 
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle

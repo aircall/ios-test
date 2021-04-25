@@ -35,6 +35,10 @@
 		4D507329263600DE001C0904 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D507328263600DE001C0904 /* Themeable.swift */; };
 		4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */; };
 		4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */; };
+		4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733426360802001C0904 /* GenericTableViewCell.swift */; };
+		4D50733726360802001C0904 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D50733526360802001C0904 /* GenericTableViewCell.xib */; };
+		4D50733C26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */; };
+		4D50733D26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,9 @@
 		4D5073232635FCAB001C0904 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		4D507328263600DE001C0904 /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
 		4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		4D50733426360802001C0904 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		4D50733526360802001C0904 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
+		4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +198,7 @@
 			children = (
 				4D36434B2634BB1100E6919D /* HistorySplitViewController.swift */,
 				4D36434C2634BB1100E6919D /* HistorySplitViewController.xib */,
+				4D50733326360793001C0904 /* Shared */,
 				4D3643552634BB2500E6919D /* List */,
 				4D3643562634BB2B00E6919D /* Details */,
 			);
@@ -296,6 +304,16 @@
 				4D5073072635FB14001C0904 /* ConstraintType.swift */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		4D50733326360793001C0904 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4D50733426360802001C0904 /* GenericTableViewCell.swift */,
+				4D50733526360802001C0904 /* GenericTableViewCell.xib */,
+				4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +425,7 @@
 				4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */,
 				4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */,
 				4D36431F2634B48600E6919D /* LaunchScreen.storyboard in Resources */,
+				4D50733726360802001C0904 /* GenericTableViewCell.xib in Resources */,
 				4D36431C2634B48600E6919D /* Assets.xcassets in Resources */,
 				4D3643172634B48500E6919D /* Main.storyboard in Resources */,
 			);
@@ -438,12 +457,14 @@
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
 				4D50730A2635FB14001C0904 /* Reusable.swift in Sources */,
 				4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */,
+				4D50733C26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */,
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
 				4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
+				4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */,
 				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
 				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
 				4D50730D2635FB14001C0904 /* Configurable.swift in Sources */,
@@ -459,6 +480,7 @@
 			files = (
 				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
+				4D50733D26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
