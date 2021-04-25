@@ -24,6 +24,7 @@
 		4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */; };
 		4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */; };
 		4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */; };
+		4D5072F02635F8D3001C0904 /* ActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072EF2635F8D3001C0904 /* ActionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsViewController.xib; sourceTree = "<group>"; };
 		4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsActionViewController.swift; sourceTree = "<group>"; };
 		4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsActionViewController.xib; sourceTree = "<group>"; };
+		4D5072EF2635F8D3001C0904 /* ActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,10 +199,19 @@
 		4D5072DD2635F0A4001C0904 /* DetailsActions */ = {
 			isa = PBXGroup;
 			children = (
+				4D5072EE2635F8CA001C0904 /* Item */,
 				4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */,
 				4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */,
 			);
 			path = DetailsActions;
+			sourceTree = "<group>";
+		};
+		4D5072EE2635F8CA001C0904 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072EF2635F8D3001C0904 /* ActionView.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5072F02635F8D3001C0904 /* ActionView.xib in Resources */,
 				4D36434E2634BB1100E6919D /* HistorySplitViewController.xib in Resources */,
 				4D36435A2634BB4B00E6919D /* HistoryListViewController.xib in Resources */,
 				4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */,
