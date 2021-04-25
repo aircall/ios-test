@@ -22,6 +22,8 @@
 		4D36435A2634BB4B00E6919D /* HistoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643582634BB4B00E6919D /* HistoryListViewController.xib */; };
 		4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */; };
 		4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */; };
+		4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */; };
+		4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		4D3643582634BB4B00E6919D /* HistoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryListViewController.xib; sourceTree = "<group>"; };
 		4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsViewController.xib; sourceTree = "<group>"; };
+		4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsActionViewController.swift; sourceTree = "<group>"; };
+		4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsActionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +189,18 @@
 			children = (
 				4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */,
 				4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */,
+				4D5072DD2635F0A4001C0904 /* DetailsActions */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		4D5072DD2635F0A4001C0904 /* DetailsActions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */,
+				4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */,
+			);
+			path = DetailsActions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +309,7 @@
 				4D36434E2634BB1100E6919D /* HistorySplitViewController.xib in Resources */,
 				4D36435A2634BB4B00E6919D /* HistoryListViewController.xib in Resources */,
 				4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */,
+				4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */,
 				4D36431F2634B48600E6919D /* LaunchScreen.storyboard in Resources */,
 				4D36431C2634B48600E6919D /* Assets.xcassets in Resources */,
 				4D3643172634B48500E6919D /* Main.storyboard in Resources */,
@@ -322,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,

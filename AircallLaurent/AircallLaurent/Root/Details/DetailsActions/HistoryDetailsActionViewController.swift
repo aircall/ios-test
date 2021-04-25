@@ -1,22 +1,28 @@
 //
-//  HistoryDetailsViewController.swift
+//  HistoryDetailsActionViewController.swift
 //  AircallLaurent
 //
-//  Created by Laurent on 24/04/2021.
+//  Created by Laurent on 25/04/2021.
 //
 
 import UIKit
 
-class HistoryDetailsViewController: UIViewController {
-  
+class HistoryDetailsActionViewController: UIViewController {
+
   //----------------------------------------------------------------------------
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
   /******************** Outlets ********************/
 
-  @IBOutlet weak private var InformationContainerView: UIView!
-  @IBOutlet weak private var ActionContainerView: UIView!
+  /******************** Callbacks ********************/
+
+  var shouldAddNote: (() -> Void)?
+
+  var shouldAddTags: (() -> Void)?
+
+  var shouldAssign: (() -> Void)?
+
 
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle
@@ -34,5 +40,5 @@ class HistoryDetailsViewController: UIViewController {
   private func setup() {
 
   }
-  
+
 }
