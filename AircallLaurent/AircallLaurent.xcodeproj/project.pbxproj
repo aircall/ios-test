@@ -25,6 +25,12 @@
 		4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */; };
 		4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */; };
 		4D5072F02635F8D3001C0904 /* ActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072EF2635F8D3001C0904 /* ActionView.xib */; };
+		4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072F62635FB13001C0904 /* UIView+AutoLayout.swift */; };
+		4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072F72635FB13001C0904 /* UIViewcontroller+Container.swift */; };
+		4D50730A2635FB14001C0904 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072FA2635FB13001C0904 /* Reusable.swift */; };
+		4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072FB2635FB13001C0904 /* NibInstanciable.swift */; };
+		4D50730D2635FB14001C0904 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072FE2635FB14001C0904 /* Configurable.swift */; };
+		4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5073072635FB14001C0904 /* ConstraintType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsActionViewController.swift; sourceTree = "<group>"; };
 		4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsActionViewController.xib; sourceTree = "<group>"; };
 		4D5072EF2635F8D3001C0904 /* ActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionView.xib; sourceTree = "<group>"; };
+		4D5072F62635FB13001C0904 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		4D5072F72635FB13001C0904 /* UIViewcontroller+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Container.swift"; sourceTree = "<group>"; };
+		4D5072FA2635FB13001C0904 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		4D5072FB2635FB13001C0904 /* NibInstanciable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstanciable.swift; sourceTree = "<group>"; };
+		4D5072FE2635FB14001C0904 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		4D5073072635FB14001C0904 /* ConstraintType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,7 @@
 			children = (
 				4D3643202634B48600E6919D /* Info.plist */,
 				4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */,
+				4D5072F42635FB13001C0904 /* Shared */,
 				4D3643492634B6A800E6919D /* SupportingFiles */,
 				4D3643482634B68D00E6919D /* Launch */,
 				4D36434A2634B8BC00E6919D /* Root */,
@@ -212,6 +225,67 @@
 				4D5072EF2635F8D3001C0904 /* ActionView.xib */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		4D5072F42635FB13001C0904 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072F52635FB13001C0904 /* extension */,
+				4D5072F82635FB13001C0904 /* Protocol */,
+				4D5073012635FB14001C0904 /* Tool */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4D5072F52635FB13001C0904 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072F62635FB13001C0904 /* UIView+AutoLayout.swift */,
+				4D5072F72635FB13001C0904 /* UIViewcontroller+Container.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		4D5072F82635FB13001C0904 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072F92635FB13001C0904 /* Xib */,
+				4D5072FC2635FB13001C0904 /* TableView */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4D5072F92635FB13001C0904 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072FA2635FB13001C0904 /* Reusable.swift */,
+				4D5072FB2635FB13001C0904 /* NibInstanciable.swift */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		4D5072FC2635FB13001C0904 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D5072FE2635FB14001C0904 /* Configurable.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		4D5073012635FB14001C0904 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4D5073062635FB14001C0904 /* AutoLayout */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4D5073062635FB14001C0904 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4D5073072635FB14001C0904 /* ConstraintType.swift */,
+			);
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,11 +424,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
+				4D50730A2635FB14001C0904 /* Reusable.swift in Sources */,
+				4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */,
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
+				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
+				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
 				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
+				4D50730D2635FB14001C0904 /* Configurable.swift in Sources */,
+				4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */,
 				4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */,
 				4D3643592634BB4B00E6919D /* HistoryListViewController.swift in Sources */,
 			);
