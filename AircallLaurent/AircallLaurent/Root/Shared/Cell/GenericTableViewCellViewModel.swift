@@ -17,6 +17,8 @@ final class GenericTableViewCellViewModel {
 
   let actionButtonImage: UIImage?
 
+  let date: Date
+
   var primaryTitleText: String {
     return ""
   }
@@ -26,11 +28,11 @@ final class GenericTableViewCellViewModel {
   }
 
   var secondaryTitleText: String? {
-    return ""
+    return date.monthDayShortFormat()
   }
 
   var secondarySubtitleText: String? {
-    return ""
+    return date.timeIn24HourFormat()
   }
 
   var isSecondaryTextAreaHidden: Bool {
@@ -48,6 +50,7 @@ final class GenericTableViewCellViewModel {
   init() {
     self.iconImage = nil
     self.actionButtonImage = nil
+    self.date = Date()
   }
 
 }
