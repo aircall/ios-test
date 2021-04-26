@@ -46,7 +46,8 @@ final class GenericTableViewCellViewModel {
   //----------------------------------------------------------------------------
 
   init() {
-
+    self.iconImage = nil
+    self.actionButtonImage = nil
   }
 
 }
