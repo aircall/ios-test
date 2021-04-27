@@ -16,7 +16,7 @@ class TableViewDataSource<Provider: CollectionDataProvider>:
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  private var provider: Provider
+  let provider: Provider
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
