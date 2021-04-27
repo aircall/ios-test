@@ -8,7 +8,8 @@
 import UIKit
 
 final class CallInformationDirectionTableViewCellViewModel:
-  GenericTableViewCellViewModelProtocol {
+  GenericTableViewCellViewModelProtocol
+{
 
   //----------------------------------------------------------------------------
   // MARK: - Properties

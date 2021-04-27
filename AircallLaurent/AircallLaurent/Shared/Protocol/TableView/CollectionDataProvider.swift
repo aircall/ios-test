@@ -9,7 +9,7 @@ import UIKit
 
 protocol CollectionDataProvider {
 
-  associatedtype CellHolder
+//  associatedtype CellHolder
 
   /******************** Data ********************/
 
@@ -19,11 +19,13 @@ protocol CollectionDataProvider {
 
   var dataDidChange: (() -> Void)? { get set }
 
+  var shouldRegisterCells: (([CellConfigurating]) -> Void)? { get set }
+
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  func registerOn(_ cellHolder: CellHolder)
+//  func registerOn(_ cellHolder: CellHolder)
 
   //----------------------------------------------------------------------------
   // MARK: - Get

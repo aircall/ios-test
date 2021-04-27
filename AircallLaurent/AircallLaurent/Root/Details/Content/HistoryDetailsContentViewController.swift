@@ -83,9 +83,15 @@ class HistoryDetailsContentViewController: UIViewController {
   }
 
   private func setupDataProvider() {
+    dataProvider.shouldRegisterCells = { [weak self] items in
+      guard let self = self else { return }
+      for item in items {
+        item.register(on: self.tableView)
+      }
+    }
+    
     dataProvider.dataDidChange = { [weak self] in
       guard let self = self else { return }
-      self.dataProvider.registerOn(self.tableView)
       self.tableView.reloadData()
     }
 
@@ -93,7 +99,7 @@ class HistoryDetailsContentViewController: UIViewController {
       self?.tableView.reloadData()
     }
 
-    dataProvider.registerOn(tableView)
+//    dataProvider.registerOn(tableView)
   }
 
   private func setupTableView() {

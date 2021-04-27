@@ -30,6 +30,9 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
       if items.isEmpty {
         dataDidClear?()
       } else {
+
+        let flatItems = items.flatMap { $0 }
+        shouldRegisterCells?(flatItems)
         dataDidChange?()
       }
     }
@@ -53,6 +56,8 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
   /// Items in table view data provider did change
   var dataDidChange: (() -> Void)?
 
+  var shouldRegisterCells: (([CellConfigurating]) -> Void)?
+
   /// Items in table view data provider did clear
   var dataDidClear: (() -> Void)?
 
@@ -64,28 +69,34 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
   // MARK: - TableView
   //--------------------------------------------------------------------------
 
-  func registerOn(_ tableView: UITableView) {
-    for cellConfiguratorSections in items {
-      for cellConfigurator in cellConfiguratorSections {
-        cellConfigurator.register(on: tableView)
-      }
-    }
-  }
+//  func registerOn(_ tableView: UITableView) {
+//    for cellConfiguratorSections in items {
+//      for cellConfigurator in cellConfiguratorSections {
+//        cellConfigurator.register(on: tableView)
+//      }
+//    }
+//  }
 
   func update(with call: CallModel) {
 //    updateContactInformation()
 //    updateCallInformation()
     var informationItems = [[CellConfigurating]]()
 
-    let contactCellViewModel = ContactInformationTableViewCellViewModel(with: call)
-    let contactCellConfigurator = InformationCellConfigurator(data: contactCellViewModel)
+    let contactCellViewModel =
+      ContactInformationTableViewCellViewModel(with: call)
+    let contactCellConfigurator =
+      InformationCellConfigurator(data: contactCellViewModel)
     let contactInformationItems = [contactCellConfigurator]
 
-    let directionCellViewModel = CallInformationDirectionTableViewCellViewModel(with: call)
-    let diractionCellConfigurator = InformationCellConfigurator(data: directionCellViewModel)
+    let directionCellViewModel =
+      CallInformationDirectionTableViewCellViewModel(with: call)
+    let diractionCellConfigurator =
+      InformationCellConfigurator(data: directionCellViewModel)
 
-    let phoneOperatorViewModel = CallInformationPhoneOperatorTableViewCellViewModel(with: call)
-    let phoneOperatorCellConfigurator = InformationCellConfigurator(data: phoneOperatorViewModel)
+    let phoneOperatorViewModel =
+      CallInformationPhoneOperatorTableViewCellViewModel(with: call)
+    let phoneOperatorCellConfigurator =
+      InformationCellConfigurator(data: phoneOperatorViewModel)
     let callInformationItems: [CellConfigurating] =
       [diractionCellConfigurator, phoneOperatorCellConfigurator]
 
