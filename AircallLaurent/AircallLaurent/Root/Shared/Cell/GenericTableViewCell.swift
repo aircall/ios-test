@@ -7,10 +7,7 @@
 
 import UIKit
 
-class GenericTableViewCell:
-  UITableViewCell,
-  Reusable
-{
+class GenericTableViewCell: UITableViewCell, Reusable {
 
   //--------------------------------------------------------------------------
   // MARK: - Properties
@@ -31,13 +28,9 @@ class GenericTableViewCell:
   private let primaryColor: UIColor = .black
   private let secondaryColor: UIColor = .lightGray
 
+  /******************** Callbacks ********************/
 
-  /******************** Reusable ********************/
-
-//  // Need to override since the nib doesn't
-//  static var reuseIdentifier: String {
-//    return "GenericTableViewCell"
-//  }
+  var didTapAction: (() -> Void)?
 
   //--------------------------------------------------------------------------
   // MARK: - Lifecycle
@@ -56,6 +49,7 @@ class GenericTableViewCell:
     setupView()
     setupIconImageView()
     setupLabels()
+    setupActionButton()
   }
 
   private func setupView() {
@@ -104,6 +98,14 @@ class GenericTableViewCell:
 
   private func setupActionButton() {
     actionButton.tintColor = secondaryColor
+  }
+
+  //==============================================================================
+  // MARK: - Action
+  //==============================================================================
+
+  @IBAction func tapAction(_ sender: Any) {
+    didTapAction?()
   }
 
 }

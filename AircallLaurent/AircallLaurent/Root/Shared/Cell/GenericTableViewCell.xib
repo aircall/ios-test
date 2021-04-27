@@ -67,6 +67,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-05-mPE">
                                 <rect key="frame" x="268" y="0.0" width="20" height="64"/>
                                 <state key="normal" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Yll-yh-Ds5"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
