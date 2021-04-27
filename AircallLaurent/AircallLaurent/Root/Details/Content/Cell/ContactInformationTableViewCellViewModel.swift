@@ -21,8 +21,6 @@ final class ContactInformationTableViewCellViewModel:
 
   var iconImage: UIImage?
 
-  var actionButtonImage: UIImage?
-
   var primaryTitleText: String {
     return call.sender
   }
@@ -39,13 +37,17 @@ final class ContactInformationTableViewCellViewModel:
     return nil
   }
 
+  var isActionButtonHidden: Bool {
+    return false
+  }
+
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
   init(with call: CallModel) {
     self.call = call
-    actionButtonImage = UIImage(systemName: "info.circle")
+//    actionButtonImage = UIImage(systemName: "info.circle")
   }
 
 }

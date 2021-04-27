@@ -16,7 +16,6 @@ import UIKit
 
 protocol GenericTableViewCellViewModelProtocol {
   var iconImage: UIImage? { get set }
-  var actionButtonImage: UIImage? { get set }
   var primaryTitleText: String { get }
   var primarySubtitleText: String { get }
   var secondaryTitleText: String? { get }
@@ -34,10 +33,6 @@ extension GenericTableViewCellViewModelProtocol {
 
   var isSecondaryTextAreaHidden: Bool {
     return secondaryTitleText == nil && secondarySubtitleText == nil
-  }
-
-  var isActionButtonHidden: Bool {
-    return actionButtonImage == nil
   }
 
 }

@@ -21,8 +21,6 @@ final class CallInformationPhoneOperatorTableViewCellViewModel:
 
   var iconImage: UIImage?
 
-  var actionButtonImage: UIImage?
-
   var primaryTitleText: String {
     return call.phoneOperator
   }
@@ -37,6 +35,10 @@ final class CallInformationPhoneOperatorTableViewCellViewModel:
 
   var secondarySubtitleText: String? {
     return nil
+  }
+
+  var isActionButtonHidden: Bool {
+    return true
   }
 
   //----------------------------------------------------------------------------

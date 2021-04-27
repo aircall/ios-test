@@ -9,47 +9,70 @@ import UIKit
 
 class GenericTableViewCell: UITableViewCell, Reusable {
 
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   // MARK: - Properties
-  //--------------------------------------------------------------------------
-
-  /******************** Outlets ********************/
-
-  @IBOutlet weak private var iconImageView: UIImageView!
-  @IBOutlet weak private var primaryTitleLabel: UILabel!
-  @IBOutlet weak private var primarySubtitleLabel: UILabel!
-  @IBOutlet weak private var secondaryStackView: UIStackView!
-  @IBOutlet weak private var secondaryTitleLabel: UILabel!
-  @IBOutlet weak private var secondarySubtitleLabel: UILabel!
-  @IBOutlet weak private var actionButton: UIButton!
+  //----------------------------------------------------------------------------
 
   /******************** Colors ********************/
 
   private let primaryColor: UIColor = .black
   private let secondaryColor: UIColor = .lightGray
 
+  /******************** Attributes ********************/
+
+  var textTitleAttributes: [NSAttributedString.Key: Any] {
+    return [
+      .foregroundColor: primaryColor,
+      .backgroundColor: UIColor.clear,
+      .font: UIFont.boldSystemFont(ofSize: 17)
+    ]
+  }
+
+  var textSubtitleAttributes: [NSAttributedString.Key: Any] {
+    return [
+      .foregroundColor: secondaryColor,
+      .backgroundColor: UIColor.clear,
+      .font: UIFont.boldSystemFont(ofSize: 15)
+    ]
+  }
+
+  var detailTextTitleAttributes: [NSAttributedString.Key: Any] {
+    return [
+      .foregroundColor: secondaryColor,
+      .backgroundColor: UIColor.clear,
+      .font: UIFont.systemFont(ofSize: 13)
+    ]
+  }
+
+  var detailTextSubtitleAttributes: [NSAttributedString.Key: Any] {
+    return [
+      .foregroundColor: secondaryColor,
+      .backgroundColor: UIColor.clear,
+      .font: UIFont.systemFont(ofSize: 13)
+    ]
+  }
+
   /******************** Callbacks ********************/
 
   var didTapAction: (() -> Void)?
 
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   // MARK: - Lifecycle
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
   override func awakeFromNib() {
     super.awakeFromNib()
     setup()
   }
 
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   // MARK: - Initialization
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
   private func setup() {
     setupView()
-    setupIconImageView()
-    setupLabels()
-    setupActionButton()
+    setupTextLabel()
+    setupDetailTextLabel()
   }
 
   private func setupView() {
@@ -61,43 +84,14 @@ class GenericTableViewCell: UITableViewCell, Reusable {
 
   }
 
-  private func setupLabels() {
-    setupPrimaryLabels()
-    setupSecondaryLabels()
+  private func setupTextLabel() {
+    textLabel?.numberOfLines = 0
+    textLabel?.lineBreakMode = .byTruncatingTail
   }
 
-  private func setupPrimaryLabels() {
-    setupPrimaryTitleLabel()
-    setupPrimarySubtitleLabel()
-  }
-
-  private func setupPrimaryTitleLabel() {
-    primaryTitleLabel.textColor = primaryColor
-    primaryTitleLabel.font = UIFont.boldSystemFont(ofSize: 17)
-  }
-
-  private func setupPrimarySubtitleLabel() {
-    primarySubtitleLabel.textColor = secondaryColor
-    primarySubtitleLabel.font = UIFont.boldSystemFont(ofSize: 15)
-  }
-
-  private func setupSecondaryLabels() {
-    setupSecondaryTitleLabel()
-    setupSecondarySubtitleLabel()
-  }
-
-  private func setupSecondaryTitleLabel() {
-    secondaryTitleLabel.textColor = secondaryColor
-    secondaryTitleLabel.font = UIFont.systemFont(ofSize: 13)
-  }
-
-  private func setupSecondarySubtitleLabel() {
-    secondarySubtitleLabel.textColor = secondaryColor
-    secondarySubtitleLabel.font = UIFont.systemFont(ofSize: 13)
-  }
-
-  private func setupActionButton() {
-    actionButton.tintColor = secondaryColor
+  private func setupDetailTextLabel() {
+    detailTextLabel?.numberOfLines = 0
+    detailTextLabel?.lineBreakMode = .byTruncatingTail
   }
 
   //==============================================================================
@@ -117,17 +111,56 @@ class GenericTableViewCell: UITableViewCell, Reusable {
 extension GenericTableViewCell: Configurable {
 
   func configure(with data: GenericTableViewCellViewModelProtocol) {
-    iconImageView.image = data.iconImage
-    
-    primaryTitleLabel.text = data.primaryTitleText
-    primarySubtitleLabel.text = data.primarySubtitleText
+    imageView?.image = data.iconImage
 
-    secondaryTitleLabel.text = data.secondaryTitleText
-    secondarySubtitleLabel.text = data.secondarySubtitleText
-    secondaryStackView.isHidden = data.isSecondaryTextAreaHidden
+    textLabel?.attributedText = generateTextLabelAttributedString(from: data)
 
-    actionButton.setImage(data.actionButtonImage, for: .normal)
-    actionButton.isHidden = data.isActionButtonHidden
+    if let detailTextAttributedString =
+        generateDetailTextLabelAttributedString(from: data) {
+      detailTextLabel?.attributedText = detailTextAttributedString
+    } else {
+      detailTextLabel?.isHidden = true
+    }
+
+    accessoryType = data.isActionButtonHidden ? .none : .detailButton
   }
 
+  private func generateTextLabelAttributedString(
+    from data: GenericTableViewCellViewModelProtocol
+  ) -> NSMutableAttributedString {
+    let attributedText = NSMutableAttributedString()
+    let titleAttributedString = NSAttributedString(
+      string: data.primaryTitleText,
+      attributes: textTitleAttributes
+    )
+    let subtitleAttributedString = NSAttributedString(
+      string: "\n\(data.primarySubtitleText)",
+      attributes: textSubtitleAttributes
+    )
+    attributedText.append(titleAttributedString)
+    attributedText.append(subtitleAttributedString)
+    return attributedText
+  }
+
+  private func generateDetailTextLabelAttributedString(
+    from data: GenericTableViewCellViewModelProtocol
+  ) -> NSMutableAttributedString? {
+    guard let secondaryTitleText = data.secondaryTitleText,
+          let secondarySubtitleText = data.secondarySubtitleText else {
+      return nil
+    }
+    let attributedText = NSMutableAttributedString()
+    let titleAttributedString = NSAttributedString(
+      string: secondaryTitleText,
+      attributes: detailTextTitleAttributes
+    )
+    let subtitleAttributedString = NSAttributedString(
+      string: "\n\(secondarySubtitleText)",
+      attributes: detailTextSubtitleAttributes
+    )
+    attributedText.append(titleAttributedString)
+    attributedText.append(subtitleAttributedString)
+    return attributedText
+  }
+  
 }

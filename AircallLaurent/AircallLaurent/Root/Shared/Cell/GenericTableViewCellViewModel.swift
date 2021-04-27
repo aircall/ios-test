@@ -17,9 +17,7 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   var iconImage: UIImage?
 
-  var actionButtonImage: UIImage?
-
-  let date: Date
+  private let date: Date?
 
   var primaryTitleText: String {
     return ""
@@ -30,11 +28,15 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
   }
 
   var secondaryTitleText: String? {
-    return date.monthDayShortFormat
+    return date?.monthDayShortFormat
   }
 
   var secondarySubtitleText: String? {
-    return date.timeIn24HourFormat
+    return date?.timeIn24HourFormat
+  }
+
+  var isActionButtonHidden: Bool {
+    return false
   }
 
   //----------------------------------------------------------------------------
@@ -43,9 +45,11 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   init(from call: CallModel) {
     self.call = call
-    self.iconImage = nil
-    self.actionButtonImage = nil
-    self.date = Date()
+    self.date = Date(fromISO8601: call.createdAt)
+
+    iconImage = call.direction == .inbound
+      ? UIImage(systemName: "phone.fill.arrow.up.right")
+      : UIImage(systemName: "phone.fill.arrow.down.left")
   }
 
 }

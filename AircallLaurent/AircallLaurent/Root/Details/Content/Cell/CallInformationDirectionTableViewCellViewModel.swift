@@ -21,8 +21,6 @@ final class CallInformationDirectionTableViewCellViewModel:
 
   var iconImage: UIImage?
 
-  var actionButtonImage: UIImage?
-
   var primaryTitleText: String {
     return call.callType.rawValue
   }
@@ -37,6 +35,10 @@ final class CallInformationDirectionTableViewCellViewModel:
 
   var secondarySubtitleText: String? {
     return nil
+  }
+
+  var isActionButtonHidden: Bool {
+    return true
   }
 
   //----------------------------------------------------------------------------

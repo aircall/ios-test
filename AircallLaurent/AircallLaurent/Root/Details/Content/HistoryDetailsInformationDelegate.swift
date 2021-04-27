@@ -29,6 +29,11 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView,
+                 accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    print("Tap")
+  }
+
+  func tableView(_ tableView: UITableView,
                  heightForRowAt indexPath: IndexPath) -> CGFloat {
     return tableView.bounds.height / 5
   }
@@ -37,15 +42,5 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
                  heightForHeaderInSection section: Int) -> CGFloat {
     return tableView.bounds.height / 5
   }
-
-//  func tableView(_ tableView: UITableView,
-//                          viewForHeaderInSection section: Int) -> UIView? {
-//    let view = UIView()
-//    let label = UILabel()
-//    label.text = provider.headerTitles[section]
-//    view.add(subview: label, with: .center())
-//    view.backgroundColor = .white
-//    return view
-//  }
 
 }
