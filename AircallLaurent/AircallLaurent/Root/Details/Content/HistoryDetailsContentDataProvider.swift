@@ -78,16 +78,24 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
 //  }
 
   func update(with call: CallModel) {
-//    updateContactInformation()
-//    updateCallInformation()
-    var informationItems = [[CellConfigurating]]()
+    let contactInformationItems = generateContactInformationCells(from: call)
+    let callInformationItems = generateCallInformationCells(from: call)
+    items = [contactInformationItems, callInformationItems]
+  }
 
+  private func generateContactInformationCells(
+    from call: CallModel
+  ) -> [CellConfigurating] {
     let contactCellViewModel =
       ContactInformationTableViewCellViewModel(with: call)
     let contactCellConfigurator =
       InformationCellConfigurator(data: contactCellViewModel)
-    let contactInformationItems = [contactCellConfigurator]
+    return [contactCellConfigurator]
+  }
 
+  private func generateCallInformationCells(
+    from call: CallModel
+  ) -> [CellConfigurating] {
     let directionCellViewModel =
       CallInformationDirectionTableViewCellViewModel(with: call)
     let diractionCellConfigurator =
@@ -97,21 +105,7 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
       CallInformationPhoneOperatorTableViewCellViewModel(with: call)
     let phoneOperatorCellConfigurator =
       InformationCellConfigurator(data: phoneOperatorViewModel)
-    let callInformationItems: [CellConfigurating] =
-      [diractionCellConfigurator, phoneOperatorCellConfigurator]
-
-    informationItems.append(contactInformationItems)
-    informationItems.append(callInformationItems)
-
-    items = informationItems
-  }
-
-  private func updateContactInformation() {
-
-  }
-
-  private func updateCallInformation() {
-
+    return [diractionCellConfigurator, phoneOperatorCellConfigurator]
   }
 
 }
