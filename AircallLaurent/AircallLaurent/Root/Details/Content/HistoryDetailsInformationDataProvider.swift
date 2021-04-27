@@ -1,5 +1,5 @@
 //
-//  HistoryDetailsContentDataProvider.swift
+//  HistoryDetailsInformationDataProvider.swift
 //  AircallLaurent
 //
 //  Created by Laurent on 27/04/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryDetailsContentDataProvider: CollectionDataProvider {
+class HistoryDetailsInformationDataProvider: CollectionDataProvider {
 
   //----------------------------------------------------------------------------
   // MARK: - Typealias

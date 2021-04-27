@@ -1,5 +1,5 @@
 //
-//  HistoryDetailsContentViewController.swift
+//  HistoryDetailsInformationViewController.swift
 //  AircallLaurent
 //
 //  Created by Laurent on 27/04/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryDetailsContentViewController: UIViewController {
+class HistoryDetailsInformationViewController: UIViewController {
 
   //--------------------------------------------------------------------------
   // MARK: - Properties
@@ -20,11 +20,11 @@ class HistoryDetailsContentViewController: UIViewController {
   /******************** TableView ********************/
 
   // Should be renamed to ViewModel.
-  private let dataProvider: HistoryDetailsContentDataProvider
+  private let dataProvider: HistoryDetailsInformationDataProvider
 
-  private let tableViewDataSource: HistoryDetailsContentDataSource
+  private let tableViewDataSource: HistoryDetailsInformationDataSource
 
-  private let tableViewDelegate: HistoryDetailsContentDelegate
+  private let tableViewDelegate: HistoryDetailsInformationDelegate
 
   /******************** Callbacks ********************/
 
@@ -62,12 +62,12 @@ class HistoryDetailsContentViewController: UIViewController {
   }
 
   init(
-    with dataProvider: HistoryDetailsContentDataProvider
-      = HistoryDetailsContentDataProvider()
+    with dataProvider: HistoryDetailsInformationDataProvider
+      = HistoryDetailsInformationDataProvider()
   ) {
     self.dataProvider = dataProvider
-    tableViewDataSource = HistoryDetailsContentDataSource(with: dataProvider)
-    tableViewDelegate = HistoryDetailsContentDelegate(with: dataProvider)
+    tableViewDataSource = HistoryDetailsInformationDataSource(with: dataProvider)
+    tableViewDelegate = HistoryDetailsInformationDelegate(with: dataProvider)
 
     super.init(nibName: nil, bundle: .main)
   }

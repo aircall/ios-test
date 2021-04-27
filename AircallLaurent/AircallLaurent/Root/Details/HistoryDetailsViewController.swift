@@ -30,9 +30,9 @@ class HistoryDetailsViewController: UIViewController {
 
   /******************** ViewControllers ********************/
 
-  private lazy var contentViewController: HistoryDetailsContentViewController =
+  private lazy var informationViewController: HistoryDetailsInformationViewController =
     {
-      return HistoryDetailsContentViewController()
+      return HistoryDetailsInformationViewController()
     }()
 
   private lazy var actionViewController: HistoryDetailsActionViewController = {
@@ -89,11 +89,11 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setupDetailsContentView() {
 
-    contentViewController.didFail = { [weak self] error in
+    informationViewController.didFail = { [weak self] error in
       print(error)
     }
 
-    add(asChildViewController: contentViewController,
+    add(asChildViewController: informationViewController,
         on: informationContainerView)
   }
 
@@ -127,7 +127,7 @@ class HistoryDetailsViewController: UIViewController {
                          duration: "120",
                          isArchived: false,
                          callType: .missed)
-    contentViewController.update(with: call)
+    informationViewController.update(with: call)
   }
   
 }

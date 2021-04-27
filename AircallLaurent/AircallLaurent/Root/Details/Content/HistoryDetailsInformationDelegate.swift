@@ -1,5 +1,5 @@
 //
-//  HistoryDetailsContentDelegate.swift
+//  HistoryDetailsInformationDelegate.swift
 //  AircallLaurent
 //
 //  Created by Laurent on 27/04/2021.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class HistoryDetailsContentDelegate: NSObject, UITableViewDelegate {
+final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
-  var provider: HistoryDetailsContentDataProvider
+  var provider: HistoryDetailsInformationDataProvider
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with provider: HistoryDetailsContentDataProvider) {
+  init(with provider: HistoryDetailsInformationDataProvider) {
     self.provider = provider
   }
 

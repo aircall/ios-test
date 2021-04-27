@@ -1,5 +1,5 @@
 //
-//  HistoryDetailsContentDataSource.swift
+//  HistoryDetailsInformationDataSource.swift
 //  AircallLaurent
 //
 //  Created by Laurent on 27/04/2021.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-final class HistoryDetailsContentDataSource: NSObject, UITableViewDataSource
+final class HistoryDetailsInformationDataSource: NSObject, UITableViewDataSource
 {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  let provider: HistoryDetailsContentDataProvider
+  let provider: HistoryDetailsInformationDataProvider
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with provider: HistoryDetailsContentDataProvider) {
+  init(with provider: HistoryDetailsInformationDataProvider) {
     self.provider = provider
   }
 
