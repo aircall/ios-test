@@ -25,7 +25,7 @@ class DateTests: XCTestCase {
     let timeStamp: TimeInterval = 1524070788
 
     let date = Date(timeIntervalSince1970: timeStamp)
-    let resultTime = date.timeIn24HourFormat()
+    let resultTime = date.timeIn24HourFormat
 
     let expectedTime = "18:59"
     XCTAssert(resultTime == expectedTime)
@@ -35,7 +35,7 @@ class DateTests: XCTestCase {
     let timeStamp: TimeInterval = 1524070788
 
     let date = Date(timeIntervalSince1970: timeStamp)
-    let resultMonthDay = date.monthDayShortFormat()
+    let resultMonthDay = date.monthDayShortFormat
 
     let expectedMonthDay = "Apr. 18"
     XCTAssert(resultMonthDay == expectedMonthDay)

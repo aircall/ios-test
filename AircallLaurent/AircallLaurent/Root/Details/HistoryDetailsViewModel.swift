@@ -13,10 +13,31 @@ final class HistoryDetailsViewModel {
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  /******************** Settings ********************/
+  /******************** Data ********************/
+
+  var call: CallModel? {
+    didSet {
+      shouldUpdateTitle?(navigationBarTitle)
+    }
+  }
+
+  private let defaultNavigationBarTitle = "Call information"
+
+  private var navigationBarTitle: String {
+    guard let call = call, let date = Date(fromISO8601: call.createdAt) else {
+      return defaultNavigationBarTitle
+    }
+
+    return "\(date.monthDayShortFormat), \(date.timeIn24HourFormat)"
+  }
+
+  /******************** Callbacks ********************/
+
+  var shouldUpdateTitle: ((String) -> Void)?
+
 
   //----------------------------------------------------------------------------
-  // MARK: - Action
+  // MARK: - Actions
   //----------------------------------------------------------------------------
 
   func addNote() {

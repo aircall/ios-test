@@ -30,11 +30,11 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
   }
 
   var secondaryTitleText: String? {
-    return date.monthDayShortFormat()
+    return date.monthDayShortFormat
   }
 
   var secondarySubtitleText: String? {
-    return date.timeIn24HourFormat()
+    return date.timeIn24HourFormat
   }
 
 

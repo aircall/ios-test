@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="actionContainerView" destination="GUn-x1-GfH" id="QIe-kX-OOe"/>
                 <outlet property="informationContainerView" destination="GPT-GO-rrF" id="DBN-7C-oZ5"/>
+                <outlet property="navigationBarTitle" destination="yTL-4N-Bf0" id="tl5-7f-t79"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

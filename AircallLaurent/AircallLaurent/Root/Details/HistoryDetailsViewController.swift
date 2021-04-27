@@ -17,6 +17,7 @@ class HistoryDetailsViewController: UIViewController {
 
   @IBOutlet weak private var informationContainerView: UIView!
   @IBOutlet weak private var actionContainerView: UIView!
+  @IBOutlet weak private var navigationBarTitle: UINavigationItem!
 
   /******************** ViewModels ********************/
 
@@ -30,14 +31,11 @@ class HistoryDetailsViewController: UIViewController {
 
   /******************** ViewControllers ********************/
 
-  private lazy var informationViewController: HistoryDetailsInformationViewController =
-    {
-      return HistoryDetailsInformationViewController()
-    }()
+  private let informationViewController =
+    HistoryDetailsInformationViewController()
 
-  private lazy var actionViewController: HistoryDetailsActionViewController = {
-    return HistoryDetailsActionViewController(nibName: nil, bundle: nil)
-  }()
+  private let actionViewController =
+    HistoryDetailsActionViewController(nibName: nil, bundle: nil)
 
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle
@@ -81,6 +79,7 @@ class HistoryDetailsViewController: UIViewController {
     setupView()
     setupDetailsContentView()
     setupDetailsActionView()
+    setupViewModel()
   }
 
   private func setupView() {
@@ -113,6 +112,12 @@ class HistoryDetailsViewController: UIViewController {
     add(asChildViewController: actionViewController, on: actionContainerView)
   }
 
+  private func setupViewModel() {
+    viewModel.shouldUpdateTitle = { [weak self] title in
+      self?.navigationBarTitle.title = title
+    }
+  }
+
   //----------------------------------------------------------------------------
   // MARK: - Update
   //----------------------------------------------------------------------------
@@ -127,6 +132,7 @@ class HistoryDetailsViewController: UIViewController {
                          duration: "120",
                          isArchived: false,
                          callType: .missed)
+    viewModel.call = call
     informationViewController.update(with: call)
   }
   

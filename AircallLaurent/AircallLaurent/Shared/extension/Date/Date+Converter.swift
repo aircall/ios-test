@@ -19,14 +19,14 @@ extension Date {
     self = date
   }
 
-  func timeIn24HourFormat() -> String {
+  var timeIn24HourFormat: String {
     let formatter = DateFormatter()
     formatter.dateStyle = .none
     formatter.dateFormat = "HH:mm"
     return formatter.string(from: self)
   }
 
-  func monthDayShortFormat() -> String {
+  var monthDayShortFormat: String {
     let formatter = DateFormatter()
     formatter.dateStyle = .none
     formatter.dateFormat = "MMM. dd"
