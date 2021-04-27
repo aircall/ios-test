@@ -28,21 +28,24 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
     provider.item(at: indexPath)?.select()
   }
 
-
+  func tableView(_ tableView: UITableView,
+                 heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return tableView.bounds.height / 5
+  }
 
   func tableView(_ tableView: UITableView,
                  heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
+    return tableView.bounds.height / 5
   }
 
-  func tableView(_ tableView: UITableView,
-                          viewForHeaderInSection section: Int) -> UIView? {
-    let view = UIView()
-    let label = UILabel()
-    label.text = provider.headerTitles[section]
-    view.add(subview: label, with: .center())
-    view.backgroundColor = .lightGray
-    return view
-  }
+//  func tableView(_ tableView: UITableView,
+//                          viewForHeaderInSection section: Int) -> UIView? {
+//    let view = UIView()
+//    let label = UILabel()
+//    label.text = provider.headerTitles[section]
+//    view.add(subview: label, with: .center())
+//    view.backgroundColor = .white
+//    return view
+//  }
 
 }

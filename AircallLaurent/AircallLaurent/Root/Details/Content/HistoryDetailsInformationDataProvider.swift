@@ -47,8 +47,11 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
   private var callDuration: String?
 
   private var callInformationTitle: String {
-    guard let callDuration = callDuration else { return "" }
-    return "Call information (\(callDuration)sec)"
+    var callDurationText = ""
+    if let callDuration = callDuration {
+      callDurationText = " (\(callDuration)sec)"
+    }
+    return "Call information\(callDurationText)"
   }
 
   /******************** Callbacks ********************/

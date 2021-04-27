@@ -110,14 +110,12 @@ class HistoryDetailsInformationViewController: UIViewController {
 
   private func setupTableViewStyle() {
     tableView.backgroundColor = .clear
-    tableView.separatorStyle = .none
     tableView.showsHorizontalScrollIndicator = false
     tableView.showsVerticalScrollIndicator = false
     tableView.bounces = false
     tableView.isScrollEnabled = false
 
-    tableView.estimatedRowHeight = 74.0
-    tableView.rowHeight = UITableView.automaticDimension
+    tableView.tableFooterView = UIView()
   }
 
   private func setupTableViewDataSource() {
