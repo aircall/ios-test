@@ -1,13 +1,14 @@
 //
-//  GenericTableViewCellViewModel.swift
+//  CallInformationDirectionTableViewCellViewModel.swift
 //  AircallLaurent
 //
-//  Created by Laurent on 25/04/2021.
+//  Created by Laurent on 27/04/2021.
 //
 
 import UIKit
 
-final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
+class CallInformationDirectionTableViewCellViewModel:
+  GenericTableViewCellViewModelProtocol {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
@@ -15,28 +16,27 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   private let call: CallModel
 
+  /****************** GenericTableViewCellViewModelProtocol ******************/
+
   var iconImage: UIImage?
 
   var actionButtonImage: UIImage?
 
-  let date: Date
-
   var primaryTitleText: String {
-    return ""
+    return call.callType.rawValue
   }
 
   var primarySubtitleText: String {
-    return ""
+    return "Subtitle"
   }
 
   var secondaryTitleText: String? {
-    return date.monthDayShortFormat()
+    return nil
   }
 
   var secondarySubtitleText: String? {
-    return date.timeIn24HourFormat()
+    return nil
   }
-
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
@@ -44,9 +44,9 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   init(from call: CallModel) {
     self.call = call
-    self.iconImage = nil
-    self.actionButtonImage = nil
-    self.date = Date()
-  }
 
+    actionButtonImage = call.direction == .inbound
+      ? UIImage(systemName: "phone.fill.arrow.up.right")
+      : UIImage(systemName: "phone.fill.arrow.down.left")
+  }
 }

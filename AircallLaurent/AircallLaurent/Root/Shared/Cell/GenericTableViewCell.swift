@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GenericTableViewCell: UITableViewCell {
+class GenericTableViewCell<ViewModel: GenericTableViewCellViewModelProtocol>:
+  UITableViewCell
+{
 
   //--------------------------------------------------------------------------
   // MARK: - Properties
@@ -103,7 +105,7 @@ class GenericTableViewCell: UITableViewCell {
 
 extension GenericTableViewCell: Configurable {
 
-  func configure(with data: GenericTableViewCellViewModel) {
+  func configure(with data: ViewModel) {
     iconImageView.image = data.iconImage
     
     primaryTitleLabel.text = data.primaryTitleText

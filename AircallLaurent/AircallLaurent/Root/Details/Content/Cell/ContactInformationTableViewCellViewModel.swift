@@ -1,13 +1,15 @@
 //
-//  GenericTableViewCellViewModel.swift
+//  ContactInformationTableViewCellViewModel.swift
 //  AircallLaurent
 //
-//  Created by Laurent on 25/04/2021.
+//  Created by Laurent on 27/04/2021.
 //
 
 import UIKit
 
-final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
+final class ContactInformationTableViewCellViewModel:
+  GenericTableViewCellViewModelProtocol
+{
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
@@ -15,28 +17,27 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   private let call: CallModel
 
+  /****************** GenericTableViewCellViewModelProtocol ******************/
+
   var iconImage: UIImage?
 
   var actionButtonImage: UIImage?
 
-  let date: Date
-
   var primaryTitleText: String {
-    return ""
+    return call.sender
   }
 
   var primarySubtitleText: String {
-    return ""
+    return call.sender
   }
 
   var secondaryTitleText: String? {
-    return date.monthDayShortFormat()
+    return nil
   }
 
   var secondarySubtitleText: String? {
-    return date.timeIn24HourFormat()
+    return nil
   }
-
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
@@ -44,9 +45,7 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
 
   init(from call: CallModel) {
     self.call = call
-    self.iconImage = nil
-    self.actionButtonImage = nil
-    self.date = Date()
+    iconImage = UIImage(systemName: "info.circle")
   }
 
 }
