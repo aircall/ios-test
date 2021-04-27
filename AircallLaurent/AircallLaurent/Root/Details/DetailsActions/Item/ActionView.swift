@@ -8,9 +8,9 @@
 import UIKit
 
 /*******************************************************************************
- * CollectionV2MovementView
+ * ActionView
  *
- * An item used inside an alert / actioSheet view o
+ * An item used to call for an action
  *
  ******************************************************************************/
 
@@ -23,7 +23,6 @@ class ActionView: UIView, NibInstanciable {
   /******************** Outlets ********************/
 
   @IBOutlet var contentView: UIView!
-//  @IBOutlet weak private var backgroundView: UIView!
   @IBOutlet weak private var imageView: UIImageView!
   @IBOutlet weak private var textLabel: UILabel!
 
@@ -70,11 +69,7 @@ class ActionView: UIView, NibInstanciable {
   private func setupView() {
     backgroundColor = .white
     cornerRadius = 10
-    applyShadow()
-  }
-
-  private func setupBackgroundView() {
-//    backgroundView.backgroundColor = .white
+    applyShadow(opacity: 0.25, radius: CGFloat(cornerRadius))
   }
 
   private func setupContentView() {
