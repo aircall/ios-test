@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CallInformationDirectionTableViewCellViewModel:
+final class CallInformationDirectionTableViewCellViewModel:
   GenericTableViewCellViewModelProtocol {
 
   //----------------------------------------------------------------------------
@@ -42,10 +42,10 @@ class CallInformationDirectionTableViewCellViewModel:
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(from call: CallModel) {
+  init(with call: CallModel) {
     self.call = call
 
-    actionButtonImage = call.direction == .inbound
+    iconImage = call.direction == .inbound
       ? UIImage(systemName: "phone.fill.arrow.up.right")
       : UIImage(systemName: "phone.fill.arrow.down.left")
   }

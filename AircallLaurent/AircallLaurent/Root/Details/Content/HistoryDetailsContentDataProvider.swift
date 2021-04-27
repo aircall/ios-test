@@ -10,31 +10,41 @@ import UIKit
 class HistoryDetailsContentDataProvider: CollectionDataProvider {
 
   //----------------------------------------------------------------------------
+  // MARK: - Typealias
+  //----------------------------------------------------------------------------
+
+  typealias InformationCellConfigurator = CellConfigurator
+  <
+    GenericTableViewCell,
+    GenericTableViewCellViewModelProtocol
+  >
+
+  //----------------------------------------------------------------------------
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
   /******************** Data ********************/
 
   var items = [[CellConfigurating]]() {
-      didSet {
-        if items.isEmpty || items[0].isEmpty {
-          dataDidClear?()
-        } else {
-          dataDidChange?()
-        }
+    didSet {
+      if items.isEmpty {
+        dataDidClear?()
+      } else {
+        dataDidChange?()
       }
+    }
   }
 
   var headerTitles: [String] {
     return ["Contact information", callInformationTitle]
   }
 
-
   /******************** Text ********************/
 
-  private let callDuration: String
+  private var callDuration: String?
 
   private var callInformationTitle: String {
+    guard let callDuration = callDuration else { return "" }
     return "Call information (\(callDuration)sec)"
   }
 
@@ -50,10 +60,6 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with call: CallModel) {
-    callDuration = call.duration
-  }
-
   //--------------------------------------------------------------------------
   // MARK: - TableView
   //--------------------------------------------------------------------------
@@ -64,6 +70,37 @@ class HistoryDetailsContentDataProvider: CollectionDataProvider {
         cellConfigurator.register(on: tableView)
       }
     }
+  }
+
+  func update(with call: CallModel) {
+//    updateContactInformation()
+//    updateCallInformation()
+    var informationItems = [[CellConfigurating]]()
+
+    let contactCellViewModel = ContactInformationTableViewCellViewModel(with: call)
+    let contactCellConfigurator = InformationCellConfigurator(data: contactCellViewModel)
+    let contactInformationItems = [contactCellConfigurator]
+
+    let directionCellViewModel = CallInformationDirectionTableViewCellViewModel(with: call)
+    let diractionCellConfigurator = InformationCellConfigurator(data: directionCellViewModel)
+
+    let phoneOperatorViewModel = CallInformationPhoneOperatorTableViewCellViewModel(with: call)
+    let phoneOperatorCellConfigurator = InformationCellConfigurator(data: phoneOperatorViewModel)
+    let callInformationItems: [CellConfigurating] =
+      [diractionCellConfigurator, phoneOperatorCellConfigurator]
+
+    informationItems.append(contactInformationItems)
+    informationItems.append(callInformationItems)
+
+    items = informationItems
+  }
+
+  private func updateContactInformation() {
+
+  }
+
+  private func updateCallInformation() {
+
   }
 
 }

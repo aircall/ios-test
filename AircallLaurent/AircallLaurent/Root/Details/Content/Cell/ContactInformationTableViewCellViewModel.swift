@@ -43,9 +43,9 @@ final class ContactInformationTableViewCellViewModel:
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(from call: CallModel) {
+  init(with call: CallModel) {
     self.call = call
-    iconImage = UIImage(systemName: "info.circle")
+    actionButtonImage = UIImage(systemName: "info.circle")
   }
 
 }

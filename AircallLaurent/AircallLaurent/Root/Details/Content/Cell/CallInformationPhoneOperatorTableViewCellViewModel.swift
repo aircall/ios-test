@@ -43,9 +43,9 @@ final class CallInformationPhoneOperatorTableViewCellViewModel:
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(from call: CallModel) {
+  init(with call: CallModel) {
     self.call = call
-    actionButtonImage = UIImage(systemName: "flag")
+    iconImage = UIImage(systemName: "flag")
   }
 
 }

@@ -15,14 +15,25 @@ class HistoryDetailsViewController: UIViewController {
 
   /******************** Outlets ********************/
 
-  @IBOutlet weak private var InformationContainerView: UIView!
-  @IBOutlet weak private var ActionContainerView: UIView!
+  @IBOutlet weak private var informationContainerView: UIView!
+  @IBOutlet weak private var actionContainerView: UIView!
 
-  /******************** ViewModel ********************/
+  /******************** ViewModels ********************/
 
   private let viewModel: HistoryDetailsViewModel
 
+  var call: CallModel? {
+    didSet {
+      update(with: call)
+    }
+  }
+
   /******************** ViewControllers ********************/
+
+  private lazy var contentViewController: HistoryDetailsContentViewController =
+    {
+      return HistoryDetailsContentViewController()
+    }()
 
   private lazy var actionViewController: HistoryDetailsActionViewController = {
     return HistoryDetailsActionViewController(nibName: nil, bundle: nil)
@@ -35,6 +46,7 @@ class HistoryDetailsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
+    update(with: nil)
   }
 
   //----------------------------------------------------------------------------
@@ -67,11 +79,22 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setup() {
     setupView()
+    setupDetailsContentView()
     setupDetailsActionView()
   }
 
   private func setupView() {
+    view.backgroundColor = .white
+  }
 
+  private func setupDetailsContentView() {
+
+    contentViewController.didFail = { [weak self] error in
+      print(error)
+    }
+
+    add(asChildViewController: contentViewController,
+        on: informationContainerView)
   }
 
   private func setupDetailsActionView() {
@@ -86,6 +109,25 @@ class HistoryDetailsViewController: UIViewController {
     actionViewController.shouldAssign = { [weak self] in
       self?.viewModel.assign()
     }
+
+    add(asChildViewController: actionViewController, on: actionContainerView)
+  }
+
+  //----------------------------------------------------------------------------
+  // MARK: - Update
+  //----------------------------------------------------------------------------
+
+  private func update(with call: CallModel?) {
+    let call = CallModel(id: 31,
+                         createdAt: "2018-04-19T09:38:41.000Z",
+                         direction: .outbound,
+                         sender: "Pierre-Baptiste Béchu",
+                         receiver: "06 46 62 12 33",
+                         phoneOperator: "NYC Office",
+                         duration: "120",
+                         isArchived: false,
+                         callType: .missed)
+    contentViewController.update(with: call)
   }
   
 }

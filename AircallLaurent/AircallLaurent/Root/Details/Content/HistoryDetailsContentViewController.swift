@@ -17,7 +17,6 @@ class HistoryDetailsContentViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
   
-
   /******************** TableView ********************/
 
   // Should be renamed to ViewModel.
@@ -64,7 +63,10 @@ class HistoryDetailsContentViewController: UIViewController {
     fatalError("init(coder:) has not been implemented.")
   }
 
-  init(with dataProvider: HistoryDetailsContentDataProvider) {
+  init(
+    with dataProvider: HistoryDetailsContentDataProvider
+      = HistoryDetailsContentDataProvider()
+  ) {
     self.dataProvider = dataProvider
     tableViewDataSource = HistoryDetailsContentDataSource(with: dataProvider)
     tableViewDelegate = TableViewDelegate<HistoryDetailsContentDataProvider>(
@@ -83,7 +85,6 @@ class HistoryDetailsContentViewController: UIViewController {
   private func setupView() {
     view.backgroundColor = .clear
   }
-
 
   private func setupDataProvider() {
     dataProvider.dataDidChange = { [weak self] in
@@ -129,8 +130,8 @@ class HistoryDetailsContentViewController: UIViewController {
   // MARK: - Update
   //--------------------------------------------------------------------------
 
-  //  func update(from call: CallModel) {
-  //      dataProvider.updateData(with: list)
-  //  }
+  func update(with call: CallModel) {
+    dataProvider.update(with: call)
+  }
 
 }

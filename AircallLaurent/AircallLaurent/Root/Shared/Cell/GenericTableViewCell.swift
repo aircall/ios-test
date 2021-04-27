@@ -7,8 +7,9 @@
 
 import UIKit
 
-class GenericTableViewCell<ViewModel: GenericTableViewCellViewModelProtocol>:
-  UITableViewCell
+class GenericTableViewCell:
+  UITableViewCell,
+  Reusable
 {
 
   //--------------------------------------------------------------------------
@@ -29,6 +30,14 @@ class GenericTableViewCell<ViewModel: GenericTableViewCellViewModelProtocol>:
 
   private let primaryColor: UIColor = .black
   private let secondaryColor: UIColor = .lightGray
+
+
+  /******************** Reusable ********************/
+
+//  // Need to override since the nib doesn't
+//  static var reuseIdentifier: String {
+//    return "GenericTableViewCell"
+//  }
 
   //--------------------------------------------------------------------------
   // MARK: - Lifecycle
@@ -105,7 +114,7 @@ class GenericTableViewCell<ViewModel: GenericTableViewCellViewModelProtocol>:
 
 extension GenericTableViewCell: Configurable {
 
-  func configure(with data: ViewModel) {
+  func configure(with data: GenericTableViewCellViewModelProtocol) {
     iconImageView.image = data.iconImage
     
     primaryTitleLabel.text = data.primaryTitleText
