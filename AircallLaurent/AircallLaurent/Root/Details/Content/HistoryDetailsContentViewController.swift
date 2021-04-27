@@ -22,11 +22,9 @@ class HistoryDetailsContentViewController: UIViewController {
   // Should be renamed to ViewModel.
   private let dataProvider: HistoryDetailsContentDataProvider
 
-  private let tableViewDataSource:
-    HistoryDetailsContentDataSource
+  private let tableViewDataSource: HistoryDetailsContentDataSource
 
-  private let tableViewDelegate:
-    TableViewDelegate<HistoryDetailsContentDataProvider>
+  private let tableViewDelegate: HistoryDetailsContentDelegate
 
   /******************** Callbacks ********************/
 
@@ -69,9 +67,7 @@ class HistoryDetailsContentViewController: UIViewController {
   ) {
     self.dataProvider = dataProvider
     tableViewDataSource = HistoryDetailsContentDataSource(with: dataProvider)
-    tableViewDelegate = TableViewDelegate<HistoryDetailsContentDataProvider>(
-      with: dataProvider
-    )
+    tableViewDelegate = HistoryDetailsContentDelegate(with: dataProvider)
 
     super.init(nibName: nil, bundle: .main)
   }

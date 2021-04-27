@@ -25,6 +25,8 @@
 		4D2D1760263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D175E263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift */; };
 		4D2D1768263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D1767263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift */; };
 		4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D1767263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift */; };
+		4D2D176E2638185300C274A2 /* HistoryDetailsContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D176D2638185300C274A2 /* HistoryDetailsContentDelegate.swift */; };
+		4D2D176F2638185300C274A2 /* HistoryDetailsContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D176D2638185300C274A2 /* HistoryDetailsContentDelegate.swift */; };
 		4D3643102634B48500E6919D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36430F2634B48500E6919D /* AppDelegate.swift */; };
 		4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643112634B48500E6919D /* SceneDelegate.swift */; };
 		4D3643142634B48500E6919D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643132634B48500E6919D /* ViewController.swift */; };
@@ -100,6 +102,7 @@
 		4D2D17582638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInformationPhoneOperatorTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		4D2D175E263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		4D2D1767263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInformationDirectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		4D2D176D2638185300C274A2 /* HistoryDetailsContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsContentDelegate.swift; sourceTree = "<group>"; };
 		4D36430C2634B48500E6919D /* AircallLaurent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircallLaurent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36430F2634B48500E6919D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3643112634B48500E6919D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 				4D2D173D2637FC9400C274A2 /* HistoryDetailsContentViewController.xib */,
 				4D2D17432637FCAC00C274A2 /* HistoryDetailsContentDataProvider.swift */,
 				4D2D17492637FD1B00C274A2 /* HistoryDetailsContentDataSource.swift */,
+				4D2D176D2638185300C274A2 /* HistoryDetailsContentDelegate.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -607,6 +611,7 @@
 				4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */,
 				4D2D175F263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */,
+				4D2D176E2638185300C274A2 /* HistoryDetailsContentDelegate.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
@@ -643,6 +648,7 @@
 				4D50733D26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */,
 				4D2D17452637FCAC00C274A2 /* HistoryDetailsContentDataProvider.swift in Sources */,
 				4DAAA6792637171E009392E1 /* DateTests.swift in Sources */,
+				4D2D176F2638185300C274A2 /* HistoryDetailsContentDelegate.swift in Sources */,
 				4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */,
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
 				4D2D175A2638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
