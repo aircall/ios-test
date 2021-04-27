@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2D172C2637F99800C274A2 /* CellConfigurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172A2637F99800C274A2 /* CellConfigurating.swift */; };
+		4D2D172D2637F99800C274A2 /* CollectionDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */; };
+		4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */; };
+		4D2D17362637FBDC00C274A2 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17332637FBDC00C274A2 /* CellConfigurator.swift */; };
+		4D2D17372637FBDC00C274A2 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17342637FBDC00C274A2 /* TableViewDelegate.swift */; };
 		4D3643102634B48500E6919D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36430F2634B48500E6919D /* AppDelegate.swift */; };
 		4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643112634B48500E6919D /* SceneDelegate.swift */; };
 		4D3643142634B48500E6919D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643132634B48500E6919D /* ViewController.swift */; };
@@ -69,6 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D2D172A2637F99800C274A2 /* CellConfigurating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurating.swift; sourceTree = "<group>"; };
+		4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataProvider.swift; sourceTree = "<group>"; };
+		4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		4D2D17332637FBDC00C274A2 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		4D2D17342637FBDC00C274A2 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		4D36430C2634B48500E6919D /* AircallLaurent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircallLaurent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36430F2634B48500E6919D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3643112634B48500E6919D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +148,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2D17312637FBDC00C274A2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */,
+				4D2D17332637FBDC00C274A2 /* CellConfigurator.swift */,
+				4D2D17342637FBDC00C274A2 /* TableViewDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		4D3643032634B48500E6919D = {
 			isa = PBXGroup;
 			children = (
@@ -237,8 +257,8 @@
 			children = (
 				4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */,
 				4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */,
-				4D5072DD2635F0A4001C0904 /* DetailsActions */,
 				4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */,
+				4D5072DD2635F0A4001C0904 /* DetailsActions */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -303,6 +323,8 @@
 		4D5072FC2635FB13001C0904 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4D2D172A2637F99800C274A2 /* CellConfigurating.swift */,
+				4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */,
 				4D5072FE2635FB14001C0904 /* Configurable.swift */,
 			);
 			path = TableView;
@@ -311,6 +333,7 @@
 		4D5073012635FB14001C0904 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4D2D17312637FBDC00C274A2 /* TableView */,
 				4D5073062635FB14001C0904 /* AutoLayout */,
 			);
 			path = Tool;
@@ -522,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2D17372637FBDC00C274A2 /* TableViewDelegate.swift in Sources */,
 				4D5073242635FCAB001C0904 /* ActionView.swift in Sources */,
 				4D507329263600DE001C0904 /* Themeable.swift in Sources */,
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
@@ -532,6 +556,7 @@
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */,
+				4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
@@ -540,9 +565,12 @@
 				4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */,
 				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
 				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
+				4D2D172C2637F99800C274A2 /* CellConfigurating.swift in Sources */,
 				4D78B4B72637208F00C5287D /* Direction.swift in Sources */,
+				4D2D17362637FBDC00C274A2 /* CellConfigurator.swift in Sources */,
 				4D50730D2635FB14001C0904 /* Configurable.swift in Sources */,
 				4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */,
+				4D2D172D2637F99800C274A2 /* CollectionDataProvider.swift in Sources */,
 				4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */,
 				4D3643592634BB4B00E6919D /* HistoryListViewController.swift in Sources */,
 			);
