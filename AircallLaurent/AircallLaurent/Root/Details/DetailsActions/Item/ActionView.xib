@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundView" destination="kDn-0k-tNr" id="Jjd-1q-2kR"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="7aH-2E-wX8"/>
                 <outlet property="imageView" destination="Mgq-Hb-DzP" id="TUd-fd-GI6"/>
                 <outlet property="textLabel" destination="Ffs-VJ-47k" id="ZlB-y7-VPG"/>
@@ -21,46 +20,28 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDn-0k-tNr">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qAe-h0-AT7">
+                    <rect key="frame" x="19.5" y="0.0" width="161" height="200"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qAe-h0-AT7">
-                            <rect key="frame" x="16" y="8" width="168" height="184"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-Hb-DzP">
-                                    <rect key="frame" x="3.5" y="0.0" width="161" height="110.5"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffs-VJ-47k">
-                                    <rect key="frame" x="63.5" y="110.5" width="41.5" height="73.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="Mgq-Hb-DzP" firstAttribute="height" secondItem="qAe-h0-AT7" secondAttribute="height" multiplier="0.6" id="tue-4d-K7G"/>
-                            </constraints>
-                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-Hb-DzP">
+                            <rect key="frame" x="0.0" y="0.0" width="161" height="120"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffs-VJ-47k">
+                            <rect key="frame" x="60" y="120" width="41.5" height="80"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="qAe-h0-AT7" secondAttribute="bottom" constant="8" id="2Mo-Tx-dd2"/>
-                        <constraint firstItem="qAe-h0-AT7" firstAttribute="top" secondItem="kDn-0k-tNr" secondAttribute="top" constant="8" id="C2h-M1-INe"/>
-                        <constraint firstItem="qAe-h0-AT7" firstAttribute="leading" secondItem="kDn-0k-tNr" secondAttribute="leading" constant="16" id="FzV-qC-Ace"/>
-                        <constraint firstAttribute="trailing" secondItem="qAe-h0-AT7" secondAttribute="trailing" constant="16" id="YGz-Aa-0DI"/>
+                        <constraint firstItem="Mgq-Hb-DzP" firstAttribute="height" secondItem="qAe-h0-AT7" secondAttribute="height" multiplier="0.6" id="tue-4d-K7G"/>
                     </constraints>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="Qqp-rt-7dM" appends="YES" id="N6G-Ek-8Cy"/>
-                    </connections>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="kDn-0k-tNr" secondAttribute="trailing" id="0Zc-XC-yXU"/>
-                <constraint firstItem="kDn-0k-tNr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7v7-ZM-gn9"/>
-                <constraint firstItem="kDn-0k-tNr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ohv-eM-3Ds"/>
-                <constraint firstAttribute="bottom" secondItem="kDn-0k-tNr" secondAttribute="bottom" id="rd5-uC-OnY"/>
+                <constraint firstItem="qAe-h0-AT7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XcP-0P-UtF"/>
+                <constraint firstItem="qAe-h0-AT7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lEc-FS-8yg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-12.318840579710146" y="334.15178571428572"/>

@@ -19,64 +19,79 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1y8-W0-ahV">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-b8-B2h">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q90-Sx-C7z">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-TG-9d8">
-                                    <rect key="frame" x="0.0" y="0.0" width="118" height="128"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-b8-B2h">
+                                    <rect key="frame" x="62" y="0.0" width="290" height="76.5"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M90-3L-svL" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="118" height="128"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-TG-9d8">
+                                            <rect key="frame" x="0.0" y="0.0" width="76.5" height="76.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M90-3L-svL" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="76.5" height="76.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="M90-3L-svL" secondAttribute="height" multiplier="1:1" id="RyG-lG-CbW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="M90-3L-svL" secondAttribute="bottom" id="7zX-N0-bCK"/>
+                                                <constraint firstItem="M90-3L-svL" firstAttribute="leading" secondItem="QNr-TG-9d8" secondAttribute="leading" id="KP8-v6-pSt"/>
+                                                <constraint firstAttribute="trailing" secondItem="M90-3L-svL" secondAttribute="trailing" id="ONc-wQ-odb"/>
+                                                <constraint firstItem="M90-3L-svL" firstAttribute="top" secondItem="QNr-TG-9d8" secondAttribute="top" id="buu-ud-hx7"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-q7-ox7">
+                                            <rect key="frame" x="106.5" y="0.0" width="77" height="76.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-A2-Att" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bdc-A2-Att" secondAttribute="trailing" id="Bh4-dH-HpY"/>
+                                                <constraint firstItem="bdc-A2-Att" firstAttribute="top" secondItem="FYC-q7-ox7" secondAttribute="top" id="Gj5-nj-LYy"/>
+                                                <constraint firstItem="bdc-A2-Att" firstAttribute="leading" secondItem="FYC-q7-ox7" secondAttribute="leading" id="OMp-jM-3ob"/>
+                                                <constraint firstAttribute="bottom" secondItem="bdc-A2-Att" secondAttribute="bottom" id="w4j-Fx-SBH"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-qS-5Vv">
+                                            <rect key="frame" x="213.5" y="0.0" width="76.5" height="76.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zg5-0C-BLV" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="76.5" height="76.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zg5-0C-BLV" firstAttribute="leading" secondItem="Ym6-qS-5Vv" secondAttribute="leading" id="aeN-G5-oVl"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zg5-0C-BLV" secondAttribute="trailing" id="dmx-ht-WSu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zg5-0C-BLV" secondAttribute="bottom" id="htG-dm-bWz"/>
+                                                <constraint firstItem="Zg5-0C-BLV" firstAttribute="top" secondItem="Ym6-qS-5Vv" secondAttribute="top" id="yoS-7l-VDc"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="M90-3L-svL" secondAttribute="bottom" id="7zX-N0-bCK"/>
-                                        <constraint firstItem="M90-3L-svL" firstAttribute="leading" secondItem="QNr-TG-9d8" secondAttribute="leading" id="KP8-v6-pSt"/>
-                                        <constraint firstAttribute="trailing" secondItem="M90-3L-svL" secondAttribute="trailing" id="ONc-wQ-odb"/>
-                                        <constraint firstItem="M90-3L-svL" firstAttribute="top" secondItem="QNr-TG-9d8" secondAttribute="top" id="buu-ud-hx7"/>
-                                    </constraints>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-q7-ox7">
-                                    <rect key="frame" x="148" y="0.0" width="118" height="128"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-A2-Att" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="118" height="128"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="bdc-A2-Att" secondAttribute="trailing" id="Bh4-dH-HpY"/>
-                                        <constraint firstItem="bdc-A2-Att" firstAttribute="top" secondItem="FYC-q7-ox7" secondAttribute="top" id="Gj5-nj-LYy"/>
-                                        <constraint firstItem="bdc-A2-Att" firstAttribute="leading" secondItem="FYC-q7-ox7" secondAttribute="leading" id="OMp-jM-3ob"/>
-                                        <constraint firstAttribute="bottom" secondItem="bdc-A2-Att" secondAttribute="bottom" id="w4j-Fx-SBH"/>
-                                    </constraints>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-qS-5Vv">
-                                    <rect key="frame" x="296" y="0.0" width="118" height="128"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zg5-0C-BLV" customClass="ActionView" customModule="AircallLaurent" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="118" height="128"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Zg5-0C-BLV" firstAttribute="leading" secondItem="Ym6-qS-5Vv" secondAttribute="leading" id="aeN-G5-oVl"/>
-                                        <constraint firstAttribute="trailing" secondItem="Zg5-0C-BLV" secondAttribute="trailing" id="dmx-ht-WSu"/>
-                                        <constraint firstAttribute="bottom" secondItem="Zg5-0C-BLV" secondAttribute="bottom" id="htG-dm-bWz"/>
-                                        <constraint firstItem="Zg5-0C-BLV" firstAttribute="top" secondItem="Ym6-qS-5Vv" secondAttribute="top" id="yoS-7l-VDc"/>
-                                    </constraints>
                                 </stackView>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ffa-b8-B2h" firstAttribute="centerX" secondItem="Q90-Sx-C7z" secondAttribute="centerX" id="4NK-wn-iMa"/>
+                                <constraint firstItem="Ffa-b8-B2h" firstAttribute="width" secondItem="Q90-Sx-C7z" secondAttribute="width" multiplier="0.7" id="N2d-aP-rIG"/>
+                                <constraint firstAttribute="bottom" secondItem="Ffa-b8-B2h" secondAttribute="bottom" id="YT8-f6-SsW"/>
+                                <constraint firstItem="Ffa-b8-B2h" firstAttribute="top" secondItem="Q90-Sx-C7z" secondAttribute="top" id="kFM-Hl-EL8"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUn-Kw-M5U">
-                            <rect key="frame" x="0.0" y="128" width="414" height="88"/>
+                            <rect key="frame" x="0.0" y="76.5" width="414" height="74.5"/>
                             <state key="normal" title="Button"/>
                         </button>
                     </subviews>
@@ -90,7 +105,7 @@
                 <constraint firstAttribute="bottom" secondItem="1y8-W0-ahV" secondAttribute="bottom" id="uXA-xX-oLa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-188.40579710144928" y="428.57142857142856"/>
+            <point key="canvasLocation" x="-188.40579710144928" y="406.80803571428572"/>
         </view>
     </objects>
     <resources>

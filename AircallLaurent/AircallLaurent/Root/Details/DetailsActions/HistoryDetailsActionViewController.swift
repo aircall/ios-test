@@ -68,6 +68,8 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
     let image = UIImage(systemName: "note")
     assert(image != nil, "Image not found") // Not handling error for this test
 
+    noteActionView.image = image
+
     noteActionView.didTap = { [weak self] in
       self?.shouldAddNote?()
     }
@@ -78,7 +80,8 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
 
     let image = UIImage(systemName: "tag")
     assert(image != nil, "Image not found") // Not handling error for this test
-    assignActionView.image = image
+
+    tagsActionView.image = image
 
     tagsActionView.didTap = { [weak self] in
       self?.shouldAddTags?()

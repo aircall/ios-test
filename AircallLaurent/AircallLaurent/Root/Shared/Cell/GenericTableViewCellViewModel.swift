@@ -37,7 +37,6 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
     return date.timeIn24HourFormat
   }
 
-
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------

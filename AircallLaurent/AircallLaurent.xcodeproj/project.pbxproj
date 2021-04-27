@@ -66,6 +66,7 @@
 		4D78B4BD263720C400C5287D /* CallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4BC263720C400C5287D /* CallType.swift */; };
 		4D78B4BE263720C400C5287D /* CallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4BC263720C400C5287D /* CallType.swift */; };
 		4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4C32637233B00C5287D /* CallModelTests.swift */; };
+		4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FFEFA26383565008F13EC /* UIView+Layer.swift */; };
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
 		4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
@@ -143,6 +144,7 @@
 		4D78B4B62637208F00C5287D /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		4D78B4BC263720C400C5287D /* CallType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallType.swift; sourceTree = "<group>"; };
 		4D78B4C32637233B00C5287D /* CallModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModelTests.swift; sourceTree = "<group>"; };
+		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -445,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5072F62635FB13001C0904 /* UIView+AutoLayout.swift */,
+				4D9FFEFA26383565008F13EC /* UIView+Layer.swift */,
 				4D5072F72635FB13001C0904 /* UIViewcontroller+Container.swift */,
 			);
 			path = UIKit;
@@ -610,6 +613,7 @@
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */,
 				4D2D175F263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
+				4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */,
 				4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */,
 				4D2D176E2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,

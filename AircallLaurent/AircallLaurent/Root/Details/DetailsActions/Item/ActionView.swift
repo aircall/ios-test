@@ -23,7 +23,7 @@ class ActionView: UIView, NibInstanciable {
   /******************** Outlets ********************/
 
   @IBOutlet var contentView: UIView!
-  @IBOutlet weak private var backgroundView: UIView!
+//  @IBOutlet weak private var backgroundView: UIView!
   @IBOutlet weak private var imageView: UIImageView!
   @IBOutlet weak private var textLabel: UILabel!
 
@@ -68,11 +68,13 @@ class ActionView: UIView, NibInstanciable {
   }
 
   private func setupView() {
-    backgroundColor = .clear
+    backgroundColor = .white
+    cornerRadius = 10
+    applyShadow()
   }
 
   private func setupBackgroundView() {
-    backgroundView.backgroundColor = .white
+//    backgroundView.backgroundColor = .white
   }
 
   private func setupContentView() {
@@ -86,6 +88,7 @@ class ActionView: UIView, NibInstanciable {
 
   private func setupTitle() {
     textLabel.numberOfLines = 1
+    textLabel.font = UIFont.systemFont(ofSize: 13)
   }
 
   //----------------------------------------------------------------------------

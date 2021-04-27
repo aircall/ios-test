@@ -31,7 +31,7 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-nu-4LQ">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-nu-4LQ">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-GO-rrF" userLabel="InformationContainerView">
@@ -39,12 +39,17 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-x1-GfH" userLabel="ActionContainerView">
-                            <rect key="frame" x="0.0" y="348.5" width="414" height="425.5"/>
+                            <rect key="frame" x="0.0" y="353.5" width="414" height="139"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uz-bF-ggA" userLabel="Spacer">
+                            <rect key="frame" x="0.0" y="497.5" width="414" height="276.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="GPT-GO-rrF" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.45" id="YjG-cU-qwe"/>
+                        <constraint firstItem="GUn-x1-GfH" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.18" id="zae-Kp-xqo"/>
                     </constraints>
                 </stackView>
             </subviews>
