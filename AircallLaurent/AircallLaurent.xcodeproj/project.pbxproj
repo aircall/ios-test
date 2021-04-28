@@ -57,8 +57,8 @@
 		4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */; };
 		4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733426360802001C0904 /* GenericTableViewCell.swift */; };
 		4D50733726360802001C0904 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D50733526360802001C0904 /* GenericTableViewCell.xib */; };
-		4D50733C26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */; };
-		4D50733D26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */; };
+		4D50733C26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */; };
+		4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */; };
 		4D78B4AE26371E1500C5287D /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4AD26371E1500C5287D /* CallModel.swift */; };
 		4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4AD26371E1500C5287D /* CallModel.swift */; };
 		4D78B4B72637208F00C5287D /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4B62637208F00C5287D /* Direction.swift */; };
@@ -66,6 +66,14 @@
 		4D78B4BD263720C400C5287D /* CallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4BC263720C400C5287D /* CallType.swift */; };
 		4D78B4BE263720C400C5287D /* CallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4BC263720C400C5287D /* CallType.swift */; };
 		4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4C32637233B00C5287D /* CallModelTests.swift */; };
+		4D7E6DA5263943E200D180C0 /* HistoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */; };
+		4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */; };
+		4D7E6DAB2639440200D180C0 /* HistoryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */; };
+		4D7E6DAC2639440200D180C0 /* HistoryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */; };
+		4D7E6DB12639441500D180C0 /* HistoryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */; };
+		4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */; };
+		4D7E6DB72639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
+		4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
 		4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FFEFA26383565008F13EC /* UIView+Layer.swift */; };
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
@@ -139,11 +147,15 @@
 		4D50732D26360605001C0904 /* HistoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		4D50733426360802001C0904 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		4D50733526360802001C0904 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
-		4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		4D78B4AD26371E1500C5287D /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		4D78B4B62637208F00C5287D /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		4D78B4BC263720C400C5287D /* CallType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallType.swift; sourceTree = "<group>"; };
 		4D78B4C32637233B00C5287D /* CallModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModelTests.swift; sourceTree = "<group>"; };
+		4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewModel.swift; sourceTree = "<group>"; };
+		4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDataSource.swift; sourceTree = "<group>"; };
+		4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDelegate.swift; sourceTree = "<group>"; };
+		4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDataProvider.swift; sourceTree = "<group>"; };
 		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
@@ -297,6 +309,11 @@
 			children = (
 				4D3643572634BB4B00E6919D /* HistoryListViewController.swift */,
 				4D3643582634BB4B00E6919D /* HistoryListViewController.xib */,
+				4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */,
+				4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */,
+				4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */,
+				4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */,
+				4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -411,7 +428,6 @@
 			children = (
 				4D50733426360802001C0904 /* GenericTableViewCell.swift */,
 				4D50733526360802001C0904 /* GenericTableViewCell.xib */,
-				4D50733B26360F50001C0904 /* GenericTableViewCellViewModel.swift */,
 				4D2D175E263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift */,
 			);
 			path = Cell;
@@ -603,10 +619,11 @@
 				4D507329263600DE001C0904 /* Themeable.swift in Sources */,
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
 				4D50730A2635FB14001C0904 /* Reusable.swift in Sources */,
+				4D7E6DB12639441500D180C0 /* HistoryListDelegate.swift in Sources */,
 				4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */,
 				4D2D17442637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */,
 				4D2D173E2637FC9400C274A2 /* HistoryDetailsInformationViewController.swift in Sources */,
-				4D50733C26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */,
+				4D50733C26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
 				4D78B4AE26371E1500C5287D /* CallModel.swift in Sources */,
 				4D2D17502638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
@@ -623,10 +640,13 @@
 				4D78B4BD263720C400C5287D /* CallType.swift in Sources */,
 				4D2D17592638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
 				4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */,
+				4D7E6DAB2639440200D180C0 /* HistoryListDataSource.swift in Sources */,
 				4D2D174A2637FD1B00C274A2 /* HistoryDetailsInformationDataSource.swift in Sources */,
 				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
 				4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */,
+				4D7E6DB72639458900D180C0 /* HistoryListDataProvider.swift in Sources */,
 				4D2D172C2637F99800C274A2 /* CellConfigurating.swift in Sources */,
+				4D7E6DA5263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 				4D2D1768263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
 				4D78B4B72637208F00C5287D /* Direction.swift in Sources */,
 				4D2D17362637FBDC00C274A2 /* CellConfigurator.swift in Sources */,
@@ -645,11 +665,14 @@
 				4D78B4B82637208F00C5287D /* Direction.swift in Sources */,
 				4D2D1760263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */,
+				4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */,
 				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D2D17512638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
+				4D7E6DAC2639440200D180C0 /* HistoryListDataSource.swift in Sources */,
 				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
+				4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */,
 				4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */,
-				4D50733D26360F50001C0904 /* GenericTableViewCellViewModel.swift in Sources */,
+				4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
 				4D2D17452637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */,
 				4DAAA6792637171E009392E1 /* DateTests.swift in Sources */,
 				4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
@@ -657,6 +680,7 @@
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
 				4D2D175A2638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
 				4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
+				4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

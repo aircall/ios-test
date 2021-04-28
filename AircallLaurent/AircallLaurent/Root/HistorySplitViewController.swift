@@ -17,7 +17,8 @@ class HistorySplitViewController: UISplitViewController {
   /******************** ViewControllers ********************/
 
   private lazy var historyListViewController: HistoryListViewController = {
-    return HistoryListViewController()
+    let viewModel = HistoryListViewModel()
+    return HistoryListViewController(with: viewModel)
   }()
 
   private var historyDetailsViewController: HistoryDetailsViewController?

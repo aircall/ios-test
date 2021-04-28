@@ -1,5 +1,5 @@
 //
-//  GenericTableViewCellViewModel.swift
+//  CallTableViewCellViewModel.swift
 //  AircallLaurent
 //
 //  Created by Laurent on 25/04/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
+final class CallTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
@@ -20,11 +20,11 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
   private let date: Date?
 
   var primaryTitleText: String {
-    return ""
+    return call.receiver ?? ""
   }
 
   var primarySubtitleText: String {
-    return ""
+    return call.sender
   }
 
   var secondaryTitleText: String? {
@@ -43,8 +43,9 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(from call: CallModel) {
+  init(with call: CallModel) {
     self.call = call
+
     self.date = Date(fromISO8601: call.createdAt)
 
     iconImage = call.direction == .inbound
