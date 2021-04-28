@@ -1,0 +1,106 @@
+import Foundation
+
+// Without JWTDecode: https://stackoverflow.com/a/40915703/2448287
+
+// Backend Network provider. URLSession but could be Alamofire or other
+
+public enum URLSessionError: Error {
+  case notAHttpUrlResponse
+  case invalidHTTPURLResponse(response: HTTPURLResponse)
+  case emptyData
+}
+
+//allows you to execute HTTP request, it incorporates NSURLSession internally.
+//Every network service can execute just one request at a time, can cancel the
+//request (big advantage), and has callbacks for success and failure responses.
+class NetworkServiceProvider: NSObject {
+
+  //----------------------------------------------------------------------------
+  // MARK: - Properties
+  //----------------------------------------------------------------------------
+
+  /******************** Typealias ********************/
+
+  private typealias DataTaskResult =
+    (data: Data?, response: URLResponse?, error: Error?)
+
+  /******************** URLSession ********************/
+
+  private var task: URLSessionDataTask?
+  private var timeoutInterval: TimeInterval = 10.0
+
+  //----------------------------------------------------------------------------
+  // MARK: - Task life cycle
+  //----------------------------------------------------------------------------
+
+  func setup(urlRequest: URLRequest,
+             completion: @escaping ((Result<Data, Error>) -> Void)) {
+    task = URLSession.shared.dataTask(with: urlRequest) {
+      data, response, error in
+      defer { self.task = nil }
+      //print("\(urlRequest.url?.absoluteString ?? "wrong url") task completed.")
+      switch self.isValid(dataTaskResult: (data, response, error)) {
+      case .failure(let failureError): completion(.failure(failureError))
+      case .success(let valideData): completion(.success(valideData))
+      }
+    }
+  }
+
+  func start() {
+    let url = task?.currentRequest?.url?.absoluteString ?? "wrong url"
+    print("\(url) task starts.")
+    if let httpBody = task?.currentRequest?.httpBody {
+      let body = String(decoding: httpBody, as: UTF8.self)
+      print(body)
+    }
+
+    task?.resume()
+  }
+
+  func cancel() {
+    task?.cancel()
+  }
+
+  //----------------------------------------------------------------------------
+  // MARK: - Validity
+  //----------------------------------------------------------------------------
+
+  private func isValidResponse(response: HTTPURLResponse) -> Bool {
+    let isValidResponse = 200...299 ~= response.statusCode
+    return isValidResponse
+  }
+
+  private func isValid(dataTaskResult: DataTaskResult) -> Result<Data, Error> {
+    if let error = dataTaskResult.error { return .failure(error) }
+
+    guard let response = dataTaskResult.response as? HTTPURLResponse else {
+      return .failure(URLSessionError.notAHttpUrlResponse)
+    }
+
+    guard isValidResponse(response: response) == true else {
+      debug(data: dataTaskResult.data)
+      let error = URLSessionError.invalidHTTPURLResponse(response: response)
+      return .failure(error)
+    }
+
+    //print("response:\n\(response)")
+
+    guard let data = dataTaskResult.data else {
+      return .failure(URLSessionError.emptyData)
+    }
+
+    return .success(data)
+  }
+
+  // Temporary debug error object in data
+  private func debug(data: Data?) {
+    guard let data = data else {
+      print("[DEBUG] error data: nil")
+      return
+    }
+
+    let string = String(data: data, encoding: .utf8)
+    print("[DEBUG] error data: \(String(describing: string))")
+  }
+
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1AC431263986290071EB23 /* HistoryListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AC430263986290071EB23 /* HistoryListRepository.swift */; };
+		4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AC430263986290071EB23 /* HistoryListRepository.swift */; };
 		4D2D172C2637F99800C274A2 /* CellConfigurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172A2637F99800C274A2 /* CellConfigurating.swift */; };
 		4D2D172D2637F99800C274A2 /* CollectionDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */; };
 		4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */; };
@@ -74,6 +76,37 @@
 		4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */; };
 		4D7E6DB72639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
 		4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
+		4D966BA22639A9BB00C5EC54 /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B882639A9BB00C5EC54 /* ApiRequestProtocol.swift */; };
+		4D966BA32639A9BB00C5EC54 /* QueryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B892639A9BB00C5EC54 /* QueryType.swift */; };
+		4D966BA42639A9BB00C5EC54 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B8A2639A9BB00C5EC54 /* HTTPMethod.swift */; };
+		4D966BA52639A9BB00C5EC54 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B8B2639A9BB00C5EC54 /* RequestProtocol.swift */; };
+		4D966BA62639A9BB00C5EC54 /* HeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B8C2639A9BB00C5EC54 /* HeaderField.swift */; };
+		4D966BA82639A9BB00C5EC54 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B8E2639A9BB00C5EC54 /* QueryBuilder.swift */; };
+		4D966BA92639A9BB00C5EC54 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B902639A9BB00C5EC54 /* NetworkError.swift */; };
+		4D966BAA2639A9BB00C5EC54 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B922639A9BB00C5EC54 /* NetworkOperation.swift */; };
+		4D966BAB2639A9BB00C5EC54 /* AsynchronousBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B932639A9BB00C5EC54 /* AsynchronousBlockOperation.swift */; };
+		4D966BAC2639A9BB00C5EC54 /* NetworkQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B942639A9BB00C5EC54 /* NetworkQueue.swift */; };
+		4D966BAD2639A9BB00C5EC54 /* ApiTokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B972639A9BB00C5EC54 /* ApiTokenProvider.swift */; };
+		4D966BAE2639A9BB00C5EC54 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B982639A9BB00C5EC54 /* TokenType.swift */; };
+		4D966BAF2639A9BB00C5EC54 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B992639A9BB00C5EC54 /* NetworkServiceProvider.swift */; };
+		4D966BB02639A9BB00C5EC54 /* UrlRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9A2639A9BB00C5EC54 /* UrlRequestBuilder.swift */; };
+		4D966BB12639A9BB00C5EC54 /* ApiServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9B2639A9BB00C5EC54 /* ApiServerConfiguration.swift */; };
+		4D966BB22639A9BB00C5EC54 /* UrlSessionApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9C2639A9BB00C5EC54 /* UrlSessionApiService.swift */; };
+		4D966BB32639A9BB00C5EC54 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9D2639A9BB00C5EC54 /* ApiServiceProtocol.swift */; };
+		4D966BC02639AB4B00C5EC54 /* AircallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */; };
+		4D966BC12639AB4B00C5EC54 /* AircallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */; };
+		4D966BCB2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */; };
+		4D966BCC2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */; };
+		4D966BD42639AC7600C5EC54 /* GetCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */; };
+		4D966BD52639AC7600C5EC54 /* GetCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */; };
+		4D966BDA2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */; };
+		4D966BDB2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */; };
+		4D966BE02639AC9D00C5EC54 /* PostCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */; };
+		4D966BE12639AC9D00C5EC54 /* PostCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */; };
+		4D966BEB2639B21A00C5EC54 /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BEA2639B21A00C5EC54 /* ResetModel.swift */; };
+		4D966BEC2639B21A00C5EC54 /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BEA2639B21A00C5EC54 /* ResetModel.swift */; };
+		4D966BF52639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
+		4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
 		4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FFEFA26383565008F13EC /* UIView+Layer.swift */; };
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
@@ -98,6 +131,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1AC430263986290071EB23 /* HistoryListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListRepository.swift; sourceTree = "<group>"; };
 		4D2D172A2637F99800C274A2 /* CellConfigurating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurating.swift; sourceTree = "<group>"; };
 		4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataProvider.swift; sourceTree = "<group>"; };
 		4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
@@ -156,6 +190,30 @@
 		4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDataSource.swift; sourceTree = "<group>"; };
 		4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDelegate.swift; sourceTree = "<group>"; };
 		4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListDataProvider.swift; sourceTree = "<group>"; };
+		4D966B882639A9BB00C5EC54 /* ApiRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequestProtocol.swift; sourceTree = "<group>"; };
+		4D966B892639A9BB00C5EC54 /* QueryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryType.swift; sourceTree = "<group>"; };
+		4D966B8A2639A9BB00C5EC54 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4D966B8B2639A9BB00C5EC54 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		4D966B8C2639A9BB00C5EC54 /* HeaderField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderField.swift; sourceTree = "<group>"; };
+		4D966B8E2639A9BB00C5EC54 /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
+		4D966B902639A9BB00C5EC54 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4D966B922639A9BB00C5EC54 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		4D966B932639A9BB00C5EC54 /* AsynchronousBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousBlockOperation.swift; sourceTree = "<group>"; };
+		4D966B942639A9BB00C5EC54 /* NetworkQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkQueue.swift; sourceTree = "<group>"; };
+		4D966B972639A9BB00C5EC54 /* ApiTokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTokenProvider.swift; sourceTree = "<group>"; };
+		4D966B982639A9BB00C5EC54 /* TokenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		4D966B992639A9BB00C5EC54 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		4D966B9A2639A9BB00C5EC54 /* UrlRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilder.swift; sourceTree = "<group>"; };
+		4D966B9B2639A9BB00C5EC54 /* ApiServerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServerConfiguration.swift; sourceTree = "<group>"; };
+		4D966B9C2639A9BB00C5EC54 /* UrlSessionApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSessionApiService.swift; sourceTree = "<group>"; };
+		4D966B9D2639A9BB00C5EC54 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallAPI.swift; sourceTree = "<group>"; };
+		4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsOperation.swift; sourceTree = "<group>"; };
+		4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallOperation.swift; sourceTree = "<group>"; };
+		4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResetOperation.swift; sourceTree = "<group>"; };
+		4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCallOperation.swift; sourceTree = "<group>"; };
+		4D966BEA2639B21A00C5EC54 /* ResetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetModel.swift; sourceTree = "<group>"; };
+		4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
@@ -310,10 +368,11 @@
 				4D3643572634BB4B00E6919D /* HistoryListViewController.swift */,
 				4D3643582634BB4B00E6919D /* HistoryListViewController.xib */,
 				4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */,
-				4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */,
 				4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */,
 				4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */,
 				4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */,
+				4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */,
+				4D1AC430263986290071EB23 /* HistoryListRepository.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -352,6 +411,7 @@
 		4D5072F42635FB13001C0904 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4D966B862639A95200C5EC54 /* Network */,
 				4D5072F52635FB13001C0904 /* extension */,
 				4D5072F82635FB13001C0904 /* Protocol */,
 				4D5073012635FB14001C0904 /* Tool */,
@@ -449,6 +509,117 @@
 				4D78B4C32637233B00C5287D /* CallModelTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4D966B862639A95200C5EC54 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BC52639AC2300C5EC54 /* Custom librairy */,
+				4D966BC92639AC3B00C5EC54 /* Requests */,
+				4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4D966B872639A9BB00C5EC54 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4D966B882639A9BB00C5EC54 /* ApiRequestProtocol.swift */,
+				4D966B892639A9BB00C5EC54 /* QueryType.swift */,
+				4D966B8A2639A9BB00C5EC54 /* HTTPMethod.swift */,
+				4D966B8B2639A9BB00C5EC54 /* RequestProtocol.swift */,
+				4D966B8C2639A9BB00C5EC54 /* HeaderField.swift */,
+				4D966B8E2639A9BB00C5EC54 /* QueryBuilder.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		4D966B8F2639A9BB00C5EC54 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				4D966B902639A9BB00C5EC54 /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		4D966B912639A9BB00C5EC54 /* Network Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4D966B922639A9BB00C5EC54 /* NetworkOperation.swift */,
+				4D966B932639A9BB00C5EC54 /* AsynchronousBlockOperation.swift */,
+				4D966B942639A9BB00C5EC54 /* NetworkQueue.swift */,
+			);
+			path = "Network Operations";
+			sourceTree = "<group>";
+		};
+		4D966B952639A9BB00C5EC54 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				4D966B962639A9BB00C5EC54 /* Token */,
+				4D966B992639A9BB00C5EC54 /* NetworkServiceProvider.swift */,
+				4D966B9A2639A9BB00C5EC54 /* UrlRequestBuilder.swift */,
+				4D966B9B2639A9BB00C5EC54 /* ApiServerConfiguration.swift */,
+				4D966B9C2639A9BB00C5EC54 /* UrlSessionApiService.swift */,
+				4D966B9D2639A9BB00C5EC54 /* ApiServiceProtocol.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		4D966B962639A9BB00C5EC54 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				4D966B972639A9BB00C5EC54 /* ApiTokenProvider.swift */,
+				4D966B982639A9BB00C5EC54 /* TokenType.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		4D966BC52639AC2300C5EC54 /* Custom librairy */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BF32639B7CF00C5EC54 /* Extensions */,
+				4D966B952639A9BB00C5EC54 /* Backend */,
+				4D966B8F2639A9BB00C5EC54 /* Errors */,
+				4D966B912639A9BB00C5EC54 /* Network Operations */,
+				4D966B872639A9BB00C5EC54 /* Requests */,
+			);
+			path = "Custom librairy";
+			sourceTree = "<group>";
+		};
+		4D966BC92639AC3B00C5EC54 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BE92639B1F900C5EC54 /* Reset */,
+				4D966BE82639B1EC00C5EC54 /* Call */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		4D966BE82639B1EC00C5EC54 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */,
+				4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */,
+				4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		4D966BE92639B1F900C5EC54 /* Reset */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */,
+				4D966BEA2639B21A00C5EC54 /* ResetModel.swift */,
+			);
+			path = Reset;
+			sourceTree = "<group>";
+		};
+		4D966BF32639B7CF00C5EC54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4DAAA67726371706009392E1 /* Date */ = {
@@ -615,31 +786,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2D17372637FBDC00C274A2 /* TableViewDelegate.swift in Sources */,
+				4D966BA62639A9BB00C5EC54 /* HeaderField.swift in Sources */,
+				4D966BCB2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
 				4D5073242635FCAB001C0904 /* ActionView.swift in Sources */,
+				4D966BAD2639A9BB00C5EC54 /* ApiTokenProvider.swift in Sources */,
+				4D966BE02639AC9D00C5EC54 /* PostCallOperation.swift in Sources */,
 				4D507329263600DE001C0904 /* Themeable.swift in Sources */,
+				4D966BDA2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */,
+				4D966BAF2639A9BB00C5EC54 /* NetworkServiceProvider.swift in Sources */,
 				4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */,
+				4D966BB02639A9BB00C5EC54 /* UrlRequestBuilder.swift in Sources */,
 				4D50730A2635FB14001C0904 /* Reusable.swift in Sources */,
 				4D7E6DB12639441500D180C0 /* HistoryListDelegate.swift in Sources */,
+				4D966BA82639A9BB00C5EC54 /* QueryBuilder.swift in Sources */,
 				4D5073082635FB14001C0904 /* UIView+AutoLayout.swift in Sources */,
 				4D2D17442637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */,
+				4D966BC02639AB4B00C5EC54 /* AircallAPI.swift in Sources */,
 				4D2D173E2637FC9400C274A2 /* HistoryDetailsInformationViewController.swift in Sources */,
+				4D966BEB2639B21A00C5EC54 /* ResetModel.swift in Sources */,
 				4D50733C26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
+				4D966BA32639A9BB00C5EC54 /* QueryType.swift in Sources */,
+				4D966BB12639A9BB00C5EC54 /* ApiServerConfiguration.swift in Sources */,
 				4D78B4AE26371E1500C5287D /* CallModel.swift in Sources */,
+				4D966BAC2639A9BB00C5EC54 /* NetworkQueue.swift in Sources */,
+				4D966BAB2639A9BB00C5EC54 /* AsynchronousBlockOperation.swift in Sources */,
 				4D2D17502638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
 				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
+				4D966BAA2639A9BB00C5EC54 /* NetworkOperation.swift in Sources */,
+				4D966BA22639A9BB00C5EC54 /* ApiRequestProtocol.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
 				4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */,
+				4D966BA92639A9BB00C5EC54 /* NetworkError.swift in Sources */,
+				4D966BAE2639A9BB00C5EC54 /* TokenType.swift in Sources */,
 				4D2D175F263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */,
+				4D966BA52639A9BB00C5EC54 /* RequestProtocol.swift in Sources */,
 				4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */,
+				4D966BB32639A9BB00C5EC54 /* ApiServiceProtocol.swift in Sources */,
+				4D1AC431263986290071EB23 /* HistoryListRepository.swift in Sources */,
 				4D2D176E2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
+				4D966BB22639A9BB00C5EC54 /* UrlSessionApiService.swift in Sources */,
+				4D966BA42639A9BB00C5EC54 /* HTTPMethod.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
 				4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D78B4BD263720C400C5287D /* CallType.swift in Sources */,
+				4D966BF52639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */,
 				4D2D17592638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
 				4D50733626360802001C0904 /* GenericTableViewCell.swift in Sources */,
+				4D966BD42639AC7600C5EC54 /* GetCallOperation.swift in Sources */,
 				4D7E6DAB2639440200D180C0 /* HistoryListDataSource.swift in Sources */,
 				4D2D174A2637FD1B00C274A2 /* HistoryDetailsInformationDataSource.swift in Sources */,
 				4D5073092635FB14001C0904 /* UIViewcontroller+Container.swift in Sources */,
@@ -663,23 +859,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D78B4B82637208F00C5287D /* Direction.swift in Sources */,
+				4D966BD52639AC7600C5EC54 /* GetCallOperation.swift in Sources */,
 				4D2D1760263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */,
 				4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */,
+				4D966BEC2639B21A00C5EC54 /* ResetModel.swift in Sources */,
+				4D966BE12639AC9D00C5EC54 /* PostCallOperation.swift in Sources */,
+				4D966BC12639AB4B00C5EC54 /* AircallAPI.swift in Sources */,
 				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D2D17512638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
 				4D7E6DAC2639440200D180C0 /* HistoryListDataSource.swift in Sources */,
 				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
 				4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */,
 				4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */,
+				4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */,
 				4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
 				4D2D17452637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */,
 				4DAAA6792637171E009392E1 /* DateTests.swift in Sources */,
+				4D966BCC2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
 				4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */,
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
+				4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */,
 				4D2D175A2638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
 				4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
+				4D966BDB2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */,
 				4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

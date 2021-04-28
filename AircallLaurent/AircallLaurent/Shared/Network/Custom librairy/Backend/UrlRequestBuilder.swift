@@ -1,0 +1,66 @@
+import Foundation
+
+/*******************************************************************************
+ * UrlRequestBuilder
+ *
+ * Generate a URLRequest from a request that conforms to ApiRequestProtocol
+ * for an URLSessionTask.
+ *
+ ******************************************************************************/
+
+class UrlRequestBuilder {
+
+  //----------------------------------------------------------------------------
+  // MARK: - Builder
+  //----------------------------------------------------------------------------
+
+  static func buildUrlRequest(from request: ApiRequestProtocol,
+                              apiConfiguration: ApiServerConfiguration,
+                              timeoutInterval: TimeInterval) -> URLRequest? {
+    guard let url =
+      UrlRequestBuilder.generateUrl(from: request,
+                                    apiConfiguration: apiConfiguration) else {
+        print("Error while generating url")
+        return nil
+    }
+
+    var urlRequest =
+      URLRequest(url: url,
+                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, // ToCheck
+        timeoutInterval: timeoutInterval)
+
+    // let headers = request.headers
+    // Set authentication token if available.
+    // headers?["X-Api-Auth-Token"] = BackendAuth.shared.token
+
+    urlRequest.httpMethod = request.method.rawValue
+    urlRequest.allHTTPHeaderFields = request.headers
+    urlRequest.httpBody = request.httpBody
+
+//    print("-----")
+//    print(urlRequest)
+//    print(urlRequest.allHTTPHeaderFields)
+//    print(urlRequest.readableBody)
+//    print("-----")
+
+    return urlRequest
+  }
+
+  private static func generateUrl(
+    from request: ApiRequestProtocol,
+    apiConfiguration: ApiServerConfiguration
+    ) -> URL? {
+    var urlComponent = apiConfiguration.baseURL
+    urlComponent.path = apiConfiguration.version + request.endpoint
+    urlComponent.percentEncodedQuery = request.query
+
+    guard let url = urlComponent.url else {
+      // TODO: Create error
+      print("Could not create url")
+      return nil
+    }
+
+    return url
+  }
+
+}
