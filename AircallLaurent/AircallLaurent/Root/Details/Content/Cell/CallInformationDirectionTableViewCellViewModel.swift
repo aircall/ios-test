@@ -15,9 +15,7 @@ final class CallInformationDirectionTableViewCellViewModel:
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  private let call: CallModel
-
-  /****************** GenericTableViewCellViewModelProtocol ******************/
+  let call: CallModel
 
   var iconImage: UIImage?
 
@@ -52,4 +50,5 @@ final class CallInformationDirectionTableViewCellViewModel:
       ? UIImage(systemName: "phone.fill.arrow.up.right")
       : UIImage(systemName: "phone.fill.arrow.down.left")
   }
+
 }

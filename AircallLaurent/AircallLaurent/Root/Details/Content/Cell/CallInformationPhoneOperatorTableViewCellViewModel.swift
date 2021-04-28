@@ -15,9 +15,7 @@ final class CallInformationPhoneOperatorTableViewCellViewModel:
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  private let call: CallModel
-
-  /****************** GenericTableViewCellViewModelProtocol ******************/
+  let call: CallModel
 
   var iconImage: UIImage?
 

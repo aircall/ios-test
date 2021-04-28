@@ -9,7 +9,17 @@ import UIKit
 
 final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
-  var provider: HistoryDetailsInformationDataProvider
+  //----------------------------------------------------------------------------
+  // MARK: - Properties
+  //----------------------------------------------------------------------------
+
+  /******************** Data ********************/
+
+  private let provider: HistoryDetailsInformationDataProvider
+
+  /******************** Callbacks ********************/
+
+  var didTapDetail: ((CallModel) -> Void)?
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
@@ -30,7 +40,8 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView,
                  accessoryButtonTappedForRowWith indexPath: IndexPath) {
-    print("Tap")
+//    guard let call = provider.item(at: indexPath) else { return }
+    
   }
 
   func tableView(_ tableView: UITableView,

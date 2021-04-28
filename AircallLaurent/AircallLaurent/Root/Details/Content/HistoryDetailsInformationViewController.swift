@@ -30,6 +30,8 @@ class HistoryDetailsInformationViewController: UIViewController {
 
   var didFail: ((Error) -> Void)?
 
+  var didTapDetail: ((CallModel) -> Void)?
+
   //--------------------------------------------------------------------------
   // MARK: - Lifecycle
   //--------------------------------------------------------------------------

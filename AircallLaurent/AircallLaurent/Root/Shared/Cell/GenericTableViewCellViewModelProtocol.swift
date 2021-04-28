@@ -15,6 +15,7 @@ import UIKit
  ******************************************************************************/
 
 protocol GenericTableViewCellViewModelProtocol {
+  var call: CallModel { get }
   var iconImage: UIImage? { get set }
   var primaryTitleText: String { get }
   var primarySubtitleText: String { get }

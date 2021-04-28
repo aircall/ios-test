@@ -13,7 +13,7 @@ final class GenericTableViewCellViewModel: GenericTableViewCellViewModelProtocol
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  private let call: CallModel
+  let call: CallModel
 
   var iconImage: UIImage?
 
