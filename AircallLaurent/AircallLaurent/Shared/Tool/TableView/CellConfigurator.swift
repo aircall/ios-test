@@ -7,9 +7,10 @@ import UIKit
  *
  ******************************************************************************/
 
-class CellConfigurator<Cell, DataType>: CellConfigurating
-  where Cell.DataType == DataType,
-Cell: UITableViewCell & Configurable & Reusable {
+class CellConfigurator<Cell, DataType>:
+  CellConfigurating where Cell.DataType == DataType,
+                          Cell: UITableViewCell & Configurable & Reusable
+{
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
@@ -20,6 +21,8 @@ Cell: UITableViewCell & Configurable & Reusable {
   /******************** Callback ********************/
 
   var didSelect: ((DataType) -> Void)?
+
+  var didSelectAccessory: ((DataType) -> Void)?
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
@@ -69,6 +72,10 @@ Cell: UITableViewCell & Configurable & Reusable {
 
   func select() {
     didSelect?(data)
+  }
+
+  func tapAccessoryButton() {
+    didSelectAccessory?(data)
   }
 
 }

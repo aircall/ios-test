@@ -30,7 +30,6 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
       if items.isEmpty {
         dataDidClear?()
       } else {
-
         let flatItems = items.flatMap { $0 }
         shouldRegisterCells?(flatItems)
         dataDidChange?()
@@ -64,13 +63,17 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
   /// Items in table view data provider did clear
   var dataDidClear: (() -> Void)?
 
+  var didSelect: ((CallModel) -> Void)?
+
+  var didSelectAcessory: ((CallModel) -> Void)?
+
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   // MARK: - TableView
-  //--------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
 //  func registerOn(_ tableView: UITableView) {
 //    for cellConfiguratorSections in items {
@@ -83,12 +86,25 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
   func update(with call: CallModel) {
     let contactInformationItems = generateContactInformationCells(from: call)
     let callInformationItems = generateCallInformationCells(from: call)
+
+    let newItems = [contactInformationItems, callInformationItems]
+
+    for item in newItems.flatMap({ $0 }) {
+      item.didSelect = { [weak self] cellViewModel in
+        self?.didSelect?(cellViewModel.call)
+      }
+
+      item.didSelectAccessory = { [weak self] cellViewModel in
+        self?.didSelectAcessory?(cellViewModel.call)
+      }
+    }
+
     items = [contactInformationItems, callInformationItems]
   }
 
   private func generateContactInformationCells(
     from call: CallModel
-  ) -> [CellConfigurating] {
+  ) -> [InformationCellConfigurator] {
     let contactCellViewModel =
       ContactInformationTableViewCellViewModel(with: call)
     let contactCellConfigurator =
@@ -98,7 +114,7 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
 
   private func generateCallInformationCells(
     from call: CallModel
-  ) -> [CellConfigurating] {
+  ) -> [InformationCellConfigurator] {
     let directionCellViewModel =
       CallInformationDirectionTableViewCellViewModel(with: call)
     let diractionCellConfigurator =

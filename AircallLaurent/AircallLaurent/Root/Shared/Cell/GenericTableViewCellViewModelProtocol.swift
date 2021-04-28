@@ -25,7 +25,6 @@ protocol GenericTableViewCellViewModelProtocol {
   var isActionButtonHidden: Bool { get }
 }
 
-
 //==============================================================================
 // MARK: - Default implementation
 //==============================================================================

@@ -101,7 +101,9 @@ class HistoryDetailsInformationViewController: UIViewController {
       self?.tableView.reloadData()
     }
 
-//    dataProvider.registerOn(tableView)
+    dataProvider.didSelectAcessory = { [weak self] call in
+      self?.didTapDetail?(call)
+    }
   }
 
   private func setupTableView() {

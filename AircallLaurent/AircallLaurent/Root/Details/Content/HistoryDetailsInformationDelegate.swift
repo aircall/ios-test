@@ -40,7 +40,7 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView,
                  accessoryButtonTappedForRowWith indexPath: IndexPath) {
-//    guard let call = provider.item(at: indexPath) else { return }
+    provider.item(at: indexPath)?.tapAccessoryButton()
     
   }
 
