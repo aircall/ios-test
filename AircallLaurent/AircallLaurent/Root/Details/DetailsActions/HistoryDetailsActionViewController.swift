@@ -71,7 +71,9 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
     noteActionView.image = image
 
     noteActionView.didTap = { [weak self] in
-      self?.shouldAddNote?()
+      self?.noteActionView.showAnimation {
+        self?.shouldAddNote?()
+      }
     }
   }
 
@@ -84,7 +86,9 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
     tagsActionView.image = image
 
     tagsActionView.didTap = { [weak self] in
-      self?.shouldAddTags?()
+      self?.tagsActionView.showAnimation {
+        self?.shouldAddTags?()
+      }
     }
   }
 
@@ -97,7 +101,9 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
 
 
     assignActionView.didTap = { [weak self] in
-      self?.shouldAssign?()
+      self?.assignActionView.showAnimation {
+        self?.shouldAssign?()
+      }
     }
   }
 
