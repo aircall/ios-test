@@ -107,6 +107,8 @@
 		4D966BEC2639B21A00C5EC54 /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BEA2639B21A00C5EC54 /* ResetModel.swift */; };
 		4D966BF52639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
 		4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
+		4D966BFE263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */; };
+		4D966BFF263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */; };
 		4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FFEFA26383565008F13EC /* UIView+Layer.swift */; };
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
@@ -214,6 +216,7 @@
 		4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCallOperation.swift; sourceTree = "<group>"; };
 		4D966BEA2639B21A00C5EC54 /* ResetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetModel.swift; sourceTree = "<group>"; };
 		4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySplitViewModel.swift; sourceTree = "<group>"; };
 		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
@@ -358,6 +361,7 @@
 				4D50733326360793001C0904 /* Shared */,
 				4D3643552634BB2500E6919D /* List */,
 				4D3643562634BB2B00E6919D /* Details */,
+				4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -785,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D966BFE263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */,
 				4D2D17372637FBDC00C274A2 /* TableViewDelegate.swift in Sources */,
 				4D966BA62639A9BB00C5EC54 /* HeaderField.swift in Sources */,
 				4D966BCB2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
@@ -878,6 +883,7 @@
 				4DAAA6792637171E009392E1 /* DateTests.swift in Sources */,
 				4D966BCC2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
 				4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
+				4D966BFF263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */,
 				4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */,
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
 				4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */,

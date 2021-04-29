@@ -17,7 +17,6 @@ class HistoryDetailsViewController: UIViewController {
 
   @IBOutlet weak private var informationContainerView: UIView!
   @IBOutlet weak private var actionContainerView: UIView!
-  @IBOutlet weak private var navigationBarTitle: UINavigationItem!
 
   /******************** ViewModels ********************/
 
@@ -77,6 +76,7 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setup() {
     setupView()
+    setupNavigationBar()
     setupDetailsContentView()
     setupDetailsActionView()
     setupViewModel()
@@ -86,8 +86,15 @@ class HistoryDetailsViewController: UIViewController {
     view.backgroundColor = .white
   }
 
-  private func setupDetailsContentView() {
+  private func setupNavigationBar() {
+    guard let navigationBar = navigationController?.navigationBar,
+          let navigationItem = navigationController?.navigationItem else {
+      return
+    }
 
+  }
+
+  private func setupDetailsContentView() {
     informationViewController.didFail = { [weak self] error in
       print(error)
     }
@@ -114,7 +121,7 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setupViewModel() {
     viewModel.shouldUpdateTitle = { [weak self] title in
-      self?.navigationBarTitle.title = title
+      self?.navigationController?.navigationItem.title = title
     }
   }
 

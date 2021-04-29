@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="actionContainerView" destination="GUn-x1-GfH" id="QIe-kX-OOe"/>
                 <outlet property="informationContainerView" destination="GPT-GO-rrF" id="DBN-7C-oZ5"/>
-                <outlet property="navigationBarTitle" destination="yTL-4N-Bf0" id="tl5-7f-t79"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,28 +21,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrn-mF-euk">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="yTL-4N-Bf0">
-                            <barButtonItem key="leftBarButtonItem" title="Item" id="99Q-ov-AYc"/>
-                            <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.up.bin" catalog="system" id="osf-at-64b"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-nu-4LQ">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-GO-rrF" userLabel="InformationContainerView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="348.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="383.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-x1-GfH" userLabel="ActionContainerView">
-                            <rect key="frame" x="0.0" y="368.5" width="414" height="139"/>
+                            <rect key="frame" x="0.0" y="403.5" width="414" height="153.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uz-bF-ggA" userLabel="Spacer">
-                            <rect key="frame" x="0.0" y="527.5" width="414" height="246.5"/>
+                            <rect key="frame" x="0.0" y="577" width="414" height="275"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -56,20 +46,15 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3lZ-1w-IA4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hZ0-nu-4LQ" secondAttribute="trailing" id="5na-ee-Qbq"/>
-                <constraint firstItem="Lrn-mF-euk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9gr-LH-CZE"/>
-                <constraint firstItem="Lrn-mF-euk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M7h-HP-5wc"/>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="top" secondItem="Lrn-mF-euk" secondAttribute="bottom" id="Qdc-1z-Pge"/>
-                <constraint firstItem="Lrn-mF-euk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kzd-lM-brG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hZ0-nu-4LQ" secondAttribute="bottom" id="oDa-MH-emE"/>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="top" secondItem="Lrn-mF-euk" secondAttribute="bottom" id="uCk-U9-zb8"/>
+                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3jE-70-1oY"/>
+                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KbT-lf-JZh"/>
+                <constraint firstAttribute="bottom" secondItem="hZ0-nu-4LQ" secondAttribute="bottom" id="br0-kS-6Sb"/>
+                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kKA-MH-76Z"/>
             </constraints>
             <point key="canvasLocation" x="33" y="107"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.up.bin" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -20,7 +20,7 @@ struct CallModel: Codable {
   let receiver: String?
   let phoneOperator: String
   let duration: String
-  let isArchived: Bool
+  var isArchived: Bool
   let callType: CallType
 
   //----------------------------------------------------------------------------
