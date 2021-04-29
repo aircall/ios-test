@@ -61,6 +61,12 @@
 		4D50733726360802001C0904 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D50733526360802001C0904 /* GenericTableViewCell.xib */; };
 		4D50733C26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */; };
 		4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */; };
+		4D5A0799263B481B00B44694 /* Error+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A0798263B481B00B44694 /* Error+Internet.swift */; };
+		4D5A079A263B481B00B44694 /* Error+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A0798263B481B00B44694 /* Error+Internet.swift */; };
+		4D5A07A0263B4EA800B44694 /* CustomSharedTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A079F263B4EA800B44694 /* CustomSharedTypealias.swift */; };
+		4D5A07A1263B4EA800B44694 /* CustomSharedTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A079F263B4EA800B44694 /* CustomSharedTypealias.swift */; };
+		4D5A07A9263B60BB00B44694 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A07A8263B60BB00B44694 /* UIView+Animation.swift */; };
+		4D5A07AA263B60BB00B44694 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A07A8263B60BB00B44694 /* UIView+Animation.swift */; };
 		4D78B4AE26371E1500C5287D /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4AD26371E1500C5287D /* CallModel.swift */; };
 		4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4AD26371E1500C5287D /* CallModel.swift */; };
 		4D78B4B72637208F00C5287D /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4B62637208F00C5287D /* Direction.swift */; };
@@ -184,6 +190,9 @@
 		4D50733426360802001C0904 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		4D50733526360802001C0904 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
 		4D50733B26360F50001C0904 /* CallTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		4D5A0798263B481B00B44694 /* Error+Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Internet.swift"; sourceTree = "<group>"; };
+		4D5A079F263B4EA800B44694 /* CustomSharedTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSharedTypealias.swift; sourceTree = "<group>"; };
+		4D5A07A8263B60BB00B44694 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		4D78B4AD26371E1500C5287D /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		4D78B4B62637208F00C5287D /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		4D78B4BC263720C400C5287D /* CallType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallType.swift; sourceTree = "<group>"; };
@@ -356,12 +365,12 @@
 		4D36434A2634B8BC00E6919D /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */,
 				4D36434B2634BB1100E6919D /* HistorySplitViewController.swift */,
 				4D36434C2634BB1100E6919D /* HistorySplitViewController.xib */,
 				4D50733326360793001C0904 /* Shared */,
 				4D3643552634BB2500E6919D /* List */,
 				4D3643562634BB2B00E6919D /* Details */,
-				4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -415,6 +424,7 @@
 		4D5072F42635FB13001C0904 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4D5A079E263B4E9300B44694 /* Typealias */,
 				4D966B862639A95200C5EC54 /* Network */,
 				4D5072F52635FB13001C0904 /* extension */,
 				4D5072F82635FB13001C0904 /* Protocol */,
@@ -428,6 +438,7 @@
 			children = (
 				4DAAA68A2637176E009392E1 /* Date */,
 				4DAAA68926371763009392E1 /* UIKit */,
+				4D5A0798263B481B00B44694 /* Error+Internet.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -485,6 +496,14 @@
 				4D78B4A526371DEF00C5287D /* Cell */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		4D5A079E263B4E9300B44694 /* Typealias */ = {
+			isa = PBXGroup;
+			children = (
+				4D5A079F263B4EA800B44694 /* CustomSharedTypealias.swift */,
+			);
+			path = Typealias;
 			sourceTree = "<group>";
 		};
 		4D78B4A526371DEF00C5287D /* Cell */ = {
@@ -640,6 +659,7 @@
 				4D5072F62635FB13001C0904 /* UIView+AutoLayout.swift */,
 				4D9FFEFA26383565008F13EC /* UIView+Layer.swift */,
 				4D5072F72635FB13001C0904 /* UIViewcontroller+Container.swift */,
+				4D5A07A8263B60BB00B44694 /* UIView+Animation.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -832,9 +852,11 @@
 				4D2D176E2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D3643102634B48500E6919D /* AppDelegate.swift in Sources */,
 				4D966BB22639A9BB00C5EC54 /* UrlSessionApiService.swift in Sources */,
+				4D5A07A0263B4EA800B44694 /* CustomSharedTypealias.swift in Sources */,
 				4D966BA42639A9BB00C5EC54 /* HTTPMethod.swift in Sources */,
 				4D50730B2635FB14001C0904 /* NibInstanciable.swift in Sources */,
 				4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */,
+				4D5A07A9263B60BB00B44694 /* UIView+Animation.swift in Sources */,
 				4D50732E26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D78B4BD263720C400C5287D /* CallType.swift in Sources */,
 				4D966BF52639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */,
@@ -850,6 +872,7 @@
 				4D7E6DA5263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 				4D2D1768263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
 				4D78B4B72637208F00C5287D /* Direction.swift in Sources */,
+				4D5A0799263B481B00B44694 /* Error+Internet.swift in Sources */,
 				4D2D17362637FBDC00C274A2 /* CellConfigurator.swift in Sources */,
 				4D50730D2635FB14001C0904 /* Configurable.swift in Sources */,
 				4D5073132635FB14001C0904 /* ConstraintType.swift in Sources */,
@@ -885,10 +908,13 @@
 				4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D966BFF263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */,
 				4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */,
+				4D5A07A1263B4EA800B44694 /* CustomSharedTypealias.swift in Sources */,
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
 				4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */,
 				4D2D175A2638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
+				4D5A07AA263B60BB00B44694 /* UIView+Animation.swift in Sources */,
 				4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
+				4D5A079A263B481B00B44694 /* Error+Internet.swift in Sources */,
 				4D966BDB2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */,
 				4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 			);
