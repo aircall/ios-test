@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   private func setupWindows(with windowScene: UIWindowScene) {
     window = UIWindow(windowScene: windowScene)
     window?.isOpaque = true
-//    window?.rootViewController =
+    let viewModel = HistorySplitViewModel()
+    window?.rootViewController = HistorySplitViewController(with: viewModel)
     window?.backgroundColor = .black
     window?.makeKeyAndVisible()
   }
