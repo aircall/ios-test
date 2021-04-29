@@ -87,11 +87,19 @@ class HistoryDetailsViewController: UIViewController {
   }
 
   private func setupNavigationBar() {
-    guard let navigationBar = navigationController?.navigationBar,
-          let navigationItem = navigationController?.navigationItem else {
-      return
-    }
+    setupNavigationBarTitle()
+    setupNavigationBarAction()
+  }
 
+  private func setupNavigationBarTitle() {
+    navigationController?.navigationBar.prefersLargeTitles = false
+  }
+
+  private func setupNavigationBarAction() {
+    let actionButton = UIBarButtonItem(barButtonSystemItem: .action,
+                                       target: self,
+                                       action: #selector(doAction))
+    navigationItem.rightBarButtonItem = actionButton
   }
 
   private func setupDetailsContentView() {
@@ -121,7 +129,7 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setupViewModel() {
     viewModel.shouldUpdateTitle = { [weak self] title in
-      self?.navigationController?.navigationItem.title = title
+      self?.navigationItem.title = title
     }
   }
 
@@ -130,17 +138,27 @@ class HistoryDetailsViewController: UIViewController {
   //----------------------------------------------------------------------------
 
   private func update(with call: CallModel?) {
-    let call = CallModel(id: 31,
-                         createdAt: "2018-04-19T09:38:41.000Z",
-                         direction: .outbound,
-                         sender: "Pierre-Baptiste Béchu",
-                         receiver: "06 46 62 12 33",
-                         phoneOperator: "NYC Office",
-                         duration: "120",
-                         isArchived: false,
-                         callType: .missed)
+//    let call = CallModel(id: 31,
+//                         createdAt: "2018-04-19T09:38:41.000Z",
+//                         direction: .outbound,
+//                         sender: "Pierre-Baptiste Béchu",
+//                         receiver: "06 46 62 12 33",
+//                         phoneOperator: "NYC Office",
+//                         duration: "120",
+//                         isArchived: false,
+//                         callType: .missed)
+    guard let call = call else { return }
     viewModel.call = call
     informationViewController.update(with: call)
+  }
+
+
+  //----------------------------------------------------------------------------
+  // MARK: - Actions
+  //----------------------------------------------------------------------------
+
+  @objc private func doAction() {
+
   }
   
 }

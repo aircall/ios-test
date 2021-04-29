@@ -152,11 +152,6 @@ class HistorySplitViewController: UISplitViewController {
     historyDetailsViewController.navigationItem.leftItemsSupplementBackButton =
       true
 
-    historyDetailsViewController.navigationItem.rightBarButtonItem =
-      displayModeButtonItem
-    historyDetailsViewController.navigationItem.rightBarButtonItem?.image =
-      UIImage(systemName: "arrow.up.bin")
-
     historyDetailsViewController.call = call
 
     showDetailViewController(historyDetailNavigationViewController, sender: nil)
