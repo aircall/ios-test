@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K4Q-Oh-ZGl">
-                        <rect key="frame" x="52.5" y="30" width="33" height="20.5"/>
+                        <rect key="frame" x="53.75" y="30" width="33" height="20.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -30,8 +30,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="applelogo" catalog="system" id="QRb-rD-Czu">
-                        <rect key="frame" x="18.5" y="27.5" width="19" height="23.5"/>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pencil" catalog="system" id="QRb-rD-Czu">
+                        <rect key="frame" x="17.25" y="30.5" width="21.5" height="19.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </imageView>
                 </subviews>
@@ -41,6 +41,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
     </resources>
 </document>

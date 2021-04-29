@@ -94,14 +94,6 @@ class GenericTableViewCell: UITableViewCell, Reusable {
     detailTextLabel?.lineBreakMode = .byTruncatingTail
   }
 
-  //============================================================================
-  // MARK: - Action
-  //============================================================================
-
-  @IBAction func tapAction(_ sender: Any) {
-    didTapAction?()
-  }
-
 }
 
 //==============================================================================
