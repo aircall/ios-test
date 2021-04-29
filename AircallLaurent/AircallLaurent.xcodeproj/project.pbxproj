@@ -31,7 +31,6 @@
 		4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D176D2638185300C274A2 /* HistoryDetailsInformationDelegate.swift */; };
 		4D3643102634B48500E6919D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36430F2634B48500E6919D /* AppDelegate.swift */; };
 		4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643112634B48500E6919D /* SceneDelegate.swift */; };
-		4D3643142634B48500E6919D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643132634B48500E6919D /* ViewController.swift */; };
 		4D3643172634B48500E6919D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643152634B48500E6919D /* Main.storyboard */; };
 		4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */; };
 		4D36431C2634B48600E6919D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36431B2634B48600E6919D /* Assets.xcassets */; };
@@ -157,7 +156,6 @@
 		4D36430C2634B48500E6919D /* AircallLaurent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircallLaurent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36430F2634B48500E6919D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3643112634B48500E6919D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D3643132634B48500E6919D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D3643162634B48500E6919D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D3643192634B48500E6919D /* AircallLaurent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AircallLaurent.xcdatamodel; sourceTree = "<group>"; };
 		4D36431B2634B48600E6919D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 				4D3643492634B6A800E6919D /* SupportingFiles */,
 				4D3643482634B68D00E6919D /* Launch */,
 				4D36434A2634B8BC00E6919D /* Root */,
-				4D3643132634B48500E6919D /* ViewController.swift */,
 				4D3643152634B48500E6919D /* Main.storyboard */,
 			);
 			path = AircallLaurent;
@@ -836,7 +833,6 @@
 				4D966BAC2639A9BB00C5EC54 /* NetworkQueue.swift in Sources */,
 				4D966BAB2639A9BB00C5EC54 /* AsynchronousBlockOperation.swift in Sources */,
 				4D2D17502638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
-				4D3643142634B48500E6919D /* ViewController.swift in Sources */,
 				4D966BAA2639A9BB00C5EC54 /* NetworkOperation.swift in Sources */,
 				4D966BA22639A9BB00C5EC54 /* ApiRequestProtocol.swift in Sources */,
 				4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */,
