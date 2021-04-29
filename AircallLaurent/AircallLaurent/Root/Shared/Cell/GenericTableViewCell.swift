@@ -82,7 +82,6 @@ class GenericTableViewCell: UITableViewCell, Reusable {
 
   private func setupView() {
     backgroundColor = .clear
-    selectionStyle = .none
   }
 
   private func setupIconImageView() {
