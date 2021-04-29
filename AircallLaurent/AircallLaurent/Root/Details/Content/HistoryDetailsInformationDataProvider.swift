@@ -37,11 +37,11 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
     }
   }
 
+  /******************** Text ********************/
+
   var headerTitles: [String] {
     return ["Contact information", callInformationTitle]
   }
-
-  /******************** Text ********************/
 
   private var callDuration: String?
 
@@ -68,22 +68,12 @@ class HistoryDetailsInformationDataProvider: CollectionDataProvider {
   var didSelectAcessory: ((CallModel) -> Void)?
 
   //----------------------------------------------------------------------------
-  // MARK: - Initialization
-  //----------------------------------------------------------------------------
-
-  //----------------------------------------------------------------------------
   // MARK: - TableView
   //----------------------------------------------------------------------------
 
-//  func registerOn(_ tableView: UITableView) {
-//    for cellConfiguratorSections in items {
-//      for cellConfigurator in cellConfiguratorSections {
-//        cellConfigurator.register(on: tableView)
-//      }
-//    }
-//  }
-
   func update(with call: CallModel) {
+    callDuration = call.duration
+
     let contactInformationItems = generateContactInformationCells(from: call)
     let callInformationItems = generateCallInformationCells(from: call)
 
