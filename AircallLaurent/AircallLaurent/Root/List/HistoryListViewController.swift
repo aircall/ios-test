@@ -97,6 +97,10 @@ class HistoryListViewController: UIViewController {
       self?.tableView.reloadData()
     }
 
+    viewModel.dataProvider.didSelect = { [weak self] call in
+      self?.didSelectCall?(call)
+    }
+
 //    viewModel.dataProvider.didSelectAcessory = { [weak self] call in
 //      self?.didTapDetail?(call)
 //    }

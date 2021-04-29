@@ -65,6 +65,11 @@ class GenericTableViewCell: UITableViewCell, Reusable {
     setup()
   }
 
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    didTapAction = nil
+  }
+
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------

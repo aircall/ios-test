@@ -61,7 +61,7 @@ final class HistoryListDataProvider: CollectionDataProvider {
 
   var didSelect: ((CallModel) -> Void)?
 
-  var didSelectAcessory: ((CallModel) -> Void)?
+  var didSelectAccessory: ((CallModel) -> Void)?
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
@@ -72,11 +72,21 @@ final class HistoryListDataProvider: CollectionDataProvider {
   //----------------------------------------------------------------------------
 
   func update(with calls: [CallModel]) {
-    let newItems = calls.map { call -> CallCellConfigurator in
-      let callCellViewModel = CallTableViewCellViewModel(with: call)
-      let callCellConfiurator = CallCellConfigurator(data: callCellViewModel)
+    let nonArchivedCalls = calls.filter { $0.isArchived == false }
 
-      return callCellConfiurator
+    let newItems = nonArchivedCalls.map { call -> CallCellConfigurator in
+      let callCellViewModel = CallTableViewCellViewModel(with: call)
+      let callCellConfigurator = CallCellConfigurator(data: callCellViewModel)
+
+      callCellConfigurator.didSelect = { [weak self] call in
+        self?.didSelect?(call.call)
+      }
+
+      callCellConfigurator.didSelectAccessory = { [weak self] call in
+        self?.didSelectAccessory?(call.call)
+      }
+
+      return callCellConfigurator
     }
 
     items = [newItems]
