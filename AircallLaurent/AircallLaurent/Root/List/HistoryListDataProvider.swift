@@ -92,28 +92,4 @@ final class HistoryListDataProvider: CollectionDataProvider {
     items = [newItems]
   }
 
-//  private func generateContactInformationCells(
-//    from call: CallModel
-//  ) -> [InformationCellConfigurator] {
-//    let contactCellViewModel =
-//      ContactInformationTableViewCellViewModel(with: call)
-//    let contactCellConfigurator =
-//      InformationCellConfigurator(data: contactCellViewModel)
-//    return [contactCellConfigurator]
-//  }
-//
-//  private func generateCallInformationCells(
-//    from call: CallModel
-//  ) -> [InformationCellConfigurator] {
-//    let directionCellViewModel =
-//      CallInformationDirectionTableViewCellViewModel(with: call)
-//    let diractionCellConfigurator =
-//      InformationCellConfigurator(data: directionCellViewModel)
-//
-//    let phoneOperatorViewModel =
-//      CallInformationPhoneOperatorTableViewCellViewModel(with: call)
-//    let phoneOperatorCellConfigurator =
-//      InformationCellConfigurator(data: phoneOperatorViewModel)
-//    return [diractionCellConfigurator, phoneOperatorCellConfigurator]
-//  }
 }
