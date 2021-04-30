@@ -43,6 +43,7 @@
 		4D36435A2634BB4B00E6919D /* HistoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643582634BB4B00E6919D /* HistoryListViewController.xib */; };
 		4D3643632634BBA100E6919D /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */; };
 		4D3643642634BBA100E6919D /* HistoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */; };
+		4D3C84E9263B7B9A009BC954 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3C84E8263B7B9A009BC954 /* Database.swift */; };
 		4D5072E02635F0C1001C0904 /* HistoryDetailsActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */; };
 		4D5072E12635F0C1001C0904 /* HistoryDetailsActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */; };
 		4D5072F02635F8D3001C0904 /* ActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5072EF2635F8D3001C0904 /* ActionView.xib */; };
@@ -118,6 +119,8 @@
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
 		4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
+		4DC435F8263B7000003994CD /* Call+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC435F6263B7000003994CD /* Call+CoreDataClass.swift */; };
+		4DC435F9263B7000003994CD /* Call+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC435F7263B7000003994CD /* Call+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +176,7 @@
 		4D3643582634BB4B00E6919D /* HistoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryListViewController.xib; sourceTree = "<group>"; };
 		4D3643612634BBA100E6919D /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		4D3643622634BBA100E6919D /* HistoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsViewController.xib; sourceTree = "<group>"; };
+		4D3C84E8263B7B9A009BC954 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4D5072DE2635F0C1001C0904 /* HistoryDetailsActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsActionViewController.swift; sourceTree = "<group>"; };
 		4D5072DF2635F0C1001C0904 /* HistoryDetailsActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailsActionViewController.xib; sourceTree = "<group>"; };
 		4D5072EF2635F8D3001C0904 /* ActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionView.xib; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
+		4DC435F6263B7000003994CD /* Call+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Call+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4DC435F7263B7000003994CD /* Call+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Call+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,8 +316,8 @@
 		4D36430E2634B48500E6919D /* AircallLaurent */ = {
 			isa = PBXGroup;
 			children = (
+				4DC435FD263B7015003994CD /* CoreData */,
 				4D3643202634B48600E6919D /* Info.plist */,
-				4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */,
 				4D5072F42635FB13001C0904 /* Shared */,
 				4D3643492634B6A800E6919D /* SupportingFiles */,
 				4D3643482634B68D00E6919D /* Launch */,
@@ -669,6 +675,17 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		4DC435FD263B7015003994CD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4D3C84E8263B7B9A009BC954 /* Database.swift */,
+				4DC435F6263B7000003994CD /* Call+CoreDataClass.swift */,
+				4DC435F7263B7000003994CD /* Call+CoreDataProperties.swift */,
+				4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -812,7 +829,9 @@
 				4D966BCB2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
 				4D5073242635FCAB001C0904 /* ActionView.swift in Sources */,
 				4D966BAD2639A9BB00C5EC54 /* ApiTokenProvider.swift in Sources */,
+				4D3C84E9263B7B9A009BC954 /* Database.swift in Sources */,
 				4D966BE02639AC9D00C5EC54 /* PostCallOperation.swift in Sources */,
+				4DC435F8263B7000003994CD /* Call+CoreDataClass.swift in Sources */,
 				4D507329263600DE001C0904 /* Themeable.swift in Sources */,
 				4D966BDA2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */,
 				4D966BAF2639A9BB00C5EC54 /* NetworkServiceProvider.swift in Sources */,
@@ -839,6 +858,7 @@
 				4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */,
 				4D966BA92639A9BB00C5EC54 /* NetworkError.swift in Sources */,
 				4D966BAE2639A9BB00C5EC54 /* TokenType.swift in Sources */,
+				4DC435F9263B7000003994CD /* Call+CoreDataProperties.swift in Sources */,
 				4D2D175F263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4D9FFEFB26383565008F13EC /* UIView+Layer.swift in Sources */,
 				4D966BA52639A9BB00C5EC54 /* RequestProtocol.swift in Sources */,
