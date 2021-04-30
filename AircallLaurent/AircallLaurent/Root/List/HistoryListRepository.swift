@@ -8,6 +8,13 @@
 import UIKit
 import CoreData
 
+/*******************************************************************************
+ * HistoryListRepository
+ *
+ * A repository for the history list with cache feature.
+ *
+ ******************************************************************************/
+
 final class HistoryListRepository {
 
   //----------------------------------------------------------------------------
@@ -36,6 +43,8 @@ final class HistoryListRepository {
   //----------------------------------------------------------------------------
   // MARK: - Calls
   //----------------------------------------------------------------------------
+
+  /******************** Calls ********************/
 
   func fetchCalls(completion: @escaping ResultCompletion<[CallModel]>) {
     apiClient.getCalls { [weak self] result in
@@ -68,37 +77,46 @@ final class HistoryListRepository {
     }
   }
 
+
+  /******************** Call ********************/
+
   func fetchCall(id: Int, completion: @escaping ResultCompletion<CallModel>) {
     apiClient.getCall(withId: id, completion: completion)
   }
 
+
+  /******************** Reset ********************/
+
   func reset(completion: @escaping ResultCompletion<Void>) {
     apiClient.reset { [weak self] result in
       switch result {
-        case .failure(let error):
-          completion(.failure(error))
-
-        case .success(_):
-          self?.database.persistentContainer.performBackgroundTask { context in
-            let fetchRequest: NSFetchRequest<Call> = Call.fetchRequest()
-            guard let calls = try? context.fetch(fetchRequest) else {
-              DispatchQueue.main.async {
-                completion(.success(()))
-              }
-              return
-            }
-
-            for call in calls {
-              call.isArchived = false
-            }
-            try? context.save()
-            DispatchQueue.main.async {
-              completion(.success(()))
-            }
-          }
+        case .failure(let error): completion(.failure(error))
+        case .success(_): self?.handleResetSuccess { completion(.success(())) }
       }
     }
   }
+
+  private func handleResetSuccess(completion: (() -> Void)?) {
+    database.persistentContainer.performBackgroundTask { context in
+      let fetchRequest: NSFetchRequest<Call> = Call.fetchRequest()
+      guard let calls = try? context.fetch(fetchRequest) else {
+        DispatchQueue.main.async {
+          completion?()
+        }
+        return
+      }
+
+      for call in calls {
+        call.isArchived = false
+      }
+      try? context.save()
+      DispatchQueue.main.async {
+        completion?()
+      }
+    }
+  }
+
+  /******************** Update ********************/
 
   func update(call: CallModel, completion: @escaping ResultCompletion<Void>) {
     apiClient.postCall(call) { [weak self] result in
@@ -106,15 +124,18 @@ final class HistoryListRepository {
         case .failure(let error):
           completion(.failure(error))
         case .success(let call):
-          self?.database.persistentContainer.performBackgroundTask { context in
-            let callDb = self?.database.findCall(id: call.id,
-                                                 inContext: context)
-            callDb?.configure(from: call)
-            try? context.save()
-            DispatchQueue.main.async {
-              completion(.success(()))
-            }
-          }
+          self?.handleUpdateSuccess(call: call) { completion(.success(()))}
+      }
+    }
+  }
+
+  private func handleUpdateSuccess(call: CallModel, completion: (() -> Void)?) {
+    database.persistentContainer.performBackgroundTask { context in
+      let callDb = database.findCall(id: call.id, inContext: context)
+      callDb?.configure(from: call)
+      try? context.save()
+      DispatchQueue.main.async {
+        completion?()
       }
     }
   }
