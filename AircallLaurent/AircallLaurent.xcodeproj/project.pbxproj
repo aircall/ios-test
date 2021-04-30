@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D1AC431263986290071EB23 /* HistoryListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AC430263986290071EB23 /* HistoryListRepository.swift */; };
-		4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AC430263986290071EB23 /* HistoryListRepository.swift */; };
 		4D2D172C2637F99800C274A2 /* CellConfigurating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172A2637F99800C274A2 /* CellConfigurating.swift */; };
 		4D2D172D2637F99800C274A2 /* CollectionDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D172B2637F99800C274A2 /* CollectionDataProvider.swift */; };
 		4D2D17352637FBDC00C274A2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17322637FBDC00C274A2 /* TableViewDataSource.swift */; };
@@ -17,7 +16,6 @@
 		4D2D173E2637FC9400C274A2 /* HistoryDetailsInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D173C2637FC9400C274A2 /* HistoryDetailsInformationViewController.swift */; };
 		4D2D173F2637FC9400C274A2 /* HistoryDetailsInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2D173D2637FC9400C274A2 /* HistoryDetailsInformationViewController.xib */; };
 		4D2D17442637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17432637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift */; };
-		4D2D17452637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17432637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift */; };
 		4D2D174A2637FD1B00C274A2 /* HistoryDetailsInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D17492637FD1B00C274A2 /* HistoryDetailsInformationDataSource.swift */; };
 		4D2D17502638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D174F2638021400C274A2 /* ContactInformationTableViewCellViewModel.swift */; };
 		4D2D17512638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D174F2638021400C274A2 /* ContactInformationTableViewCellViewModel.swift */; };
@@ -28,7 +26,6 @@
 		4D2D1768263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D1767263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift */; };
 		4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D1767263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift */; };
 		4D2D176E2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D176D2638185300C274A2 /* HistoryDetailsInformationDelegate.swift */; };
-		4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D176D2638185300C274A2 /* HistoryDetailsInformationDelegate.swift */; };
 		4D3643102634B48500E6919D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36430F2634B48500E6919D /* AppDelegate.swift */; };
 		4D3643122634B48500E6919D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643112634B48500E6919D /* SceneDelegate.swift */; };
 		4D3643172634B48500E6919D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3643152634B48500E6919D /* Main.storyboard */; };
@@ -75,13 +72,9 @@
 		4D78B4BE263720C400C5287D /* CallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4BC263720C400C5287D /* CallType.swift */; };
 		4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78B4C32637233B00C5287D /* CallModelTests.swift */; };
 		4D7E6DA5263943E200D180C0 /* HistoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */; };
-		4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DA4263943E200D180C0 /* HistoryListViewModel.swift */; };
 		4D7E6DAB2639440200D180C0 /* HistoryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */; };
-		4D7E6DAC2639440200D180C0 /* HistoryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DAA2639440200D180C0 /* HistoryListDataSource.swift */; };
 		4D7E6DB12639441500D180C0 /* HistoryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */; };
-		4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB02639441500D180C0 /* HistoryListDelegate.swift */; };
 		4D7E6DB72639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
-		4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E6DB62639458900D180C0 /* HistoryListDataProvider.swift */; };
 		4D966BA22639A9BB00C5EC54 /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B882639A9BB00C5EC54 /* ApiRequestProtocol.swift */; };
 		4D966BA32639A9BB00C5EC54 /* QueryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B892639A9BB00C5EC54 /* QueryType.swift */; };
 		4D966BA42639A9BB00C5EC54 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B8A2639A9BB00C5EC54 /* HTTPMethod.swift */; };
@@ -100,17 +93,11 @@
 		4D966BB22639A9BB00C5EC54 /* UrlSessionApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9C2639A9BB00C5EC54 /* UrlSessionApiService.swift */; };
 		4D966BB32639A9BB00C5EC54 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966B9D2639A9BB00C5EC54 /* ApiServiceProtocol.swift */; };
 		4D966BC02639AB4B00C5EC54 /* AircallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */; };
-		4D966BC12639AB4B00C5EC54 /* AircallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BBF2639AB4B00C5EC54 /* AircallAPI.swift */; };
 		4D966BCB2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */; };
-		4D966BCC2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BCA2639AC6C00C5EC54 /* GetCallsOperation.swift */; };
 		4D966BD42639AC7600C5EC54 /* GetCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */; };
-		4D966BD52639AC7600C5EC54 /* GetCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD32639AC7600C5EC54 /* GetCallOperation.swift */; };
 		4D966BDA2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */; };
-		4D966BDB2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BD92639AC8A00C5EC54 /* GetResetOperation.swift */; };
 		4D966BE02639AC9D00C5EC54 /* PostCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */; };
-		4D966BE12639AC9D00C5EC54 /* PostCallOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BDF2639AC9D00C5EC54 /* PostCallOperation.swift */; };
 		4D966BEB2639B21A00C5EC54 /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BEA2639B21A00C5EC54 /* ResetModel.swift */; };
-		4D966BEC2639B21A00C5EC54 /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BEA2639B21A00C5EC54 /* ResetModel.swift */; };
 		4D966BF52639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
 		4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BF42639B7FC00C5EC54 /* Encodable+Extension.swift */; };
 		4D966BFE263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966BFD263A15CE00C5EC54 /* HistorySplitViewModel.swift */; };
@@ -119,6 +106,7 @@
 		4DAAA6792637171E009392E1 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6782637171E009392E1 /* DateTests.swift */; };
 		4DAAA6812637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
 		4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAA6802637174E009392E1 /* Date+Converter.swift */; };
+		4DC1284F263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1284E263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift */; };
 		4DC435F8263B7000003994CD /* Call+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC435F6263B7000003994CD /* Call+CoreDataClass.swift */; };
 		4DC435F9263B7000003994CD /* Call+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC435F7263B7000003994CD /* Call+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -231,6 +219,7 @@
 		4D9FFEFA26383565008F13EC /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		4DAAA6782637171E009392E1 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		4DAAA6802637174E009392E1 /* Date+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Converter.swift"; sourceTree = "<group>"; };
+		4DC1284E263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		4DC435F6263B7000003994CD /* Call+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Call+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DC435F7263B7000003994CD /* Call+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Call+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,6 +319,7 @@
 		4D3643282634B48700E6919D /* AircallLaurentTests */ = {
 			isa = PBXGroup;
 			children = (
+				4DC1284D263C03AD0078ED91 /* HistoryDetails */,
 				4D78B4C22637232500C5287D /* Model */,
 				4DAAA67726371706009392E1 /* Date */,
 				4D3643292634B48700E6919D /* AircallLaurentTests.swift */,
@@ -675,6 +665,14 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		4DC1284D263C03AD0078ED91 /* HistoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4DC1284E263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift */,
+			);
+			path = HistoryDetails;
+			sourceTree = "<group>";
+		};
 		4DC435FD263B7015003994CD /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -903,36 +901,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D78B4B82637208F00C5287D /* Direction.swift in Sources */,
-				4D966BD52639AC7600C5EC54 /* GetCallOperation.swift in Sources */,
 				4D2D1760263802D000C274A2 /* GenericTableViewCellViewModelProtocol.swift in Sources */,
 				4DAAA6822637174E009392E1 /* Date+Converter.swift in Sources */,
-				4D7E6DB82639458900D180C0 /* HistoryListDataProvider.swift in Sources */,
-				4D966BEC2639B21A00C5EC54 /* ResetModel.swift in Sources */,
-				4D966BE12639AC9D00C5EC54 /* PostCallOperation.swift in Sources */,
-				4D966BC12639AB4B00C5EC54 /* AircallAPI.swift in Sources */,
+				4DC1284F263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift in Sources */,
 				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D2D17512638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
-				4D7E6DAC2639440200D180C0 /* HistoryListDataSource.swift in Sources */,
 				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
-				4D7E6DB22639441500D180C0 /* HistoryListDelegate.swift in Sources */,
 				4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */,
 				4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */,
 				4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
-				4D2D17452637FCAC00C274A2 /* HistoryDetailsInformationDataProvider.swift in Sources */,
 				4DAAA6792637171E009392E1 /* DateTests.swift in Sources */,
-				4D966BCC2639AC6C00C5EC54 /* GetCallsOperation.swift in Sources */,
-				4D2D176F2638185300C274A2 /* HistoryDetailsInformationDelegate.swift in Sources */,
 				4D966BFF263A15CE00C5EC54 /* HistorySplitViewModel.swift in Sources */,
 				4D78B4C42637233B00C5287D /* CallModelTests.swift in Sources */,
 				4D5A07A1263B4EA800B44694 /* CustomSharedTypealias.swift in Sources */,
 				4D78B4BE263720C400C5287D /* CallType.swift in Sources */,
-				4D1AC432263986290071EB23 /* HistoryListRepository.swift in Sources */,
 				4D2D175A2638022200C274A2 /* CallInformationPhoneOperatorTableViewCellViewModel.swift in Sources */,
 				4D5A07AA263B60BB00B44694 /* UIView+Animation.swift in Sources */,
 				4D2D1769263806BA00C274A2 /* CallInformationDirectionTableViewCellViewModel.swift in Sources */,
 				4D5A079A263B481B00B44694 /* Error+Internet.swift in Sources */,
-				4D966BDB2639AC8A00C5EC54 /* GetResetOperation.swift in Sources */,
-				4D7E6DA6263943E200D180C0 /* HistoryListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

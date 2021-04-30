@@ -7,7 +7,33 @@
 
 import Foundation
 
-final class HistoryDetailsViewModel {
+/*******************************************************************************
+ * HistoryDetailsViewModelProtocol
+ *
+ * A type that can be used as viewModel of `HistoryDetailsViewController`
+ * Place here for conveniency and help me to demonstrate how to test with
+ * protocols
+ *
+ ******************************************************************************/
+
+protocol HistoryDetailsViewModelProtocol {
+  var call: CallModel? { get set }
+  var placeholderText: String { get }
+  var shouldUpdateTitle: ((String) -> Void)? { get set }
+
+  func addNote()
+  func tag()
+  func assign()
+}
+
+/*******************************************************************************
+ * HistoryDetailsViewModel
+ *
+ * A viewModel related to `HistoryDetailsViewController`
+ *
+ ******************************************************************************/
+
+final class HistoryDetailsViewModel: HistoryDetailsViewModelProtocol {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties

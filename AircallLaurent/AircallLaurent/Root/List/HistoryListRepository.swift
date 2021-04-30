@@ -13,6 +13,12 @@ import CoreData
  *
  * A repository for the history list with cache feature.
  *
+ * /!\ In order to test this class we should
+ * 1) Use protocol for `apiClient` and `database`
+ * 2) Make `HistoryListRepository` conform to `HistoryListRepositoryProtocol`
+ * 3) Mock all the functions from these protocols
+ * 4) Be happy seeing the code coverage increasing :)
+ * 
  ******************************************************************************/
 
 final class HistoryListRepository {

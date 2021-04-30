@@ -24,7 +24,7 @@ final class CallInformationDirectionTableViewCellViewModel:
   }
 
   var primarySubtitleText: String {
-    return "Subtitle"
+    return ""
   }
 
   var secondaryTitleText: String? {

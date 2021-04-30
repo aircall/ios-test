@@ -20,7 +20,8 @@ final class CallInformationPhoneOperatorTableViewCellViewModel:
   var iconImage: UIImage?
 
   var primaryTitleText: String {
-    return call.phoneOperator
+    return call.phoneOperator.isEmpty
+      ? "Phone operator not found" : call.phoneOperator
   }
 
   var primarySubtitleText: String {

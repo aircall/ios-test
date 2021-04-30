@@ -30,20 +30,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-GO-rrF" userLabel="InformationContainerView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-x1-GfH" userLabel="ActionContainerView">
-                                    <rect key="frame" x="0.0" y="423" width="414" height="161.5"/>
+                                    <rect key="frame" x="0.0" y="513" width="414" height="161"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uz-bF-ggA" userLabel="Spacer">
-                                    <rect key="frame" x="0.0" y="604.5" width="414" height="291.5"/>
+                                    <rect key="frame" x="0.0" y="694" width="414" height="202"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="GPT-GO-rrF" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.45" id="YjG-cU-qwe"/>
+                                <constraint firstItem="GPT-GO-rrF" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.55" id="YjG-cU-qwe"/>
                                 <constraint firstItem="GUn-x1-GfH" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.18" id="zae-Kp-xqo"/>
                             </constraints>
                         </stackView>

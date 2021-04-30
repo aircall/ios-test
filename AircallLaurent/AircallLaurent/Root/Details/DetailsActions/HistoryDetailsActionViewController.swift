@@ -117,7 +117,7 @@ class HistoryDetailsActionViewController: UIViewController, Themeable {
   private func setupCopyButton() {
     let copyButtonTitle = "Copy call ID"
     copyButton.setTitle(copyButtonTitle, for: .normal)
-    copyButton.setTitleColor(themeColor, for: .normal)
+//    copyButton.setTitleColor(themeColor, for: .normal)
   }
 
 }

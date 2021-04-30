@@ -27,7 +27,7 @@ final class CallTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
   private let date: Date?
 
   var primaryTitleText: String {
-    return call.receiver ?? ""
+    return call.receiver ?? "Unknown caller"
   }
 
   var primarySubtitleText: String {
