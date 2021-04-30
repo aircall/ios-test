@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * HistorySplitViewController
+ *
+ * A splitView to display list and details view of Calls
+ *
+ ******************************************************************************/
+
 class HistorySplitViewController: UISplitViewController {
 
   //----------------------------------------------------------------------------
@@ -24,9 +31,10 @@ class HistorySplitViewController: UISplitViewController {
     return HistoryListViewController(with: viewModel)
   }()
 
-  private lazy var historyDetailsViewController: HistoryDetailsViewController = {
-    let viewModel = HistoryDetailsViewModel()
-    return HistoryDetailsViewController(with: viewModel)
+  private lazy var historyDetailsViewController: HistoryDetailsViewController =
+    {
+      let viewModel = HistoryDetailsViewModel()
+      return HistoryDetailsViewController(with: viewModel)
   }()
 
   //----------------------------------------------------------------------------
@@ -68,19 +76,6 @@ class HistorySplitViewController: UISplitViewController {
   private func setup() {
     setupSplitViewController()
     setupViewControllers()
-
-//    let call = CallModel(id: 31,
-//                         createdAt: "2018-04-19T09:38:41.000Z",
-//                         direction: .outbound,
-//                         sender: "Pierre-Baptiste Béchu",
-//                         receiver: "06 46 62 12 33",
-//                         phoneOperator: "NYC Office",
-//                         duration: "120",
-//                         isArchived: false,
-//                         callType: .missed)
-//
-//
-//    show(call: call)
   }
 
   private func setupSplitViewController() {
