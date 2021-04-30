@@ -5,9 +5,10 @@
 //  Created by Laurent on 28/04/2021.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
-final class HistoryListViewModel {
+final class HistoryListViewModel: NSObject {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties
@@ -15,7 +16,7 @@ final class HistoryListViewModel {
 
   /******************** Data ********************/
 
-  let dataProvider: HistoryListDataProvider
+  let fetchedResultsController: NSFetchedResultsController<Call> 
 
   let repository = HistoryListRepository()
 
@@ -23,77 +24,116 @@ final class HistoryListViewModel {
 
   var didFail: ((Error) -> Void)?
 
+  var dataDidChange: (() -> Void)?
+
+  var willFetchedResultsControllerChangeContent: (() -> Void)?
+
+  var didFetchedResultsControllerChangeContent: (() -> Void)?
+
+  var didFetchedResultsControllerChangeSectionInfo:
+    ((NSFetchedResultsChangeType, Int) -> Void)?
+
+  var didFetchedResultsControllerChangeSectionObject:
+    ((NSFetchedResultsChangeType, IndexPath?, IndexPath?) -> Void)?
+
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with dataProvider: HistoryListDataProvider = HistoryListDataProvider()) {
-    self.dataProvider = dataProvider
+  override init() {
+    let request: NSFetchRequest<Call> = Call.fetchRequest()
+    let createdAtSortDescriptor = NSSortDescriptor(key: "createdAt",
+                                                   ascending: true)
+    request.sortDescriptors = [createdAtSortDescriptor]
+    request.predicate = NSPredicate(format: "isArchived == 0")
+
+    let viewContext = Database.shared.persistentContainer.viewContext
+    self.fetchedResultsController =
+      NSFetchedResultsController<Call>(fetchRequest: request,
+                                       managedObjectContext: viewContext,
+                                       sectionNameKeyPath: nil,
+                                       cacheName: nil)
+    super.init()
+
+    fetchedResultsController.delegate = self
+    try? fetchedResultsController.performFetch()
+    dataDidChange?()
   }
 
   //----------------------------------------------------------------------------
   // MARK: - Network
   //----------------------------------------------------------------------------
 
-  func fetchCalls() { //completion: ((Result<[CallModel], Error>)-> Void)) {
-//    let calls = [
-//      CallModel(id: 31,
-//                createdAt: "2018-04-19T09:38:41.000Z",
-//                direction: .outbound,
-//                sender: "Pierre-Baptiste Béchu",
-//                receiver: "06 46 62 12 33",
-//                phoneOperator: "NYC Office",
-//                duration: "120",
-//                isArchived: false,
-//                callType: .missed),
-//      CallModel(id: 31,
-//                createdAt: "2018-04-19T09:38:41.000Z",
-//                direction: .outbound,
-//                sender: "Pierre-Baptiste Béchu",
-//                receiver: "06 46 62 12 33",
-//                phoneOperator: "NYC Office",
-//                duration: "120",
-//                isArchived: false,
-//                callType: .missed),
-//      CallModel(id: 31,
-//                createdAt: "2018-04-19T09:38:41.000Z",
-//                direction: .outbound,
-//                sender: "Pierre-Baptiste Béchu",
-//                receiver: "06 46 62 12 33",
-//                phoneOperator: "NYC Office",
-//                duration: "120",
-//                isArchived: false,
-//                callType: .missed),
-//      CallModel(id: 31,
-//                createdAt: "2018-04-19T09:38:41.000Z",
-//                direction: .outbound,
-//                sender: "Pierre-Baptiste Béchu",
-//                receiver: "06 46 62 12 33",
-//                phoneOperator: "NYC Office",
-//                duration: "120",
-//                isArchived: false,
-//                callType: .missed),
-//      CallModel(id: 31,
-//                createdAt: "2018-04-19T09:38:41.000Z",
-//                direction: .outbound,
-//                sender: "Pierre-Baptiste Béchu",
-//                receiver: "06 46 62 12 33",
-//                phoneOperator: "NYC Office",
-//                duration: "120",
-//                isArchived: false,
-//                callType: .missed)
-//    ]
-//    completion(.success(calls))
-
+  func fetchCalls() {
     repository.fetchCalls { [weak self] result in
       switch result {
-        case .success(let calls): self?.dataProvider.update(with: calls)
+        case .success(let calls):
+          try? self?.fetchedResultsController.performFetch()
+          self?.dataDidChange?()
         case .failure(let error): self?.didFail?(error)
       }
     }
-
-
-
   }
+
+  func resetArchiveState() {
+    repository.reset { [weak self] result in
+      switch result {
+        case .success():
+          try? self?.fetchedResultsController.performFetch()
+          self?.dataDidChange?()
+        case .failure(let error): self?.didFail?(error)
+      }
+    }
+  }
+
+  func archive(call: CallModel) {
+    var archivedCall = call
+    archivedCall.isArchived = true
+    repository.update(call: archivedCall) { [weak self] result in
+      switch result {
+        case .success():
+          try? self?.fetchedResultsController.performFetch()
+          self?.dataDidChange?()
+        case .failure(let error): self?.didFail?(error)
+      }
+    }
+  }
+
+}
+
+//==============================================================================
+// MARK: - NSFetchedResultsControllerDelegate
+//==============================================================================
+
+extension HistoryListViewModel: NSFetchedResultsControllerDelegate {
+
+  func controllerWillChangeContent(
+      _ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    willFetchedResultsControllerChangeContent?()
+    }
+
+    func controller(
+      _ controller: NSFetchedResultsController<NSFetchRequestResult>,
+      didChange sectionInfo: NSFetchedResultsSectionInfo,
+      atSectionIndex sectionIndex: Int,
+      for type: NSFetchedResultsChangeType) {
+      didFetchedResultsControllerChangeSectionInfo?(type, sectionIndex)
+    }
+
+    func controller(
+      _ controller: NSFetchedResultsController<NSFetchRequestResult>,
+      didChange anObject: Any,
+      at indexPath: IndexPath?,
+      for type: NSFetchedResultsChangeType,
+      newIndexPath: IndexPath?) {
+      didFetchedResultsControllerChangeSectionObject?(type,
+                                                      indexPath,
+                                                      newIndexPath)
+    }
+
+    func controllerDidChangeContent(
+      _ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+      didFetchedResultsControllerChangeContent?()
+    }
 
 }

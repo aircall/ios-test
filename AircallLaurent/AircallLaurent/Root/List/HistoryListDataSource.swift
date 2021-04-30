@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class HistoryListDataSource: NSObject, UITableViewDataSource
 {
@@ -14,13 +15,13 @@ final class HistoryListDataSource: NSObject, UITableViewDataSource
   // MARK: - Properties
   //----------------------------------------------------------------------------
 
-  let provider: HistoryListDataProvider
+  let provider: NSFetchedResultsController<Call>
 
   //----------------------------------------------------------------------------
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with provider: HistoryListDataProvider) {
+  init(with provider: NSFetchedResultsController<Call>) {
     self.provider = provider
   }
 
@@ -29,21 +30,33 @@ final class HistoryListDataSource: NSObject, UITableViewDataSource
   //----------------------------------------------------------------------------
 
   func numberOfSections(in tableView: UITableView) -> Int {
-    return provider.numberOfSections()
+    return provider.sections?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView,
                  numberOfRowsInSection section: Int) -> Int {
-    return provider.numberOfItems(in: section)
+    if let sections = provider.sections, section < sections.count {
+      return sections[section].numberOfObjects
+    } else {
+      return 0
+    }
   }
 
   func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let item = provider.item(at: indexPath) else {
+    let identifier = GenericTableViewCell.reuseIdentifier
+    guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: identifier,
+            for: indexPath
+    ) as? GenericTableViewCell else {
       return UITableViewCell()
     }
-    return item.configuratedCellFor(tableView: tableView,
-                                    atIndexPath: indexPath)
+
+    let callModel = provider.object(at: indexPath).callModel
+
+    let cellViewModel = CallTableViewCellViewModel(with: callModel)
+    cell.configure(with: cellViewModel)
+    return cell
   }
 
 }

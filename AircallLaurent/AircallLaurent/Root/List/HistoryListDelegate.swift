@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class HistoryListDelegate: NSObject, UITableViewDelegate {
 
@@ -15,9 +16,11 @@ final class HistoryListDelegate: NSObject, UITableViewDelegate {
 
   /******************** Data ********************/
 
-  private let provider: HistoryListDataProvider
+  private let provider: NSFetchedResultsController<Call>
 
   /******************** Callbacks ********************/
+
+  var didSelect: ((CallModel) -> Void)?
 
   var didTapDetail: ((CallModel) -> Void)?
 
@@ -25,7 +28,7 @@ final class HistoryListDelegate: NSObject, UITableViewDelegate {
   // MARK: - Initialization
   //----------------------------------------------------------------------------
 
-  init(with provider: HistoryListDataProvider) {
+  init(with provider: NSFetchedResultsController<Call>) {
     self.provider = provider
   }
 
@@ -35,13 +38,14 @@ final class HistoryListDelegate: NSObject, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView,
                  didSelectRowAt indexPath: IndexPath) {
-    provider.item(at: indexPath)?.select()
+    let callModel = provider.object(at: indexPath).callModel
+    didSelect?(callModel)
   }
 
   func tableView(_ tableView: UITableView,
                  accessoryButtonTappedForRowWith indexPath: IndexPath) {
-    provider.item(at: indexPath)?.tapAccessoryButton()
-
+    let callModel = provider.object(at: indexPath).callModel
+    didTapDetail?(callModel)
   }
 
   func tableView(_ tableView: UITableView,

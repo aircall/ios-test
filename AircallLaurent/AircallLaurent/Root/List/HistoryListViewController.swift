@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HistoryListViewController: UIViewController {
 
@@ -62,14 +63,17 @@ class HistoryListViewController: UIViewController {
 
   init(with viewModel: HistoryListViewModel) {
     self.viewModel = viewModel
-    tableViewDataSource = HistoryListDataSource(with: viewModel.dataProvider)
-    tableViewDelegate = HistoryListDelegate(with: viewModel.dataProvider)
+    tableViewDataSource =
+      HistoryListDataSource(with: viewModel.fetchedResultsController)
+    tableViewDelegate =
+      HistoryListDelegate(with: viewModel.fetchedResultsController)
 
     super.init(nibName: nil, bundle: .main)
   }
 
   private func setup() {
     setupView()
+    setupNavigationBar()
     setupViewModel()
     setupTableView()
 
@@ -80,36 +84,68 @@ class HistoryListViewController: UIViewController {
     view.backgroundColor = .white
   }
 
+  private func setupNavigationBar() {
+    let actionButton = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                       target: self,
+                                       action: #selector(reset))
+    navigationItem.rightBarButtonItem = actionButton
+  }
+
   private func setupViewModel() {
-    viewModel.dataProvider.shouldRegisterCells = { [weak self] items in
-      guard let self = self else { return }
-      for item in items {
-        item.register(on: self.tableView)
-      }
+    viewModel.willFetchedResultsControllerChangeContent = { [weak self] in
+      self?.tableView.beginUpdates()
     }
 
-    viewModel.dataProvider.dataDidChange = { [weak self] in
-      guard let self = self else { return }
-      self.tableView.reloadData()
-    }
-
-    viewModel.dataProvider.dataDidClear = { [weak self] in
+    viewModel.didFetchedResultsControllerChangeContent = { [weak self] in
+      self?.tableView.endUpdates()
       self?.tableView.reloadData()
     }
 
-    viewModel.dataProvider.didSelect = { [weak self] call in
-      self?.didSelectCall?(call)
+    viewModel.didFetchedResultsControllerChangeSectionInfo = {
+      [weak self] type, sectionIndex in
+      switch type {
+        case .insert:
+          self?.tableView.insertSections([sectionIndex], with: .fade)
+        case .delete:
+          self?.tableView.deleteSections([sectionIndex], with: .fade)
+        default:
+          break
+      }
     }
 
-//    viewModel.dataProvider.didSelectAcessory = { [weak self] call in
-//      self?.didTapDetail?(call)
-//    }
+    viewModel.didFetchedResultsControllerChangeSectionObject = {
+      [weak self] type, indexPath, newIndexPath in
+      switch type {
+        case .insert:
+          guard let newIndexPath = newIndexPath else { return }
+          self?.tableView.insertRows(at: [newIndexPath], with: .fade)
+
+        case .delete:
+          guard let indexPath = indexPath else { return }
+          self?.tableView.deleteRows(at: [indexPath], with: .fade)
+
+        case .update:
+          guard let indexPath = indexPath else { return }
+          self?.tableView.reloadRows(at: [indexPath], with: .fade)
+
+        case .move:
+          guard let indexPath = indexPath else { return }
+          self?.tableView.deleteRows(at: [indexPath], with: .fade)
+
+          guard let newIndexPath = newIndexPath else { return }
+          self?.tableView.insertRows(at: [newIndexPath], with: .fade)
+
+        @unknown default: break
+      }
+    }
+
   }
 
   private func setupTableView() {
     setupTableViewStyle()
     setupTableViewDataSource()
     setupTableViewDelegate()
+    setupTableViewCell()
   }
 
   private func setupTableViewStyle() {
@@ -125,6 +161,39 @@ class HistoryListViewController: UIViewController {
 
   private func setupTableViewDelegate() {
     tableView.delegate = tableViewDelegate
+
+    tableViewDelegate.didSelect = { [weak self] call in
+      self?.didSelectCall?(call)
+    }
+
+    tableViewDelegate.didTapDetail = { [weak self] call in
+      self?.viewModel.archive(call: call)
+    }
+  }
+
+  private func setupTableViewCell() {
+    let cellIdentifier = GenericTableViewCell.reuseIdentifier
+    let cellClass = GenericTableViewCell.self
+    let bundle = Bundle(for: cellClass)
+    if bundle.path(forResource: cellIdentifier, ofType: "nib") != nil {
+      let nib = UINib(nibName: cellIdentifier, bundle: bundle)
+      tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+    } else {
+      tableView.register(cellClass, forCellReuseIdentifier: cellIdentifier)
+    }
+  }
+
+  //----------------------------------------------------------------------------
+  // MARK: - Update
+  //----------------------------------------------------------------------------
+
+  @objc private func reset() {
+    viewModel.resetArchiveState()
+  }
+
+  func archive(call: CallModel) {
+    viewModel.archive(call: call)
   }
   
 }
+

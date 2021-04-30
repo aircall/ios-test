@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Call {
 
   //----------------------------------------------------------------------------
@@ -24,6 +23,7 @@ extension Call {
   @NSManaged public var duration: String?
   @NSManaged public var id: Int32
   @NSManaged public var isArchived: Bool
+  @NSManaged public var phoneOperator: String?
   @NSManaged public var receiver: String?
   @NSManaged public var sender: String?
 
@@ -47,6 +47,21 @@ extension Call {
     receiver = call.receiver
     sender = call.sender
   }
+
+  var callModel: CallModel {
+    return CallModel(
+      id: Int(id),
+      createdAt: createdAt ?? "",
+      direction: Direction(rawValue: direction ?? "") ?? .inbound,
+      sender: sender ?? "",
+      receiver: receiver,
+      phoneOperator: phoneOperator ?? "",
+      duration: duration ?? "",
+      isArchived: isArchived,
+      callType: CallType(rawValue: callType ?? "") ?? .missed
+    )
+  }
+
 }
 
 extension Call : Identifiable {

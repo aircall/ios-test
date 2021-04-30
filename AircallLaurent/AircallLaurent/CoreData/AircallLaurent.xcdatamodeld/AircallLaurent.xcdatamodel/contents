@@ -7,10 +7,11 @@
         <attribute name="duration" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="phoneOperator" optional="YES" attributeType="String"/>
         <attribute name="receiver" optional="YES" attributeType="String"/>
         <attribute name="sender" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Call" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Call" positionX="-63" positionY="-18" width="128" height="178"/>
     </elements>
 </model>
