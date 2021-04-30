@@ -131,7 +131,7 @@ final class HistoryListRepository {
 
   private func handleUpdateSuccess(call: CallModel, completion: (() -> Void)?) {
     database.persistentContainer.performBackgroundTask { context in
-      let callDb = database.findCall(id: call.id, inContext: context)
+      let callDb = self.database.findCall(id: call.id, inContext: context)
       callDb?.configure(from: call)
       try? context.save()
       DispatchQueue.main.async {
