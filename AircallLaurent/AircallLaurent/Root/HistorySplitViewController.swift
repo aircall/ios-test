@@ -103,6 +103,12 @@ class HistorySplitViewController: UISplitViewController {
   }
 
   private func setupDetailViewController() {
+    historyDetailsViewController.shouldArchive = { [weak self] call in
+      self?.historyDetailsViewController.navigationController?
+        .navigationController?.popViewController(animated: true)
+      self?.historyDetailsViewController.call = nil
+      self?.historyListViewController.archive(call: call)
+    }
   }
 
   /// Add a master view controller embedded into a navigation view controlller

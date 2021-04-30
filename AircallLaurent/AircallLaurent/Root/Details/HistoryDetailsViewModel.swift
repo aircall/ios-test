@@ -31,6 +31,8 @@ final class HistoryDetailsViewModel {
     return "\(date.monthDayShortFormat), \(date.timeIn24HourFormat)"
   }
 
+  let placeholderText = "Please select a call"
+
   /******************** Callbacks ********************/
 
   var shouldUpdateTitle: ((String) -> Void)?

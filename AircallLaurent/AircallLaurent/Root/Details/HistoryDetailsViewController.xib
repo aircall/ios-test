@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="actionContainerView" destination="GUn-x1-GfH" id="QIe-kX-OOe"/>
                 <outlet property="informationContainerView" destination="GPT-GO-rrF" id="DBN-7C-oZ5"/>
+                <outlet property="placeHolderLabel" destination="bhi-B0-oUi" id="c2J-HX-g6Y"/>
+                <outlet property="placeHolderView" destination="TsJ-lF-s9g" id="i28-L5-WeD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,40 +23,82 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-nu-4LQ">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqF-SV-npf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-GO-rrF" userLabel="InformationContainerView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="383.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-x1-GfH" userLabel="ActionContainerView">
-                            <rect key="frame" x="0.0" y="403.5" width="414" height="153.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uz-bF-ggA" userLabel="Spacer">
-                            <rect key="frame" x="0.0" y="577" width="414" height="275"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-nu-4LQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-GO-rrF" userLabel="InformationContainerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-x1-GfH" userLabel="ActionContainerView">
+                                    <rect key="frame" x="0.0" y="423" width="414" height="161.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uz-bF-ggA" userLabel="Spacer">
+                                    <rect key="frame" x="0.0" y="604.5" width="414" height="291.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="GPT-GO-rrF" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.45" id="YjG-cU-qwe"/>
+                                <constraint firstItem="GUn-x1-GfH" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.18" id="zae-Kp-xqo"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsJ-lF-s9g" userLabel="PlaceholderVIew">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwd-sN-BbJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhi-B0-oUi">
+                                            <rect key="frame" x="186.5" y="0.0" width="41.5" height="896"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Zwd-sN-BbJ" firstAttribute="top" secondItem="TsJ-lF-s9g" secondAttribute="top" id="3Vy-Rn-c5E"/>
+                                <constraint firstItem="Zwd-sN-BbJ" firstAttribute="leading" secondItem="TsJ-lF-s9g" secondAttribute="leading" id="7lf-mO-e5l"/>
+                                <constraint firstAttribute="bottom" secondItem="Zwd-sN-BbJ" secondAttribute="bottom" id="9AX-0s-mnf"/>
+                                <constraint firstAttribute="trailing" secondItem="Zwd-sN-BbJ" secondAttribute="trailing" id="OZy-PE-YUP"/>
+                            </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="GPT-GO-rrF" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.45" id="YjG-cU-qwe"/>
-                        <constraint firstItem="GUn-x1-GfH" firstAttribute="height" secondItem="hZ0-nu-4LQ" secondAttribute="height" multiplier="0.18" id="zae-Kp-xqo"/>
+                        <constraint firstItem="TsJ-lF-s9g" firstAttribute="leading" secondItem="xqF-SV-npf" secondAttribute="leading" id="2pH-qR-hXD"/>
+                        <constraint firstItem="hZ0-nu-4LQ" firstAttribute="leading" secondItem="xqF-SV-npf" secondAttribute="leading" id="AVz-NY-8Dh"/>
+                        <constraint firstAttribute="bottom" secondItem="hZ0-nu-4LQ" secondAttribute="bottom" id="BOV-Fh-Zy4"/>
+                        <constraint firstItem="hZ0-nu-4LQ" firstAttribute="top" secondItem="xqF-SV-npf" secondAttribute="top" id="In5-Bo-XCV"/>
+                        <constraint firstAttribute="bottom" secondItem="TsJ-lF-s9g" secondAttribute="bottom" id="Q8t-0s-LVf"/>
+                        <constraint firstItem="TsJ-lF-s9g" firstAttribute="top" secondItem="xqF-SV-npf" secondAttribute="top" id="YfA-pc-Ull"/>
+                        <constraint firstAttribute="trailing" secondItem="hZ0-nu-4LQ" secondAttribute="trailing" id="l1q-OE-NfT"/>
+                        <constraint firstAttribute="trailing" secondItem="TsJ-lF-s9g" secondAttribute="trailing" id="yc9-b9-9Vx"/>
                     </constraints>
-                </stackView>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3jE-70-1oY"/>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KbT-lf-JZh"/>
-                <constraint firstAttribute="bottom" secondItem="hZ0-nu-4LQ" secondAttribute="bottom" id="br0-kS-6Sb"/>
-                <constraint firstItem="hZ0-nu-4LQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kKA-MH-76Z"/>
+                <constraint firstAttribute="trailing" secondItem="xqF-SV-npf" secondAttribute="trailing" id="IML-3T-6mb"/>
+                <constraint firstItem="xqF-SV-npf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TSD-Vr-nGZ"/>
+                <constraint firstAttribute="bottom" secondItem="xqF-SV-npf" secondAttribute="bottom" id="o9F-7J-BP2"/>
+                <constraint firstItem="xqF-SV-npf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ulF-3O-e3z"/>
             </constraints>
             <point key="canvasLocation" x="33" y="107"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

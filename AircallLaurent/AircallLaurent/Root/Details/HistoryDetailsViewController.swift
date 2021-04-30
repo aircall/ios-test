@@ -17,6 +17,8 @@ class HistoryDetailsViewController: UIViewController {
 
   @IBOutlet weak private var informationContainerView: UIView!
   @IBOutlet weak private var actionContainerView: UIView!
+  @IBOutlet weak private var placeHolderView: UIView!
+  @IBOutlet weak private var placeHolderLabel: UILabel!
 
   /******************** ViewModels ********************/
 
@@ -24,7 +26,13 @@ class HistoryDetailsViewController: UIViewController {
 
   var call: CallModel? {
     didSet {
-      update(with: call)
+      if let call = call {
+        update(with: call)
+        placeHolderView.isHidden = true
+      } else {
+        placeHolderView.isHidden = false
+        navigationItem.title = ""
+      }
     }
   }
 
@@ -36,6 +44,10 @@ class HistoryDetailsViewController: UIViewController {
   private let actionViewController =
     HistoryDetailsActionViewController(nibName: nil, bundle: nil)
 
+  /******************** Callbacks ********************/
+
+  var shouldArchive: ((CallModel) -> Void)?
+
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle
   //----------------------------------------------------------------------------
@@ -43,7 +55,6 @@ class HistoryDetailsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
-    update(with: nil)
   }
 
   //----------------------------------------------------------------------------
@@ -76,6 +87,7 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setup() {
     setupView()
+    setupPlaceHolder()
     setupNavigationBar()
     setupDetailsContentView()
     setupDetailsActionView()
@@ -84,6 +96,12 @@ class HistoryDetailsViewController: UIViewController {
 
   private func setupView() {
     view.backgroundColor = .white
+  }
+
+  private func setupPlaceHolder() {
+    placeHolderView.backgroundColor = .white
+    placeHolderLabel.font = UIFont.systemFont(ofSize: 24)
+    placeHolderLabel.text = viewModel.placeholderText
   }
 
   private func setupNavigationBar() {
@@ -103,7 +121,7 @@ class HistoryDetailsViewController: UIViewController {
   }
 
   private func setupDetailsContentView() {
-    informationViewController.didFail = { [weak self] error in
+    informationViewController.didFail = { error in
       print(error)
     }
 
@@ -137,28 +155,18 @@ class HistoryDetailsViewController: UIViewController {
   // MARK: - Update
   //----------------------------------------------------------------------------
 
-  private func update(with call: CallModel?) {
-//    let call = CallModel(id: 31,
-//                         createdAt: "2018-04-19T09:38:41.000Z",
-//                         direction: .outbound,
-//                         sender: "Pierre-Baptiste Béchu",
-//                         receiver: "06 46 62 12 33",
-//                         phoneOperator: "NYC Office",
-//                         duration: "120",
-//                         isArchived: false,
-//                         callType: .missed)
-    guard let call = call else { return }
+  private func update(with call: CallModel) {
     viewModel.call = call
     informationViewController.update(with: call)
   }
-
 
   //----------------------------------------------------------------------------
   // MARK: - Actions
   //----------------------------------------------------------------------------
 
   @objc private func doAction() {
-
+    guard let call = call else { return }
+    shouldArchive?(call)
   }
   
 }
