@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * HistoryDetailsInformationDelegate
+ *
+ * A delegate for the HistoryDetails tableview
+ *
+ ******************************************************************************/
+
 final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
   //----------------------------------------------------------------------------
@@ -46,7 +53,7 @@ final class HistoryDetailsInformationDelegate: NSObject, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView,
                  heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return tableView.bounds.height / 5
+    return tableView.bounds.height / 10
   }
 
   func tableView(_ tableView: UITableView,

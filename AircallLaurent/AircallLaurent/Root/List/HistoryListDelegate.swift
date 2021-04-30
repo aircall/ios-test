@@ -8,6 +8,13 @@
 import UIKit
 import CoreData
 
+/*******************************************************************************
+ * HistoryListDelegate
+ *
+ * A delegate used for the History list tableview
+ *
+ ******************************************************************************/
+
 final class HistoryListDelegate: NSObject, UITableViewDelegate {
 
   //----------------------------------------------------------------------------

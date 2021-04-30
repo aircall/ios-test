@@ -8,8 +8,14 @@
 import UIKit
 import CoreData
 
-final class HistoryListDataSource: NSObject, UITableViewDataSource
-{
+/*******************************************************************************
+ * HistoryListDataSource
+ *
+ * A data source used for the History list tableview
+ *
+ ******************************************************************************/
+
+final class HistoryListDataSource: NSObject, UITableViewDataSource {
 
   //----------------------------------------------------------------------------
   // MARK: - Properties

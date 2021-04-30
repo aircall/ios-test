@@ -187,10 +187,13 @@ class HistoryListViewController: UIViewController {
   // MARK: - Update
   //----------------------------------------------------------------------------
 
+  /// Reset the archive state of all the calls
   @objc private func reset() {
     viewModel.resetArchiveState()
   }
 
+  /// Archive a given call
+  /// - Parameter call: A call to archive
   func archive(call: CallModel) {
     viewModel.archive(call: call)
   }

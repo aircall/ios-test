@@ -7,6 +7,16 @@
 
 import Foundation
 
+/*******************************************************************************
+ * HistoryListDataProvider
+ *
+ * A data provider for the list for the History list.
+ *
+ * /!\ NOT USED. For presentation purpose if we wouldn't have use
+ * fetchedResultsController
+ *
+ ******************************************************************************/
+
 final class HistoryListDataProvider: CollectionDataProvider {
 
   //----------------------------------------------------------------------------
@@ -37,35 +47,23 @@ final class HistoryListDataProvider: CollectionDataProvider {
     }
   }
 
-  /******************** Text ********************/
-
-  private var callDuration: String?
-
-  private var callInformationTitle: String {
-    var callDurationText = ""
-    if let callDuration = callDuration {
-      callDurationText = " (\(callDuration)sec)"
-    }
-    return "Call information\(callDurationText)"
-  }
-
   /******************** Callbacks ********************/
 
   /// Items in table view data provider did change
   var dataDidChange: (() -> Void)?
 
+  /// Called when a table view should register the cells of the data provider.
   var shouldRegisterCells: (([CellConfigurating]) -> Void)?
 
   /// Items in table view data provider did clear
   var dataDidClear: (() -> Void)?
 
+  /// Called when a cell is selected
   var didSelect: ((CallModel) -> Void)?
 
-  var didSelectAccessory: ((CallModel) -> Void)?
 
-  //----------------------------------------------------------------------------
-  // MARK: - Initialization
-  //----------------------------------------------------------------------------
+  /// Called when an accessory action of a cell is selected.
+  var didSelectAccessory: ((CallModel) -> Void)?
 
   //----------------------------------------------------------------------------
   // MARK: - TableView

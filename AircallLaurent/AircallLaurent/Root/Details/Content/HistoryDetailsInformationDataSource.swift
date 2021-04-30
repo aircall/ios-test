@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * HistoryDetailsInformationDataSource
+ *
+ * A data source for the HistoryDetails tableview
+ *
+ ******************************************************************************/
+
 final class HistoryDetailsInformationDataSource: NSObject, UITableViewDataSource
 {
 

@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * HistoryDetailsActionViewController
+ *
+ * A ViewControlle for a set of actions
+ *
+ ******************************************************************************/
+
 class HistoryDetailsActionViewController: UIViewController, Themeable {
 
   //----------------------------------------------------------------------------

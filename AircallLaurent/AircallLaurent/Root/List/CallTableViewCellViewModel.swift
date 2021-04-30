@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * CallTableViewCellViewModel
+ *
+ * A cell view model for the history list cells
+ *
+ ******************************************************************************/
+
 final class CallTableViewCellViewModel: GenericTableViewCellViewModelProtocol {
 
   //----------------------------------------------------------------------------

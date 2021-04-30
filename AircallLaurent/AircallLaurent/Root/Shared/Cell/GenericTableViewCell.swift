@@ -7,6 +7,14 @@
 
 import UIKit
 
+/*******************************************************************************
+ * GenericTableViewCell
+ *
+ * A generic cell used in the project configurable with a
+ * `GenericTableViewCellViewModelProtocol`.
+ *
+ ******************************************************************************/
+
 class GenericTableViewCell: UITableViewCell, Reusable {
 
   //----------------------------------------------------------------------------
@@ -52,10 +60,6 @@ class GenericTableViewCell: UITableViewCell, Reusable {
     ]
   }
 
-  /******************** Callbacks ********************/
-
-  var didTapAction: (() -> Void)?
-
   //----------------------------------------------------------------------------
   // MARK: - Lifecycle
   //----------------------------------------------------------------------------
@@ -67,7 +71,6 @@ class GenericTableViewCell: UITableViewCell, Reusable {
 
   override func prepareForReuse() {
     super.prepareForReuse()
-    didTapAction = nil
   }
 
   //----------------------------------------------------------------------------
@@ -82,10 +85,6 @@ class GenericTableViewCell: UITableViewCell, Reusable {
 
   private func setupView() {
     backgroundColor = .clear
-  }
-
-  private func setupIconImageView() {
-
   }
 
   private func setupTextLabel() {

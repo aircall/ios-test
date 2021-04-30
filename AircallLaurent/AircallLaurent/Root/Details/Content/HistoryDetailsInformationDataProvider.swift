@@ -7,6 +7,13 @@
 
 import UIKit
 
+/*******************************************************************************
+ * HistoryDetailsInformationDataProvider
+ *
+ * A data provider used for the details tableview.
+ *
+ ******************************************************************************/
+
 class HistoryDetailsInformationDataProvider: CollectionDataProvider {
 
   //----------------------------------------------------------------------------
