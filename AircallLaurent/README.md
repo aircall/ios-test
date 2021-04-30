@@ -50,5 +50,6 @@ CoreData with NSFetchedResultController. I wanted to avoid external database lik
 
 * Add swipe action for history list table view.
 * Use right icon images related to the information (USA flag for the US phone provider)
+* Add UI Unit tests
 
 # 😈

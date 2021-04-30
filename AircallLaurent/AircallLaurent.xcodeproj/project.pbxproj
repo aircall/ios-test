@@ -32,7 +32,6 @@
 		4D36431A2634B48500E6919D /* AircallLaurent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643182634B48500E6919D /* AircallLaurent.xcdatamodeld */; };
 		4D36431C2634B48600E6919D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36431B2634B48600E6919D /* Assets.xcassets */; };
 		4D36431F2634B48600E6919D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D36431D2634B48600E6919D /* LaunchScreen.storyboard */; };
-		4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643292634B48700E6919D /* AircallLaurentTests.swift */; };
 		4D3643352634B48700E6919D /* AircallLaurentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3643342634B48700E6919D /* AircallLaurentUITests.swift */; };
 		4D36434D2634BB1100E6919D /* HistorySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36434B2634BB1100E6919D /* HistorySplitViewController.swift */; };
 		4D36434E2634BB1100E6919D /* HistorySplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D36434C2634BB1100E6919D /* HistorySplitViewController.xib */; };
@@ -153,7 +152,6 @@
 		4D36431E2634B48600E6919D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3643202634B48600E6919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3643252634B48700E6919D /* AircallLaurentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallLaurentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D3643292634B48700E6919D /* AircallLaurentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallLaurentTests.swift; sourceTree = "<group>"; };
 		4D36432B2634B48700E6919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3643302634B48700E6919D /* AircallLaurentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AircallLaurentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3643342634B48700E6919D /* AircallLaurentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircallLaurentUITests.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 				4DC1284D263C03AD0078ED91 /* HistoryDetails */,
 				4D78B4C22637232500C5287D /* Model */,
 				4DAAA67726371706009392E1 /* Date */,
-				4D3643292634B48700E6919D /* AircallLaurentTests.swift */,
 				4D36432B2634B48700E6919D /* Info.plist */,
 			);
 			path = AircallLaurentTests;
@@ -906,7 +903,6 @@
 				4DC1284F263C03BE0078ED91 /* HistoryDetailsViewModelTests.swift in Sources */,
 				4D50732F26360605001C0904 /* HistoryDetailsViewModel.swift in Sources */,
 				4D2D17512638021400C274A2 /* ContactInformationTableViewCellViewModel.swift in Sources */,
-				4D36432A2634B48700E6919D /* AircallLaurentTests.swift in Sources */,
 				4D78B4AF26371E1500C5287D /* CallModel.swift in Sources */,
 				4D966BF62639B7FC00C5EC54 /* Encodable+Extension.swift in Sources */,
 				4D50733D26360F50001C0904 /* CallTableViewCellViewModel.swift in Sources */,
