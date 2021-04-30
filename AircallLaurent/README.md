@@ -52,6 +52,7 @@ CoreData with NSFetchedResultController. I wanted to avoid external database lik
 * Add swipe action for history list table view.
 * Use right icon images related to the information (USA flag for the US phone provider)
 * Add UI Unit tests
+* Maybe use `NSDiffableDataSource`
 
 The time to finish it would depend of the requirement of the differents feature lik the unactive buttons. What should do "assign action" ? What icon to display for phone operator? Generic or localized? The format to display on each cells which seems to be custom and not a copy of the call object from the api rest.
 Also we should improve the code coverage.
