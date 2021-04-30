@@ -28,6 +28,7 @@ It will be soon open sourcered so feel free to comment 😄
 * Root is the entry point for are all the controllers used for the app.
 * Shared folder for several extensions, protocol or handy class used in the application, especially a custom TableView pattern used in the details view. The purpose is to abstract a lot of TableView stuff and can handle multiple cell type. Soon opensourced too. All theses extension are my own code (no "copy pasta" without understand 🤓)
 
+`Call` endpoint is not used since the split view pass data between master and details. I would be usefull if this controller wouldn't have been here and where at each tap of a cell a call to get the Call (passing data as I do would have been the same tho). `Activity` and `Call` endpoints seems to send the same data for a Call object (think) 🤔
 
 # Tests 🛠
 
