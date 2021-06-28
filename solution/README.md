@@ -84,10 +84,31 @@ But one simple solution would be to just add a button to each row to trigger the
 
 ## Unit tests
 I tried to use the TDD approach but couldn't stick to it 100% of the time.  
-Anyways, I think I still could achieve a pretty good amount of code coverage for the main packages:
-<img src="Resources/common_coverage.png" width="800" />
-<img src="Resources/domain_coverage.png" width="800" />
-<img src="Resources/networking_coverage.png" width="800" />
+Anyways, I think I still could achieve a pretty good amount of code coverage for the main packages:  
+```
+Filename                                                                                Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Extensions/Foundation/ISO8601DateFormatterExtensions.swift                                   1                 0   100.00%           1                 0   100.00%           5                 0   100.00%           0                 0         -
+Extensions/Foundation/JSONDecoderExtensions.swift                                            4                 0   100.00%           2                 0   100.00%          24                 0   100.00%           0                 0         -
+Extensions/Foundation/JSONEncoderExtensions.swift                                            2                 0   100.00%           2                 0   100.00%          12                 0   100.00%           0                 0         -
+FileDescription.swift                                                                        4                 0   100.00%           2                 0   100.00%          11                 0   100.00%           0                 0         -
+Formatting/DateFormatterExtensions.swift                                                     4                 3    25.00%           4                 3    25.00%          20                15    25.00%           0                 0         -
+Logging/Implementations/Log.swift                                                           10                 0   100.00%           4                 0   100.00%          31                 0   100.00%           0                 0         -
+Logging/Implementations/LogFormatter.swift                                                  10                 0   100.00%           3                 0   100.00%          18                 0   100.00%           0                 0         -
+Logging/Implementations/UnifiedLogger.swift                                                  4                 0   100.00%           2                 0   100.00%          12                 0   100.00%           0                 0         -
+TestDataSampling.swift                                                                       3                 0   100.00%           1                 0   100.00%           8                 0   100.00%           0                 0         -
+Domain/Sources/Entities/Call.swift                                                           1                 0   100.00%           1                 0   100.00%          11                 0   100.00%           0                 0         -
+Domain/Sources/UseCases/Implementations/DefaultArchivingCallUseCase.swift                    2                 0   100.00%           2                 0   100.00%           6                 0   100.00%           0                 0         -
+Domain/Sources/UseCases/Implementations/DefaultListCallsUseCase.swift                        7                 0   100.00%           4                 0   100.00%          24                 0   100.00%           0                 0         -
+Networking/Sources/DataTransfer/Implementations/DefaultDataTransferService.swift            27                27     0.00%          14                14     0.00%          82                82     0.00%           0                 0         -
+Networking/Sources/Networking/Endpoint/Implementations/Endpoint.swift                        2                 0   100.00%           2                 0   100.00%           6                 0   100.00%           0                 0         -
+Networking/Sources/Networking/Endpoint/Implementations/RequestableExtensions.swift           4                 0   100.00%           2                 0   100.00%          16                 0   100.00%           0                 0         -
+Networking/Sources/Networking/Implementations/APIDataNetworkConfig.swift                     1                 0   100.00%           1                 0   100.00%           3                 0   100.00%           0                 0         -
+Networking/Sources/Networking/Implementations/DefaultNetworkService.swift                   26                 3    88.46%           7                 1    85.71%          82                 3    96.34%           0                 0         -
+Networking/Sources/Networking/Implementations/URLSession+NetworkSession.swift                2                 2     0.00%           2                 2     0.00%          10                10     0.00%           0                 0         -
+Networking/Sources/Networking/Mocks/MockNetworkSession.swift                                10                 2    80.00%           4                 1    75.00%          36                 3    91.67%           0                 0         -
+
+```
 
 ## Documentation
 Every package is documented, except for the *Presentation*:
