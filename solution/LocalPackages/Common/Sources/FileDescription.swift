@@ -39,7 +39,7 @@ public struct FileDescription {
         - name: The file's name.
      - Returns: An instance of `FileDescription`.
      */
-    static func json(with name: String) -> FileDescription? {
+    public static func json(with name: String) -> FileDescription? {
         FileDescription(name: name, extension: CommonConstants.jsonExtension)
     }
 }

@@ -10,9 +10,9 @@ import Foundation
 /**
  Defines helper methods to handle test data samples.
  */
-protocol TestDataSampling: AnyObject { }
+public protocol TestDataSampling: AnyObject { }
 
-extension TestDataSampling {
+public extension TestDataSampling {
 
     /**
      Gets a sample data for tests purposes.
