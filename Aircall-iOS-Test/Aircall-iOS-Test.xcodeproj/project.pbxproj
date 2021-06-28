@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D6D6FD12685BF0D002C20EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D6FD02685BF0D002C20EF /* AppDelegate.swift */; };
+		1D6D6FD32685BF0D002C20EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D6FD22685BF0D002C20EF /* SceneDelegate.swift */; };
+		1D6D6FD82685BF0D002C20EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D6FD62685BF0D002C20EF /* Main.storyboard */; };
+		1D6D6FDA2685BF10002C20EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D6FD92685BF10002C20EF /* Assets.xcassets */; };
+		1D6D6FDD2685BF10002C20EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D6FDB2685BF10002C20EF /* LaunchScreen.storyboard */; };
+		1D6D6FF32685BF10002C20EF /* Aircall_iOS_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D6FF22685BF10002C20EF /* Aircall_iOS_TestUITests.swift */; };
+		1D6D70022685C7FF002C20EF /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70012685C7FF002C20EF /* Networker.swift */; };
+		1D6D70052685CDF9002C20EF /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70042685CDF9002C20EF /* Requestable.swift */; };
+		1D6D70072685D5AC002C20EF /* InputEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70062685D5AC002C20EF /* InputEncodable.swift */; };
+		1D6D70092685D5C0002C20EF /* OutputDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70082685D5C0002C20EF /* OutputDecodable.swift */; };
+		1D6D700C2685D60E002C20EF /* ActivityListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D700B2685D60E002C20EF /* ActivityListRequest.swift */; };
+		1D6D70132685FF79002C20EF /* ArchiveActivityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70122685FF79002C20EF /* ArchiveActivityRequest.swift */; };
+		1D6D7016268602BF002C20EF /* ActivityDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D7015268602BF002C20EF /* ActivityDetailRequest.swift */; };
+		1D6D701926860337002C20EF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D701826860337002C20EF /* Activity.swift */; };
+		1D6D701B26860400002C20EF /* ResetActivitiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D701A26860400002C20EF /* ResetActivitiesRequest.swift */; };
+		1D6D702026861C1A002C20EF /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D701F26861C1A002C20EF /* ActivityListViewController.swift */; };
+		1D6D702226861CA0002C20EF /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D702126861CA0002C20EF /* ActivityDetailViewController.swift */; };
+		1D6D702826862134002C20EF /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D702726862134002C20EF /* ActivityViewModel.swift */; };
+		1D6D702D26873547002C20EF /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D702C26873547002C20EF /* RequestMethod.swift */; };
+		1D6D702F268735CD002C20EF /* ActivityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D702E268735CD002C20EF /* ActivityListCell.swift */; };
+		1D6D703326876743002C20EF /* FromToCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D703226876743002C20EF /* FromToCell.swift */; };
+		1D6D7035268767A2002C20EF /* DurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D7034268767A2002C20EF /* DurationCell.swift */; };
+		1D6D7038268768DC002C20EF /* DirectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D7037268768DC002C20EF /* DirectionCell.swift */; };
+		1D6D703A2687697B002C20EF /* ViaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70392687697B002C20EF /* ViaCell.swift */; };
+		1D6D703C268770D0002C20EF /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D703B268770D0002C20EF /* ArchiveCell.swift */; };
+		1D6D7040268780CF002C20EF /* ActivityConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D703F268780CF002C20EF /* ActivityConfigurableCell.swift */; };
+		1D6D7043268781DE002C20EF /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D7042268781DE002C20EF /* Formatters.swift */; };
+		1D6D70452687849A002C20EF /* ActivityViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D70442687849A002C20EF /* ActivityViewModelTests.swift */; };
+		1D6D7048268784FC002C20EF /* NetworkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D7047268784FC002C20EF /* NetworkerMock.swift */; };
+		1D6D704C26878B38002C20EF /* EntitiesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D704B26878B38002C20EF /* EntitiesMock.swift */; };
+		1DED57F726891924000ECD90 /* ActivityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED57F626891924000ECD90 /* ActivityListPresenter.swift */; };
+		1DED57FB26891B5E000ECD90 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED57FA26891B5E000ECD90 /* NetworkConstants.swift */; };
+		1DED580426891DEF000ECD90 /* PresenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED580326891DEF000ECD90 /* PresenterExtensions.swift */; };
+		1DED58062689263E000ECD90 /* ActivityDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED58052689263E000ECD90 /* ActivityDetailsPresenter.swift */; };
+		1DED580826892CF1000ECD90 /* ActivityListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED580726892CF1000ECD90 /* ActivityListPresenterTests.swift */; };
+		1DED580A268930D2000ECD90 /* ActivityDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED5809268930D2000ECD90 /* ActivityDetailsPresenterTests.swift */; };
+		1DED580C26894376000ECD90 /* ActivityListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED580B26894376000ECD90 /* ActivityListViewControllerTests.swift */; };
+		1DED5812268946E6000ECD90 /* ActivityViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED5811268946E6000ECD90 /* ActivityViewModelMock.swift */; };
+		1DED581426894BC7000ECD90 /* ActivityDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED581326894BC7000ECD90 /* ActivityDetailViewControllerTests.swift */; };
+		1DED581826894FC8000ECD90 /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED581726894FC8000ECD90 /* FormattersTests.swift */; };
+		1DED581A268950ED000ECD90 /* PresenterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED5819268950ED000ECD90 /* PresenterExtensionsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D6D6FE42685BF10002C20EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D6D6FC52685BF0D002C20EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6D6FCC2685BF0D002C20EF;
+			remoteInfo = "Aircall-iOS-Test";
+		};
+		1D6D6FEF2685BF10002C20EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D6D6FC52685BF0D002C20EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6D6FCC2685BF0D002C20EF;
+			remoteInfo = "Aircall-iOS-Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D6D6FCD2685BF0D002C20EF /* Aircall-iOS-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aircall-iOS-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6D6FD02685BF0D002C20EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D6D6FD22685BF0D002C20EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1D6D6FD72685BF0D002C20EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D6D6FD92685BF10002C20EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D6D6FDC2685BF10002C20EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D6D6FDE2685BF10002C20EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6D6FE32685BF10002C20EF /* Aircall-iOS-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aircall-iOS-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6D6FE92685BF10002C20EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6D6FEE2685BF10002C20EF /* Aircall-iOS-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aircall-iOS-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6D6FF22685BF10002C20EF /* Aircall_iOS_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircall_iOS_TestUITests.swift; sourceTree = "<group>"; };
+		1D6D6FF42685BF10002C20EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6D70012685C7FF002C20EF /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		1D6D70042685CDF9002C20EF /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		1D6D70062685D5AC002C20EF /* InputEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputEncodable.swift; sourceTree = "<group>"; };
+		1D6D70082685D5C0002C20EF /* OutputDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputDecodable.swift; sourceTree = "<group>"; };
+		1D6D700B2685D60E002C20EF /* ActivityListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListRequest.swift; sourceTree = "<group>"; };
+		1D6D70122685FF79002C20EF /* ArchiveActivityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveActivityRequest.swift; sourceTree = "<group>"; };
+		1D6D7015268602BF002C20EF /* ActivityDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailRequest.swift; sourceTree = "<group>"; };
+		1D6D701826860337002C20EF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		1D6D701A26860400002C20EF /* ResetActivitiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetActivitiesRequest.swift; sourceTree = "<group>"; };
+		1D6D701F26861C1A002C20EF /* ActivityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
+		1D6D702126861CA0002C20EF /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		1D6D702726862134002C20EF /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		1D6D702C26873547002C20EF /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		1D6D702E268735CD002C20EF /* ActivityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListCell.swift; sourceTree = "<group>"; };
+		1D6D703226876743002C20EF /* FromToCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromToCell.swift; sourceTree = "<group>"; };
+		1D6D7034268767A2002C20EF /* DurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationCell.swift; sourceTree = "<group>"; };
+		1D6D7037268768DC002C20EF /* DirectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionCell.swift; sourceTree = "<group>"; };
+		1D6D70392687697B002C20EF /* ViaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaCell.swift; sourceTree = "<group>"; };
+		1D6D703B268770D0002C20EF /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
+		1D6D703F268780CF002C20EF /* ActivityConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityConfigurableCell.swift; sourceTree = "<group>"; };
+		1D6D7042268781DE002C20EF /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		1D6D70442687849A002C20EF /* ActivityViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModelTests.swift; sourceTree = "<group>"; };
+		1D6D7047268784FC002C20EF /* NetworkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerMock.swift; sourceTree = "<group>"; };
+		1D6D704B26878B38002C20EF /* EntitiesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesMock.swift; sourceTree = "<group>"; };
+		1DED57F626891924000ECD90 /* ActivityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListPresenter.swift; sourceTree = "<group>"; };
+		1DED57FA26891B5E000ECD90 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		1DED580326891DEF000ECD90 /* PresenterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterExtensions.swift; sourceTree = "<group>"; };
+		1DED58052689263E000ECD90 /* ActivityDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsPresenter.swift; sourceTree = "<group>"; };
+		1DED580726892CF1000ECD90 /* ActivityListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListPresenterTests.swift; sourceTree = "<group>"; };
+		1DED5809268930D2000ECD90 /* ActivityDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		1DED580B26894376000ECD90 /* ActivityListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListViewControllerTests.swift; sourceTree = "<group>"; };
+		1DED5811268946E6000ECD90 /* ActivityViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModelMock.swift; sourceTree = "<group>"; };
+		1DED581326894BC7000ECD90 /* ActivityDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		1DED581726894FC8000ECD90 /* FormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersTests.swift; sourceTree = "<group>"; };
+		1DED5819268950ED000ECD90 /* PresenterExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterExtensionsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D6D6FCA2685BF0D002C20EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FE02685BF10002C20EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FEB2685BF10002C20EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D6D6FC42685BF0D002C20EF = {
+			isa = PBXGroup;
+			children = (
+				1D6D6FCF2685BF0D002C20EF /* Aircall-iOS-Test */,
+				1D6D6FE62685BF10002C20EF /* Aircall-iOS-TestTests */,
+				1D6D6FF12685BF10002C20EF /* Aircall-iOS-TestUITests */,
+				1D6D6FCE2685BF0D002C20EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D6D6FCE2685BF0D002C20EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D6FCD2685BF0D002C20EF /* Aircall-iOS-Test.app */,
+				1D6D6FE32685BF10002C20EF /* Aircall-iOS-TestTests.xctest */,
+				1D6D6FEE2685BF10002C20EF /* Aircall-iOS-TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D6D6FCF2685BF0D002C20EF /* Aircall-iOS-Test */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D6FD02685BF0D002C20EF /* AppDelegate.swift */,
+				1D6D6FD22685BF0D002C20EF /* SceneDelegate.swift */,
+				1D6D70002685C7DE002C20EF /* Networking */,
+				1D6D70172686032C002C20EF /* Model */,
+				1D6D702326861D69002C20EF /* Views */,
+				1D6D7026268620F9002C20EF /* View Models */,
+				1DED57F82689192F000ECD90 /* Presenters */,
+				1D6D7041268781CE002C20EF /* Utils */,
+				1D6D6FD92685BF10002C20EF /* Assets.xcassets */,
+				1D6D6FDE2685BF10002C20EF /* Info.plist */,
+			);
+			path = "Aircall-iOS-Test";
+			sourceTree = "<group>";
+		};
+		1D6D6FE62685BF10002C20EF /* Aircall-iOS-TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D7046268784ED002C20EF /* Mocks */,
+				1DED580E2689438A000ECD90 /* View Models */,
+				1DED580D2689437E000ECD90 /* Presenters */,
+				1DED581526894FAF000ECD90 /* Views */,
+				1DED581626894FB6000ECD90 /* Utils */,
+				1D6D6FE92685BF10002C20EF /* Info.plist */,
+			);
+			path = "Aircall-iOS-TestTests";
+			sourceTree = "<group>";
+		};
+		1D6D6FF12685BF10002C20EF /* Aircall-iOS-TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D6FF22685BF10002C20EF /* Aircall_iOS_TestUITests.swift */,
+				1D6D6FF42685BF10002C20EF /* Info.plist */,
+			);
+			path = "Aircall-iOS-TestUITests";
+			sourceTree = "<group>";
+		};
+		1D6D70002685C7DE002C20EF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D70012685C7FF002C20EF /* Networker.swift */,
+				1D6D7014268602AC002C20EF /* Protocols */,
+				1D6D70032685CDCD002C20EF /* Requests */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1D6D70032685CDCD002C20EF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D700B2685D60E002C20EF /* ActivityListRequest.swift */,
+				1D6D7015268602BF002C20EF /* ActivityDetailRequest.swift */,
+				1D6D70122685FF79002C20EF /* ArchiveActivityRequest.swift */,
+				1D6D701A26860400002C20EF /* ResetActivitiesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		1D6D7014268602AC002C20EF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D70042685CDF9002C20EF /* Requestable.swift */,
+				1D6D70062685D5AC002C20EF /* InputEncodable.swift */,
+				1D6D70082685D5C0002C20EF /* OutputDecodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1D6D70172686032C002C20EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D701826860337002C20EF /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D6D702326861D69002C20EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D704D2687D2CA002C20EF /* Storyboards */,
+				1DED581B2689B2E8000ECD90 /* View Controllers */,
+				1D6D7030268735D2002C20EF /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D6D7026268620F9002C20EF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D702726862134002C20EF /* ActivityViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		1D6D7030268735D2002C20EF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D703F268780CF002C20EF /* ActivityConfigurableCell.swift */,
+				1D6D702E268735CD002C20EF /* ActivityListCell.swift */,
+				1D6D70312687672E002C20EF /* Detail */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1D6D70312687672E002C20EF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D703226876743002C20EF /* FromToCell.swift */,
+				1D6D7034268767A2002C20EF /* DurationCell.swift */,
+				1D6D7037268768DC002C20EF /* DirectionCell.swift */,
+				1D6D70392687697B002C20EF /* ViaCell.swift */,
+				1D6D703B268770D0002C20EF /* ArchiveCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1D6D7041268781CE002C20EF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DED57FA26891B5E000ECD90 /* NetworkConstants.swift */,
+				1D6D702C26873547002C20EF /* RequestMethod.swift */,
+				1D6D7042268781DE002C20EF /* Formatters.swift */,
+				1DED580326891DEF000ECD90 /* PresenterExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1D6D7046268784ED002C20EF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D7047268784FC002C20EF /* NetworkerMock.swift */,
+				1D6D704B26878B38002C20EF /* EntitiesMock.swift */,
+				1DED5811268946E6000ECD90 /* ActivityViewModelMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1D6D704D2687D2CA002C20EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D6FDB2685BF10002C20EF /* LaunchScreen.storyboard */,
+				1D6D6FD62685BF0D002C20EF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1DED57F82689192F000ECD90 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1DED57F626891924000ECD90 /* ActivityListPresenter.swift */,
+				1DED58052689263E000ECD90 /* ActivityDetailsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1DED580D2689437E000ECD90 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1DED580726892CF1000ECD90 /* ActivityListPresenterTests.swift */,
+				1DED5809268930D2000ECD90 /* ActivityDetailsPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1DED580E2689438A000ECD90 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D70442687849A002C20EF /* ActivityViewModelTests.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		1DED581526894FAF000ECD90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DED580B26894376000ECD90 /* ActivityListViewControllerTests.swift */,
+				1DED581326894BC7000ECD90 /* ActivityDetailViewControllerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1DED581626894FB6000ECD90 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DED581726894FC8000ECD90 /* FormattersTests.swift */,
+				1DED5819268950ED000ECD90 /* PresenterExtensionsTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1DED581B2689B2E8000ECD90 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D701F26861C1A002C20EF /* ActivityListViewController.swift */,
+				1D6D702126861CA0002C20EF /* ActivityDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6D6FCC2685BF0D002C20EF /* Aircall-iOS-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6D6FF72685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-Test" */;
+			buildPhases = (
+				1D6D6FC92685BF0D002C20EF /* Sources */,
+				1D6D6FCA2685BF0D002C20EF /* Frameworks */,
+				1D6D6FCB2685BF0D002C20EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aircall-iOS-Test";
+			productName = "Aircall-iOS-Test";
+			productReference = 1D6D6FCD2685BF0D002C20EF /* Aircall-iOS-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D6D6FE22685BF10002C20EF /* Aircall-iOS-TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6D6FFA2685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-TestTests" */;
+			buildPhases = (
+				1D6D6FDF2685BF10002C20EF /* Sources */,
+				1D6D6FE02685BF10002C20EF /* Frameworks */,
+				1D6D6FE12685BF10002C20EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D6D6FE52685BF10002C20EF /* PBXTargetDependency */,
+			);
+			name = "Aircall-iOS-TestTests";
+			productName = "Aircall-iOS-TestTests";
+			productReference = 1D6D6FE32685BF10002C20EF /* Aircall-iOS-TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D6D6FED2685BF10002C20EF /* Aircall-iOS-TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6D6FFD2685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-TestUITests" */;
+			buildPhases = (
+				1D6D6FEA2685BF10002C20EF /* Sources */,
+				1D6D6FEB2685BF10002C20EF /* Frameworks */,
+				1D6D6FEC2685BF10002C20EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D6D6FF02685BF10002C20EF /* PBXTargetDependency */,
+			);
+			name = "Aircall-iOS-TestUITests";
+			productName = "Aircall-iOS-TestUITests";
+			productReference = 1D6D6FEE2685BF10002C20EF /* Aircall-iOS-TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D6D6FC52685BF0D002C20EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					1D6D6FCC2685BF0D002C20EF = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					1D6D6FE22685BF10002C20EF = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1D6D6FCC2685BF0D002C20EF;
+					};
+					1D6D6FED2685BF10002C20EF = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1D6D6FCC2685BF0D002C20EF;
+					};
+				};
+			};
+			buildConfigurationList = 1D6D6FC82685BF0D002C20EF /* Build configuration list for PBXProject "Aircall-iOS-Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D6D6FC42685BF0D002C20EF;
+			productRefGroup = 1D6D6FCE2685BF0D002C20EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6D6FCC2685BF0D002C20EF /* Aircall-iOS-Test */,
+				1D6D6FE22685BF10002C20EF /* Aircall-iOS-TestTests */,
+				1D6D6FED2685BF10002C20EF /* Aircall-iOS-TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D6D6FCB2685BF0D002C20EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6D6FDD2685BF10002C20EF /* LaunchScreen.storyboard in Resources */,
+				1D6D6FDA2685BF10002C20EF /* Assets.xcassets in Resources */,
+				1D6D6FD82685BF0D002C20EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FE12685BF10002C20EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FEC2685BF10002C20EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D6D6FC92685BF0D002C20EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DED57FB26891B5E000ECD90 /* NetworkConstants.swift in Sources */,
+				1D6D700C2685D60E002C20EF /* ActivityListRequest.swift in Sources */,
+				1DED57F726891924000ECD90 /* ActivityListPresenter.swift in Sources */,
+				1D6D70052685CDF9002C20EF /* Requestable.swift in Sources */,
+				1DED580426891DEF000ECD90 /* PresenterExtensions.swift in Sources */,
+				1D6D702226861CA0002C20EF /* ActivityDetailViewController.swift in Sources */,
+				1D6D7043268781DE002C20EF /* Formatters.swift in Sources */,
+				1D6D7016268602BF002C20EF /* ActivityDetailRequest.swift in Sources */,
+				1D6D703C268770D0002C20EF /* ArchiveCell.swift in Sources */,
+				1D6D7038268768DC002C20EF /* DirectionCell.swift in Sources */,
+				1D6D6FD12685BF0D002C20EF /* AppDelegate.swift in Sources */,
+				1D6D701926860337002C20EF /* Activity.swift in Sources */,
+				1DED58062689263E000ECD90 /* ActivityDetailsPresenter.swift in Sources */,
+				1D6D6FD32685BF0D002C20EF /* SceneDelegate.swift in Sources */,
+				1D6D702026861C1A002C20EF /* ActivityListViewController.swift in Sources */,
+				1D6D70072685D5AC002C20EF /* InputEncodable.swift in Sources */,
+				1D6D7035268767A2002C20EF /* DurationCell.swift in Sources */,
+				1D6D702826862134002C20EF /* ActivityViewModel.swift in Sources */,
+				1D6D701B26860400002C20EF /* ResetActivitiesRequest.swift in Sources */,
+				1D6D70022685C7FF002C20EF /* Networker.swift in Sources */,
+				1D6D702F268735CD002C20EF /* ActivityListCell.swift in Sources */,
+				1D6D70132685FF79002C20EF /* ArchiveActivityRequest.swift in Sources */,
+				1D6D703A2687697B002C20EF /* ViaCell.swift in Sources */,
+				1D6D702D26873547002C20EF /* RequestMethod.swift in Sources */,
+				1D6D703326876743002C20EF /* FromToCell.swift in Sources */,
+				1D6D70092685D5C0002C20EF /* OutputDecodable.swift in Sources */,
+				1D6D7040268780CF002C20EF /* ActivityConfigurableCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FDF2685BF10002C20EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DED581A268950ED000ECD90 /* PresenterExtensionsTests.swift in Sources */,
+				1D6D70452687849A002C20EF /* ActivityViewModelTests.swift in Sources */,
+				1DED5812268946E6000ECD90 /* ActivityViewModelMock.swift in Sources */,
+				1DED580C26894376000ECD90 /* ActivityListViewControllerTests.swift in Sources */,
+				1D6D704C26878B38002C20EF /* EntitiesMock.swift in Sources */,
+				1DED581426894BC7000ECD90 /* ActivityDetailViewControllerTests.swift in Sources */,
+				1DED580826892CF1000ECD90 /* ActivityListPresenterTests.swift in Sources */,
+				1D6D7048268784FC002C20EF /* NetworkerMock.swift in Sources */,
+				1DED581826894FC8000ECD90 /* FormattersTests.swift in Sources */,
+				1DED580A268930D2000ECD90 /* ActivityDetailsPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6D6FEA2685BF10002C20EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6D6FF32685BF10002C20EF /* Aircall_iOS_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D6D6FE52685BF10002C20EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6D6FCC2685BF0D002C20EF /* Aircall-iOS-Test */;
+			targetProxy = 1D6D6FE42685BF10002C20EF /* PBXContainerItemProxy */;
+		};
+		1D6D6FF02685BF10002C20EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6D6FCC2685BF0D002C20EF /* Aircall-iOS-Test */;
+			targetProxy = 1D6D6FEF2685BF10002C20EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D6D6FD62685BF0D002C20EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D6D6FD72685BF0D002C20EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D6D6FDB2685BF10002C20EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D6D6FDC2685BF10002C20EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6D6FF52685BF10002C20EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D6D6FF62685BF10002C20EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D6D6FF82685BF10002C20EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6D6FF92685BF10002C20EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1D6D6FFB2685BF10002C20EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aircall-iOS-Test.app/Aircall-iOS-Test";
+			};
+			name = Debug;
+		};
+		1D6D6FFC2685BF10002C20EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aircall-iOS-Test.app/Aircall-iOS-Test";
+			};
+			name = Release;
+		};
+		1D6D6FFE2685BF10002C20EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aircall-iOS-Test";
+			};
+			name = Debug;
+		};
+		1D6D6FFF2685BF10002C20EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XR27KQ425;
+				INFOPLIST_FILE = "Aircall-iOS-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromeboursier.Aircall-iOS-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aircall-iOS-Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6D6FC82685BF0D002C20EF /* Build configuration list for PBXProject "Aircall-iOS-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6D6FF52685BF10002C20EF /* Debug */,
+				1D6D6FF62685BF10002C20EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6D6FF72685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6D6FF82685BF10002C20EF /* Debug */,
+				1D6D6FF92685BF10002C20EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6D6FFA2685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6D6FFB2685BF10002C20EF /* Debug */,
+				1D6D6FFC2685BF10002C20EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6D6FFD2685BF10002C20EF /* Build configuration list for PBXNativeTarget "Aircall-iOS-TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6D6FFE2685BF10002C20EF /* Debug */,
+				1D6D6FFF2685BF10002C20EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D6D6FC52685BF0D002C20EF /* Project object */;
+}
