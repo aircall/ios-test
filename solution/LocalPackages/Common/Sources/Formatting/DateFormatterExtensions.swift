@@ -17,4 +17,34 @@ public extension DateFormatter {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
         return formatter
     }
+    
+    /**
+     A `DateFormatter` that displays the date and time abreviated.
+     - Remark: An example of formated date would be like 'June 12, 9:41'.
+     */
+    static var monthDayTime: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm"
+        return formatter
+    }
+    
+    /**
+     A `DateFormatter` that displays the date abreviated.
+     - Remark: An example of formated date would be like 'June 12'.
+     */
+    static var monthDay: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter
+    }
+    
+    /**
+     A `DateFormatter` that displays the time.
+     - Remark: An example of formated date would be like '9:41'.
+     */
+    static var time: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm"
+        return formatter
+    }
 }
