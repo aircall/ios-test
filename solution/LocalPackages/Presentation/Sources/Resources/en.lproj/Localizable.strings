@@ -1,0 +1,23 @@
+
+"abandoned_by" = "Abandoned by %@";
+"answered_by" = "Answered by %@";
+"assign" = "Assign";
+"call_direction_answered" = "%@ answered";
+"call_direction_missed" = "%@ missed";
+"callee" = "callee";
+"caller" = "caller";
+"call_id_copied" = "Call ID copied to clipboard!";
+"call_information_title" = "Call Information";
+"contact_information_title" = "Contact Information";
+"copy_call_id" = "Copy call ID";
+"empty_string" = "";
+"history" = "History";
+"incoming_call" = "Incoming call";
+"loading_indicator_title" = "Loading...";
+"made_by_caller" = "made by %@";
+"not_answered_by" = "Not answered by %@";
+"notes" = "Notes";
+"ok" = "OK";
+"on_callee" = "on %@";
+"outcoming_call" = "Outcoming call";
+"tags" = "Tags";
