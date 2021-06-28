@@ -14,10 +14,8 @@ import Foundation
  */
 public protocol CallsRepository {
     /**
-     Archives a call.
+     Lists all calls.
      - Parameters:
-        - callId: The id of the call.
-        - archive: Tells whether the call should be archived or not.
         - completion: A closure to be executed uppon completion.
      - Returns: An instance of `Cancellable` if the task can be cancelled.
      */
