@@ -1,0 +1,18 @@
+excluded:
+  - .build
+
+analyzer_rules:
+  - unused_import
+
+line_length:
+  warning: 150
+  error: 200
+
+function_parameter_count:
+  warning: 8
+  error: 10
+
+identifier_name:
+  excluded:
+    - id
+    - to
