@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Aircall
+
+  Created by Delphine Garcia on 29/06/2021.
+*/
+
+"Ok" = "OK";
+"Generic_error" = "An error has occurred";
+
+"Activities_title" = "History";
+"Activities_noData" = "No call";
+"Activities_inbound_via" = "on %@";
+"Activities_outbound_via" = "made by %@";
+
+"Activity_details_call_information" = "Call information";
+"Activity_details_incoming" = "incoming";
+"Activity_details_outcoming" = "outcoming";
+"Activity_details_answered" = "call answered";
+"Activity_details_missed" = "call missed";
+"Activity_details_voicemail" = "voicemail";
+"Activity_details_duration" = "Total duration: %@ seconds";
+
+"Archive_action" = "Archive";
+"Archive_error" = "The call hasn't been archived.";
