@@ -1,146 +1,28 @@
 
+## - Write a brief outline of the architecture of your app.
 
+I decided to challenge myself and to use SwiftUI with a MVVM architecture. I also tried to use Combine for fetching api data, to approach declarative development in swift.
 
-# Aircall - iOS Technical test
+In order to have a better control of the loadable object I created a View that handle different states: loading, idle, failure and loaded (with data and with empty data).
+For archiving calls I decided to show a confirmation popup to the user, because it is a good practice in terms of UX.
 
-  
+I also decided to extend my model to implement mock data, for testing purposes and to show previews canvas with SwiftUI.
 
-## Summary
+## Explain why you decided to use each third party libraries.
+I did not use third party libraries because for this project I did not think it was necessary, moreover I try to avoid third party librairies when possible.
 
-  
+## What was the most difficult part of the challenge ?
 
-The purpose of this test is to give you an opportunity to showcase your coding skills.
+To be honest it was a really challenging project because I decided to use SwiftUI, which was almost new to me. I took this decision for several reasons: I know that at Aircall you are using SwiftUI, and I wanted to prove to myself and to the company that I can learn and use a "new" framework in a few days.
 
-To doing so, you will build a small Aircall iOS app from scratch.
+I am aware that my project is not perfect and have some flaws, and maybe trying SwiftUI almost for the first time in a technical test was not a bright idea, nevertheless I really enjoyed the experience and I am eager to learn and to share my knowledges in other areas. That motivates me even more to use SwiftUI in a real world application.
 
-  
+Because it was almost my first app with SwiftUI, I also spent a lot of time refactoring my code, and I think the most difficult part in this project was the implementation of my LoadableView, but at the end I'm satisfied with the result because I reached my goal of creating a reusable view that allows a better control of loading states and prevent code duplication.
 
-### General rules
+If you want, [here](https://github.com/MaxenceChantome/LePetitCoin) you can look at my technical test for Leboncoin using UIKit, which is a better representation of my current iOS experience (even thought the project had to be compatible with iOS12 so I did not use UITableViewDiffableDataSource).
 
-- You are free to use the architecture you prefer
+## Estimate your percentage of completion and how much time you would need to finish
 
-- You are free to use the libraries you want
-
-- You are free to use UIKit or SwiftUI
-
-- The app must compatible with iOS 13+
-
-  
-
-### Things you need to implement
-
-1. Display a ****list of calls**** page
-
-2. Click on call from the list will redirect to ****call details**** page
-
-3. You should be able to ****archive a call**** from List and Details page
-
-=> Archived calls will no longer be visible from ****list of calls****
-
-  
-
-### Where to focus
-
-1. We will pay attention on the architecture of your app
-
-2. The quality of your tests
-
-3. The clarity and documentation of your code
-
-4. Don't pay too much attention on design stuff, it's not a criteria for us. After all, you are a developer not a designer !
-
-  
-
-List of calls |  Call details
-
-:-------------------------:|:-------------------------:
-
-![](assets/activity_feed.png) | ![](assets/call_detail.png)
-
-  
-
-### Need help ?
-
-  
-
-Don't hesitate to ask any question regarding the test at ios@aircall.io
-
-  
-
-  
-
-## API documentation
-
-  
-
-### Routes
-
-  
-
-Here is the API address: https://aircall-job.herokuapp.com.
-
-  
-
-As you can see, it's hosted on a free Heroku server, which means that the first time you will fetch the API, it will take few seconds to answer.
-
-  
-
-- ****GET**** - https://aircall-job.herokuapp.com/activities: get calls to display in the Activity Feed
-
-- ****GET**** - https://aircall-job.herokuapp.com/activities/:id: retrieve a specific call details
-
-- ****POST**** - https://aircall-job.herokuapp.com/activities/:id: update a call. The only field updatable is `is_archived (bool)`. You'll need to send a JSON in the request body:
-
-```
-
-{
-
-is_archived: true
-
-}
-
-```
-
-- ****GET**** - https://aircall-job.herokuapp.com/reset: Reset all calls to initial state (usefull if you archived all calls).
-
-  
-
-  
-
-### Call object
-
-  
-
-- ****id**** - unique ID of call
-
-- ****created_at**** - creation date
-
-- ****direction**** - `inbound` or `outbound` call
-
-- ****from**** - caller's number
-
-- ****to**** - callee's number
-
-- ****via**** - Aircall number used for the call
-
-- ****duration**** - duration of a call (in seconds)
-
-- ****is_archived**** - call is archived or not
-
-- ****call_type**** - can be a `missed`, `answered` or `voicemail` call.
-
-  
-
-  
-
-## Submission
-
-  
-You are ready, submit a pull request on this repository and ping your point of contact at Aircall.
-
-Don't forget to include a ****README**** file with the following:
-
-- Write a brief outline of the architecture of your app.
-- Explain why you decided to use each third party libraries.
-- What was the most difficult part of the challenge ?
-- Estimate your percentage of completion and how much time you would need to finish
+I did the project requirement, nevertheless my tests can be more specific for different states.
+I estimate that I have finished 90% of the project, and maybe 2 more days would have allows me to write better tests.
+In the total the project took me 7 days, but I could only give 3/4 hours per day for the project due to a tight schedule.
