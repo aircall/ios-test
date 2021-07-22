@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Aircall
+
+  Created by Bertrand BLOC'H on 18/07/2021.
+  
+*/
+
+"mobile/history/title.text" = "History";
+"mobile/history/activity-inboud-via.text" = "on $var";
+"mobile/history/activity-outbound-via.text" = "made by $var";
+"mobile/error/common-alert-title.text" = "⚠️ Warning ⚠️";
+"mobile/error/common-alert-message.text" = "Something bad just happened!";
+"mobile/error/common-alert-action.text" = "Ok";
+"mobile/error/fail-to-archive-activity-message.text" = "We were unable to archive, please try again?";
+"mobile/error/data-consistency-problem-essage.text" = "Your data seems to be corrupted";
+"mobile/error/dataSource-availability-problem-essage.text" = "Your data seems unavailable at this time";
+"mobile/error/general-error-message.text" = "Your mobile will explode in a minute 🧨";
+"mobile/activity/details/call-information-title.text" = "Call Information";
+"mobile/activity/details/incoming-call.text" = "Incoming Call $var";
+"mobile/activity/details/outgoing-call.text" = "Outgoing Call $var";
+"mobile/activity/missed-call.text" = "missed";
+"mobile/activity/answered-call-text" = "answered";
+"mobile/activity/voicemail-call.text" = "voicemail";
+
