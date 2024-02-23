@@ -12,9 +12,9 @@ To do so, you will build a small Aircall iOS app from scratch.
 
 - Use the architecture you prefer
 - Use any library you want
-- Use **UIKit or SwiftUI**
+- Use **SwiftUI**
 - Your app need to be **compatible with iOS n-1**
-  - for instance if iOS15 is the latest available version, your app need to support iOS14+
+  - for instance if iOS17 is the latest available version, your app need to support iOS16+
 
 ### Things you need to implement
 
